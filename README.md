@@ -15,7 +15,7 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
 ## Equipo
 
 - ### Franco Acosta 
-*Vivo en Pergamino, BSAS. tengo 26 años y trabajo de editor de fotos y videos para una productora extranjera. Conocí el mundo de la programación hace unos años estudiando Sistemas y decidí meterme de lleno en la actualidad orientado hacia el desarrollo Web.*
+*Vivo en Pergamino, BSAS. tengo 26 años y trabajo de editor de fotos y videos. Conocí el mundo de la programación hace unos años estudiando Sistemas y decidí meterme de lleno en la actualidad orientado hacia el desarrollo Web.*
 - ### Gonzalo Calvimonte
 *Vivo en Capitan Bermudez, provincia de Santa Fe. Tengo 28 años. Trabajo en el sector de logistica de empresas agroportuarias y aceiteras. Me meti en el mundo del desarrollo buscando herramientas que me ayuden a conseguir un mejor empleo.*
 - ### Julián Lapido
