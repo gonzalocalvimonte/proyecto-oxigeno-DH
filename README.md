@@ -53,8 +53,6 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
  
  ## Wireframe
  
- https://wireframe.cc/pro/pp/f4cd5d885563179
- 
- 
 
 
+[Oxigeno---Wireframe-cc-Premium.pdf](https://github.com/JuliLapido/grupo_2/files/9047922/Oxigeno---Wireframe-cc-Premium.pdf)
