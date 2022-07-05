@@ -20,7 +20,7 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
 *Vivo en Capitan Bermudez, provincia de Santa Fe. Tengo 28 años. Trabajo en el sector de logistica de empresas agroportuarias y aceiteras. Me meti en el mundo del desarrollo buscando herramientas que me ayuden a conseguir un mejor empleo.*
 - ### Julián Lapido
 *Vivo en Capital Federal, Argentina. Trabajo como Project Manager en Toyota Argentina. Quise ampliar mis conocimientos técnicos para obtener otro punto de vista en mi día día.*
-- ### Lisandro Fernádez Tasende
+- ### Lisandro Fernández Tasende
 *Trabajo en ventas en una empresa de telecomunicaciones. Me gusta mucho aprender cosas relacionadas con la tecnología.*
 
 
