@@ -1,0 +1,24 @@
+{
+  "name": "grupo_2",
+  "version": "1.0.0",
+  "description": "Crearemos un market place focalizado en la venta de chalecos salvavidas, como también productos de naútica no técnica (deportiva o pesca).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliLapido/grupo_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliLapido/grupo_2/issues"
+  },
+  "homepage": "https://github.com/JuliLapido/grupo_2#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
