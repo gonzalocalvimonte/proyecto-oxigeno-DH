@@ -12,11 +12,37 @@
     <title>OXIGENO Carrito</title>
 </head>
 <body>
-    <header>
-        <h1>CARRITO</h1>
+    <header id="header">
+        <div class="top-header">
+            <nav id="logo">
+                <picture>
+                    <a href="/">
+                        <img src="images/logo.png" alt="Oxígeno">
+                    </a>
+                </picture>
+            </nav>
+            <form action="" method="get" id="search">
+                <label for="query"><i class="fa-solid fa-search"></i></label>
+                <button type="submit"><i class="fa-solid fa-search"></i></button>
+                <input type="text" name="q" id="query" placeholder="Buscar productos, marcas">
+            </form>
+            <ul id="nav">
+                <li class="burger-menu"><a href="/"><i class="bars fa-solid fa-bars"></i> </a></li>
+                <li class="user"><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+                <li class="cart"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <ul id="menu">
+                <li class="submenu"><a href="/">Productos</a></li>
+                <li class="submenu"><a href="/">Ofertas</a></li>
+                <li class="submenu"><a href="/">Quienes Somos</a></li>
+                <li class="submenu"><a href="/">Contacto</a></li>
+            </ul>
+        </div>
+
     </header>
 
     <main>
+        <h1>CARRITO</h1>
     </main>
 
     <footer>
