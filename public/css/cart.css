@@ -8,6 +8,64 @@
     --white: #fff;
 }
 
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cart-title{
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
+.cart-detail{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+}
+.cart-detail li{
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0 2rem;
+}
+.cart-detail p{
+    padding: 0.5rem;
+    font-weight: lighter;
+    border-top: solid 1px black;
+}
+.cart-detail button{
+    width: 20px;
+    border: none;
+
+    justify-content: center;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 4px;
+}
+.mas{
+    background-color: var(--blue-1);
+}
+.menos{
+    background-color: rgba(189, 87, 87, 0.801);
+}
+.pay-btn{
+    display: flex;
+    padding: 1rem;
+}
+.pay-btn button{
+    padding: 0.7rem;
+    border: none;
+    background-color: var(--blue-2);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.pay-btn button:hover{
+    background-color: var(--blue-1);
+}
 @media all and  (min-width: 768px){
 
 }
