@@ -59,7 +59,9 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
 
 [Oxigeno---Wireframe-cc-Premium.pdf](https://github.com/JuliLapido/grupo_2/files/9047922/Oxigeno---Wireframe-cc-Premium.pdf)
 
+## Bocetos
 
+https://www.canva.com/design/DAE_ALah1jM/Lnunu871XknvgrghDKgDhA/view?utm_content=DAE_ALah1jM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
 
 ## Tablero de trabajo
