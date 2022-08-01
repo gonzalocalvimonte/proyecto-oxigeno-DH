@@ -10,7 +10,8 @@ Crearemos un market place focalizado en la venta de chalecos salvavidas, como ta
 
 Nuestros público de referencia será poseedores de embarcaciones, aficionados de la presca depotiva o amantes de los deportes acuáticos (en un promedio de 18 a 60 años).
 
-
+ 
+ 
 
 ## Equipo
 
