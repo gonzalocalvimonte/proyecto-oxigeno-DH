@@ -8,10 +8,14 @@
     --white: #fff;
 }
 
-#main{
+main{
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .cart-title{
@@ -20,18 +24,24 @@
     padding: 1rem;
 }
 .cart-detail{
+    
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    margin: auto;
     font-weight: bold;
 }
 .cart-detail li{
     justify-content: center;
     text-align: center;
+    
     padding: 0 1rem;
     margin: 0 2rem;
 }
 .cart-detail p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.5rem;
     font-weight: lighter;
     border-top: solid 1px black;
@@ -52,8 +62,12 @@
     background-color: rgba(189, 87, 87, 0.801);
 }
 .pay-btn{
+    width: 100%;
     display: flex;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
 }
 .pay-btn button{
     padding: 0.7rem;
