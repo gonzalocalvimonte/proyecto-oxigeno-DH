@@ -10,7 +10,8 @@ Crearemos un market place focalizado en la venta de chalecos salvavidas, como ta
 
 Nuestros público de referencia será poseedores de embarcaciones, aficionados de la presca depotiva o amantes de los deportes acuáticos (en un promedio de 18 a 60 años).
 
-
+ 
+ 
 
 ## Equipo
 
@@ -22,6 +23,7 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
 *Vivo en Capital Federal, Argentina. Trabajo como Project Manager en Toyota Argentina. Quise ampliar mis conocimientos técnicos para obtener otro punto de vista en mi día día.*
 - ### Lisandro Fernández Tasende
 *Trabajo en ventas en una empresa de telecomunicaciones. Me gusta mucho aprender cosas relacionadas con la tecnología.*
+
 
 
 
@@ -56,3 +58,12 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
 
 
 [Oxigeno---Wireframe-cc-Premium.pdf](https://github.com/JuliLapido/grupo_2/files/9047922/Oxigeno---Wireframe-cc-Premium.pdf)
+
+## Bocetos
+
+https://www.canva.com/design/DAE_ALah1jM/Lnunu871XknvgrghDKgDhA/view?utm_content=DAE_ALah1jM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
+
+## Tablero de trabajo
+
+https://trello.com/invite/b/Gd36Gcd4/b3cd367df2f596878fc581fa02ff4b7d/oxigeno-grupo-2
