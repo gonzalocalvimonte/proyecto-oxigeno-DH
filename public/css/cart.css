@@ -8,48 +8,40 @@
     --white: #fff;
 }
 
-main{
-    margin-top: auto;
-    margin-bottom: auto;
+#cart-page{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.cart-title{
-    text-align: center;
+    align-items: start;
     width: 100%;
-    padding: 1rem;
 }
-.cart-detail{
-    
+.cart-title{
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+}
+#table{
     display: flex;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    font-weight: bold;
 }
-.cart-detail li{
+#cart-page table{
     justify-content: center;
     text-align: center;
-    
-    padding: 0 1rem;
-    margin: 0 2rem;
+    border-collapse: collapse;
 }
-.cart-detail p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    font-weight: lighter;
-    border-top: solid 1px black;
+#cart-page th{
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--blue-2);
+    border-collapse: collapse;
 }
-.cart-detail button{
+#cart-page td{
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--blue-2);
+    border-collapse: collapse;
+}
+#table button{
     width: 20px;
     border: none;
-
     justify-content: center;
     text-align: center;
     margin: 0.5rem;
@@ -79,6 +71,18 @@ main{
 }
 .pay-btn button:hover{
     background-color: var(--blue-1);
+}
+.envio{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+}
+.envio input{
+    border-style: none;
+    padding: 0.5rem;
+    outline: none;
 }
 @media all and  (min-width: 768px){
 
