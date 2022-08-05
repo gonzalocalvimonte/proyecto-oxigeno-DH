@@ -4,7 +4,7 @@
   "description": "Crearemos un market place focalizado en la venta de chalecos salvavidas, como también productos de naútica no técnica (deportiva o pesca).",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js -e js,mjs,json,ejs,css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/JuliLapido/grupo_2#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
   }
 }

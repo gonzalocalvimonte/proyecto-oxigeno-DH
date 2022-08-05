@@ -36,120 +36,55 @@
                 <li class="submenu"><a href="/">Ofertas</a></li>
                 <li class="submenu"><a href="/">Quienes Somos</a></li>
                 <li class="submenu"><a href="/">Contacto</a></li>
-                <li class="submenu"><a href="/addProduct">agregarProd</a></li>
+                <li class="submenu"><a href="/">agregarProd</a></li>
             </ul>
         </div>
     </header>
+    
+    <main class="mainAddProd">
+        <form action="/" class="formAddProd">
 
-    <main id="main">
+            <span class="title-formAdd">Completar registro de producto nuevo</span>
 
-    <section id="main-section-1">    
-            <picture>
-                <img src="images/kayak.png" alt="kayak">
-                <section>
-                    <a href=""> ¡Ofertas! </a>
-                </section>
-            </picture>   
-    </section>
+            <input type="hidden" name="sku">
 
-    <section id="main-section-2">
-        <article class="titles">
-            <h1>Más vendidos</h1>
-        </article>
+            <input type="text" placeholder="Nombre del Producto" name="name" required>
 
-        <section class="section-productos">
+            <input type="number" placeholder="Precio" name="price" required>
 
-            <section class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas-x4.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 15000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas x 4u</p>
-                </article>
-            </section>
-
-            <section class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 5000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas</p>
-                </article>
-            </section>
-
-            <section class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas-x4.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 15000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas x 4u</p>
-                </article>
-            </section>
-
-        </section>
-
-        <article class="titles">
-            <h1>Últimos buscados</h1>
-        </article>
-
-        <section class="section-productos">
+            <textarea name="description" placeholder="Descripcion"></textarea>
             
+            <select id="category" name="category" required>
+                <option value="null" disabled selected>Elegir una categoria</option>
+                <option value="Deportes acuaticos">Deportes acuaticos</option>
+                <option value="Remera">Remera</option>
+                <option value="Iluminacion">Iluminacion</option>
+                <option value="Fondeo y amarre">Fondeo y amarre</option>
+                <option value="Cocina">Cocina</option>
+                <option value="Indumentaria">Indumentaria</option>
+                <option value="Equipamiento">Equipamiento</option>
+            </select>
 
-            <article class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 5000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas</p>
-                </article>
-            </article>
+            <select id="category" name="size">
+                <option value="null" disabled selected>Elegir talle si corresponde</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
 
-            <article class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas-x4.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 15000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas x 4u</p>
-                </article>
-            </article>
+            <div id="image-prod">
+            <label  for="fotoProd">Selecionar foto del producto</label>
+            <input  type="file" name="fotoProducto" id="fotoProd">
+            </div>
 
-            <article class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 5000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas</p>
-                </article>
-            </article>
+            <div id="button-add">
+            <button type="submit" class="button-add"> Agregar producto </button>
+            </div>
 
-        </section>
-    </section>
+        </form>
     </main>
-
     <footer id="footer">
         <section class="categorias">
         <nav>

@@ -1,0 +1,140 @@
+/*
+.main-agregProd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-agregProd form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-agregProd form article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+}
+*/
+*{
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+}
+
+.mainAddProd{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.formAddProd{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.title-formAdd{
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--gris);
+}
+.formAddProd input,select,textarea{
+    border: none;
+    outline: none;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.formAddProd textarea{
+    height: 200px;
+    resize: none;   
+}
+#image-prod{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+#image-prod label{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#button-add{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.button-add{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 2.5rem;
+    color: var(--white);
+    background-color: var(--blue-2);
+    border: none;
+    border-radius: 0.25rem;   
+}
+.button-add:hover{
+    background-color: var(--blue-1);
+}
+
+@media all and  (min-width: 768px) and (max-width:1024px){
+    .formAddProd{
+        width: 70%;
+    }
+    #image-prod{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    #image-prod label,input{
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+    .button-add{
+        width:40%
+    }
+}
+@media all and  (max-width:767px) {
+    .formAddProd{
+        width: 90%;
+    }
+    #image-prod{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    #image-prod label,input{
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+    .button-add{
+        width: 40%;
+    }
+}

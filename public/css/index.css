@@ -5,6 +5,7 @@
 @import url(register.css);
 @import url(cart.css);
 @import url(products.css);
+@import url(agregarProd.css);
 
 *{
     margin: 0px;
