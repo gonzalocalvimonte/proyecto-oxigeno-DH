@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <%- include('./partials/head.ejs')  %> 
+    <%- include('./partials/head.ejs')  %> 
 </head>
 <body>
     <header id="header">
-        <div class="top-header">
-            <nav id="logo">
-                <picture>
-                    <a href="/">
-                        <img src="images/logo.png" alt="Oxígeno">
-                    </a>
-                </picture>
-            </nav>
-            <form action="" method="get" id="search">
-                <label for="query"><i class="fa-solid fa-search"></i></label>
-                <button type="submit"><i class="fa-solid fa-search"></i></button>
-                <input type="text" name="q" id="query" placeholder="Buscar productos, marcas">
-            </form>
-            <ul id="nav">
-                <li class="burger-menu"><a href="/"><i class="bars fa-solid fa-bars"></i> </a></li>
-                <li class="user"><a href="/login"><i class="fa-solid fa-user"></i></a></li>
-                <li class="cart"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-            <ul id="menu">
-                <li class="submenu"><a href="/">Productos</a></li>
-                <li class="submenu"><a href="/">Ofertas</a></li>
-                <li class="submenu"><a href="/">Quienes Somos</a></li>
-                <li class="submenu"><a href="/">Contacto</a></li>
-            </ul>
-        </div>
+        <%- include("./partials/header.ejs")  %> 
     </header>
 
     <main id="main">
@@ -142,49 +118,7 @@
     </main>
 
     <footer id="footer">
-        <section class="categorias">
-        <nav>
-            <h6><a href="/">Deportes acuáticos</a></h6>
-            <ul>
-                <li><a href="/">Chalecos</a></li>
-                <li><a href="/">Juegos de arrastre</a></li>
-                <li><a href="/">Accesorios</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <h6><a href="/">Iluminación</a></h6>
-            <ul>
-                <li><a href="/">Linternas</a></li>
-                <li><a href="/">Luces bajo agua</a></li>
-                <li><a href="/">Cintas de led</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <h6><a href="/">Fondeo y amarre</a></h6>
-            <ul>
-                <li><a href="/">Anclas</a></li>
-                <li><a href="/">Cabos</a></li>
-                <li><a href="/">Boyas</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <h6><a href="/">Cocina</a></h6>
-            <ul>
-                <li><a href="/">Conservadoras</a></li>
-                <li><a href="/">Frigobares</a></li>
-                <li><a href="/">Anafes</a></li>
-            </ul>
-        </nav>
-        <span id="logo-whatsapp">
-            <a href="">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-        </span>
-    </section>
-    <section class="detalles-oxigeno">
-        <p>Copyright © 2000-2022 Oxigeno S.A</p>
-        <p>Calle falsa 123,CP 3000,Albuquerque,CABA</p>
-    </section>
+        <%- include("./partials/footer.ejs") %> 
     </footer>
 </body>
 </html>

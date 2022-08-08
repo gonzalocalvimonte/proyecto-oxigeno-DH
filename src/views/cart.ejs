@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')  %> 
+</head>
+<body>
+    <header id="header">
+        <%- include("./partials/header.ejs")  %> 
+    </header>
+
+    <main id="cart-page">
+        <h2 class="cart-title">Carrito de Compras</h2>
+
+        <section id="table">
+            <table>
+                <tr>
+                    <th class="item">Item</th>
+                    <th class="cantidad">Cantidad</th>
+                    <th class="total">Precio</th>
+                </tr>
+                <tr>
+                    <td class="item">Salvavidas </td>
+                    <td class="cantidad"><button class="mas" type="button">+</button> 1 <button class="menos" type="button">-</button></td>
+                    <td class="total">$5000</td>
+                </tr>
+                <tr>
+                    <td class="item">Salvavidas </td>
+                    <td class="cantidad"><button class="mas" type="button">+</button> 1 <button class="menos" type="button">-</button></td>
+                    <td class="total">$5000</td>
+                </tr>
+                <tr>
+                    <td class="item">Salvavidas </td>
+                    <td class="cantidad"><button class="mas" type="button">+</button> 1 <button class="menos" type="button">-</button></td>
+                    <td class="total">$5000</td>
+                </tr>
+                <tr>
+                    <th class="total">Total</th>
+                    <th>3</th>
+                    <th class="total">$15000</th>
+                </tr>
+            </table>
+        </section>
+        <section class="envio">
+            <article>
+                <p>Calcular envio: <input class="" type="text" name="c-postal" id="c-postal" required placeholder="Codido Postal"></p>
+            </article>
+        </section>
+        <section class="pay-btn">
+            <button type="submit">
+                Comprar
+            </button>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <%- include("./partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>
