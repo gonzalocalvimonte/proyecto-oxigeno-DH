@@ -8,14 +8,19 @@ server.listen(port, start());
 const statics = express.static(join(__dirname, "../public"));
 server.use(statics);
 
-server.get("/", (req, res) => res.sendFile(join(__dirname, "views/index.html")));
+server.set('views', './src/views');
 
-server.get("/login", (req, res) => res.sendFile(join(__dirname, "views/login.html")));
+server.set('view engine', 'ejs');
 
-server.get("/register", (req, res) => res.sendFile(join(__dirname, "views/register.html")));
 
-server.get("/cart", (req, res) => res.sendFile(join(__dirname, "views/cart.html")));
+server.get("/", (req, res) => res.render('index'));
 
-server.get("/products", (req, res) => res.sendFile(join(__dirname, "views/products.html")));
+server.get("/", (req, res) => res.render('login'));
 
-server.get("/addProduct", (req, res) => res.sendFile(join(__dirname, "views/agregarProd.html")));
+server.get("/", (req, res) => res.render('register'));
+
+server.get("/", (req, res) => res.render('cart'));
+
+server.get("/", (req, res) => res.render('products'));
+
+server.get("/", (req, res) => res.render('agregarProd'));
