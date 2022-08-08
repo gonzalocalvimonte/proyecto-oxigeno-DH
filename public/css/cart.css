@@ -13,6 +13,8 @@
     flex-wrap: wrap;
     align-items: start;
     width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .cart-title{
     width: 100%;
