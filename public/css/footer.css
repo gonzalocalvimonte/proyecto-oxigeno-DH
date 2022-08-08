@@ -19,18 +19,22 @@
     justify-content: space-around;
     padding: .5rem;
     text-align: center;
+    font-size: .7rem;
 }
 
 .detalles-oxigeno{
     display: flex;
     width: 100%;
     justify-content: center;
+    text-align: center;
+    padding: 1rem .5rem 0 .5rem;
+    font-size: .8rem;
 }
 .detalles-oxigeno p{
-    padding: 2rem 2rem 0 2rem;
+    padding: 0 .5rem;
 }
 #footer h6{
-    font-size: 1.12rem;
+    font-size: .9rem;
     text-decoration: underline;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
@@ -49,7 +53,12 @@
     right: 2rem;
 }
 @media all and  (min-width: 768px){
-
+    #footer .categorias{
+        font-size: 1rem;
+    }
+    #footer h6{
+        font-size: 1rem;
+    }
 }
 @media all and  (min-width:1200px) {
 
