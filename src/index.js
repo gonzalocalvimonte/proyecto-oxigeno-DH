@@ -1,8 +1,8 @@
 const express = require("express");
 const server = express();
 const {join} = require("path");
-const port = process.env.PORT || 3000;
-const start = () => (console.log("Starting server..."));
+
+const {port, start} = require("./modules/server")
 server.listen(port, start());
 
 server.set('views', './src/views');
