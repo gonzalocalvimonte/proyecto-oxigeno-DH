@@ -22,3 +22,11 @@ Nos llevamos detalles para modificar e ir avanzando en::
 -Futuros avances de proximos sprint y funcionalidades.
 
 Por completar: división de carpetas.
+
+
+### Reunión 8/8
+
+Consolidamos estrategia para próximo sprint:
+
+-Unificar criterios desde el "vamos".
+-Realizar la división de carpetas en el momento de programar.
