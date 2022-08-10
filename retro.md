@@ -1,5 +1,7 @@
 # Retrospectiva
 
+
+##Sprint 2
 ### Aspectos positivos
 
 En el primer sprint, realizabamos reuniones que duraban mucho tiempo y 
@@ -15,3 +17,15 @@ evitar posibles conflictos en el codigo
 Nos costó organizarnos con el tiempo, ya que varios integrantes del grupo tuvieron complicaciones
 personales y laborales que les acortó el tiempo que podian dedicar a sus tareas dentro del proyecto
 y llegamos justo con la entrega del sprint.
+
+
+##Sprint 3
+
+### Aspectos positivos
+Tuvimos una mejora notoria en la organización. Distribuimos tareas desde el primer momento, para luego reorganizar y volver a distrubuir de acuerdo a las necesidades de cada caso puntual.
+
+Logramos consolidar el canal formal mediante Trello, Git, weeklies; sin perder la eficacia del canal informal de WhatsApp.
+
+### Aspectos negativos
+
+Tuvimos algunos inconvenientes técnicos en el uso de Pull y Push en github, logrando algunas sobreescrituras indecesadas. 
