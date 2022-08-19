@@ -1,0 +1,19 @@
+[
+  {},
+  {
+    "name": "cat yoda",
+    "price": 2000,
+    "description": "un gato yoda a la venta",
+    "category": "Remera",
+    "sku": null,
+    "image": "default.png"
+  },
+  {
+    "name": "cat yoda",
+    "price": 2000,
+    "description": "un gato yoda a la venta",
+    "category": "Remera",
+    "sku": 1,
+    "image": "default.png"
+  }
+]
