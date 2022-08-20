@@ -18,6 +18,7 @@ server.use(express.urlencoded({extended:true}))
 server.use(method('m'))
 
 server.use(require('./routes/products.routes'))
+server.use(require('./routes/users.routes'))
 
 server.get("/", (req, res) => res.render('index'));
 server.get("/login", (req, res) => res.render('login'));

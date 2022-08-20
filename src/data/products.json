@@ -15,5 +15,21 @@
     "category": "Remera",
     "sku": 1,
     "image": "default.png"
+  },
+  {
+    "name": "kayak",
+    "price": 150,
+    "description": "un kayak para andar en kayak",
+    "category": "Deportes acuaticos",
+    "sku": 2,
+    "image": "default.png"
+  },
+  {
+    "name": "salvavidas",
+    "price": 2,
+    "description": "un kayak para andar en kayak",
+    "category": "Deportes acuaticos",
+    "sku": 3,
+    "image": "default.png"
   }
 ]

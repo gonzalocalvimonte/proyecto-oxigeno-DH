@@ -1,0 +1,26 @@
+[
+  {
+    "sku": 0
+  },
+  {
+    "nombre": "Julian",
+    "apellido": "Lapido",
+    "email": "lapidojulian@gmail.com",
+    "contraseña": [
+      "40732041",
+      "40732041"
+    ],
+    "sku": 1,
+    "nacimiento": "2022-08-23",
+    "domicilio": "rivadavia 8981"
+  },
+  {
+    "nombre": "Julian",
+    "apellido": "fernanez",
+    "email": "lapid@gmail.com",
+    "contraseña": "789456",
+    "sku": 2,
+    "nacimiento": "2022-08-04",
+    "domicilio": "rivadavia 8981"
+  }
+]
