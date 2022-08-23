@@ -1,6 +1,10 @@
 # Weelies
 
+## Sprint 3
+
 ### Reunión 5/8
+
+## Sprint 3
 
 Nos juntamos durante 30min para ver avances parciales y coordinar siguientes pasos
 
@@ -30,3 +34,17 @@ Consolidamos estrategia para próximo sprint:
 
 -Unificar criterios desde el "vamos".
 -Realizar la división de carpetas en el momento de programar.
+
+
+## Sprint 4
+
+### Reunión 20/08
+
+Consolidamos criterios de ruteos para avanzar con creacion de productos y de usuarios.
+Queda firme el proceso.
+
+### Reunión 23/08
+
+Compartimos resultados hasta el momento.
+Re-distribución de tareas (editar y eliminar prodcutos + Listado de productos)
+Queeda agendada reunión para el 24/08 y revisión de resultados hasta el momento
