@@ -31,5 +31,13 @@
     "category": "Deportes acuaticos",
     "sku": 3,
     "image": "default.png"
+  },
+  {
+    "name": "Kayak",
+    "price": 150000,
+    "description": "kayak para el agua",
+    "category": "Deportes acuaticos",
+    "sku": 4,
+    "image": "default.png"
   }
 ]

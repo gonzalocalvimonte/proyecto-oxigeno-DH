@@ -22,5 +22,14 @@
     "sku": 2,
     "nacimiento": "2022-08-04",
     "domicilio": "rivadavia 8981"
+  },
+  {
+    "nombre": "pedro",
+    "apellido": "lopez",
+    "email": "plopez@oxigeno.com",
+    "contraseña": "123456",
+    "sku": 3,
+    "nacimiento": "2022-08-17",
+    "domicilio": "rivadavia 8981"
   }
 ]
