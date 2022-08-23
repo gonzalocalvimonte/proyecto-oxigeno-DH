@@ -2,9 +2,8 @@
 
 ## Sprint 3
 
-### Reunión 5/8
 
-## Sprint 3
+### Reunión 5/8
 
 Nos juntamos durante 30min para ver avances parciales y coordinar siguientes pasos
 
