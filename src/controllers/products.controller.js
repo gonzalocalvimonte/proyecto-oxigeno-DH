@@ -35,7 +35,7 @@ const controller = {
     },
     edit: (req, res) => {
         let product = one(req.params.id);
-        return res.render("products/edit", {product});
+        return res.render('products/edit', {product});
     },
     update: (req, res) => {
         let all = all();
@@ -45,9 +45,9 @@ const controller = {
                 product.price = parseInt(req.body.price);
                 product.description = req.body.description;
                 product.category = req.body.category;
-                //e.image (completar actualizacion de foto)
+                /* product.image = req.files && req.files.length > 0 ? req.files[0].filename : product.image */
             }
-            return product
+            return res.redirect('/products/detail');
         })
         write(update);
         return res.redirect("/products/");

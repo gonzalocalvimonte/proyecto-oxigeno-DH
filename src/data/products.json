@@ -5,15 +5,15 @@
     "description": "un gato yoda a la venta",
     "category": "Remera",
     "sku": null,
-    "image": "default.png"
+    "image": "salvavidas"
   },
   {
     "name": "cat yoda",
     "price": 2000,
-    "description": "un gato yoda a la venta",
+    "description": "un gato yoda a la venta es un gato muy gato que tiene espcaio en las palabras y no sabe escribir entonces yo lo ayudo a que pueda contar un poco de su vida diaria que come que toma que hace mientras no duerma su siesta numero45 del dia sabado a la ncohe cuando se va de parranda con su amigos gatunos que son de todos los colores y tamanios no tengo enie entonces pongo la enie de esa manera",
     "category": "Remera",
     "sku": 1,
-    "image": "default.png"
+    "image": "salvavidas-.png"
   },
   {
     "name": "kayak",
