@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../partials/head.ejs')  %> 
-    <link rel="stylesheet" href="/css/agregarProd.css">
+    <%- include('../partials/head.ejs')  %>
+    <link rel="stylesheet" href="css/edit.css"> 
 </head>
 <body>
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
     </header>
     
-    <main class="mainAddProd"> <!-- AGREGAR PARA CONSERVAR DATO PRECARGADO CON VALUE --> 
-        <form action="/products/save" class="formAddProd" method="/products/update?_m=PUT">
+    <main class="mainAddProd">
+        <form action="/products/update?m=PUT" class="formAddProd" method="post" enctype="multipart/form-data">
 
-            <span class="title-formAdd">Completar registro de producto nuevo</span>
+            <span class="title-formAdd">Editar datos del producto cargado</span>
 
-            <input type="hidden" name="sku">
+            <input type="hidden" name="sku" value="<%= product.sku %>">
 
-            <input type="text" placeholder="Nombre del Producto" name="name" required>
+            <input type="text" placeholder="Nombre del Producto" name="name" required value="<%= product.name %>">
 
-            <input type="number" placeholder="Precio" name="price" required>
+            <input type="number" placeholder="Precio" name="price" required value="<%= product.price%>">
 
-            <textarea name="description" placeholder="Descripcion"></textarea>
+            <textarea name="description" placeholder="Descripcion" value=""><%= product.description %></textarea>
             
             <select id="category" name="category" required>
                 <option value="null" disabled selected>Elegir una categoria</option>
-                <option value="Deportes acuaticos">Deportes acuaticos</option>
-                <option value="Remera">Remera</option>
-                <option value="Iluminacion">Iluminacion</option>
-                <option value="Fondeo y amarre">Fondeo y amarre</option>
-                <option value="Cocina">Cocina</option>
-                <option value="Indumentaria">Indumentaria</option>
-                <option value="Equipamiento">Equipamiento</option>
-            </select>
-
-            <select id="category" name="size">
-                <option value="null" disabled selected>Elegir talle si corresponde</option>
-                <option value="xs">XS</option>
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
+                <option value="Deportes acuaticos" <%= product.category == 'Deportes acuaticos' ? "selected" : "" %>>Deportes acuaticos</option>
+                <option value="Remera" <%= product.category == 'Remera' ? "selected" : "" %>>Remera</option>
+                <option value="Iluminacion" <%= product.category == 'Iluminacion' ? "selected" : "" %>>Iluminacion</option>
+                <option value="Fondeo y amarre" <%= product.category == 'Fondeo y amarre' ? "selected" : "" %>>Fondeo y amarre</option>
+                <option value="Cocina" <%= product.category == 'Cocina' ? "selected" : "" %>>Cocina</option>
+                <option value="Indumentaria" <%= product.category == 'Indumentaria' ? "selected" : "" %>>Indumentaria</option>
+                <option value="Equipamiento" <%= product.category == 'Equipamento' ? "selected" : "" %>>Equipamiento</option>
             </select>
 
             <div id="image-prod">
             <label  for="fotoProd">Selecionar foto del producto</label>
-            <input  type="file" name="fotoProducto" id="fotoProd">
+            <input  type="file" name="image" id="fotoProd">
             </div>
 
             <div id="button-add">
-            <button type="submit" class="button-add"> Agregar producto </button>
+            <button type="submit" class="button-add"> Guardar cambios </button>
             </div>
 
         </form>

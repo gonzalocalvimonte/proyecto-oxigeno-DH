@@ -1,0 +1,90 @@
+*{
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+}
+
+#main-detail-ejs{
+    margin: auto;
+    width: 60%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#imagen-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin: auto 0 auto 0;
+}
+
+#imagen-producto img{
+    height: 100%;
+    width: 60%;
+}
+
+
+
+.section-detalles-botones{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    background-color: rgb(237, 237, 237);
+    width: 60%;
+    height: auto;
+   
+}
+
+#detalles-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.detalle-precio,.detalle-descripcion{
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+}
+.detalle-nombre{
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.75rem;
+}
+
+#botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    
+}
+
+.boton-editar,.boton-eliminar{
+    padding: 0.25rem;
+    font-size: 1rem;
+}
+
+.boton-editar:hover{
+    background-color: var(--blue-2);
+}
+
+.boton-eliminar:hover{
+    background-color: var(--blue-2);
+}
