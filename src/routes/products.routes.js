@@ -21,15 +21,18 @@ const { diskStorage } = require('multer');
 const upload = multer({storage:multer.diskStorage({destination,filename})})
 
 //CRUD
+//Crud CREATE
+route.get("/create", upload.any(), controller.create);
+route.post("/save", controller.save);
+//cRud READ
+route.get('/', controller.index);
+route.get("/:category?", controller.index);
+route.get("/detail/:id", controller.detail);
+//crUd UPDATE
+route.get("/edit/:id", controller.edit);
+route.put("/update", controller.update)
+//cruD DELETE
+route.delete("/delete/:id", controller.delete)
 
-//C:Create
-//Products GET con controller index(para mostrar listado de productos)
-route.get('/products/list', controller.index);
-
-//Products/create GET con controller create(muestra formulario para agregar producto a la lista)
-route.get('/products/add',upload.any(), controller.create);
-
-//Productos POST con controller save(accion del formulario para guardar el producto creado a la lista de productos)
-route.post('/products/save', controller.save)
 
 module.exports = route

@@ -3,7 +3,12 @@ const {all,write,generate} = require('../models/users.models')
 
 
 const controller = {
-    
+  login: (req, res) => {
+    return res.render("user/login")
+  },
+  register: (req, res) => {
+    return res.render("user/register")
+  },
     // index: function(req,res){
        // let products = all();
        // if(req.params.categoria){
@@ -28,7 +33,7 @@ const controller = {
         let todos = all()
         todos.push(nuevo)
         write(todos)
-        return res.redirect('/login')
+        return res.redirect('login')
     }
 }
 

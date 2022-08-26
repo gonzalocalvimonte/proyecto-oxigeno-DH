@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head.ejs')  %> 
+    <%- include('../partials/head.ejs')  %> 
 </head>
 <body>
     <header id="header">
-        <%- include("./partials/header.ejs")  %> 
+        <%- include("../partials/header.ejs")  %> 
     </header>
     
     <main class="mainAddProd"> <!-- AGREGAR PARA CONSERVAR DATO PRECARGADO CON VALUE --> 
-        <form action="/products/save" class="formAddProd" method="post">
+        <form action="/products/save" class="formAddProd" method="/products/update?_m=PUT">
 
             <span class="title-formAdd">Completar registro de producto nuevo</span>
 
@@ -54,7 +54,7 @@
     </main>
     
     <footer id="footer">
-        <%- include("./partials/footer.ejs") %> 
+        <%- include("../partials/footer.ejs") %> 
     </footer>
 </body>
 </html>

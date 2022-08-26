@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head.ejs')  %> 
+    <%- include('../partials/head.ejs')  %> 
 </head>
 <body>
     <header id="header">
-        <%- include("./partials/header.ejs")  %> 
+        <%- include("../partials/header.ejs")  %> 
     </header>   
 
     <main id="login">
@@ -13,7 +13,7 @@
             <input class="in-log" type="text" name="usuairo" id="usuario" required placeholder="Email">
             <input class="in-log" type="password" placeholder="Contraseña" name="password" id="password" required>
             <a href="/">¿Olvidaste tu contraseña?</a>
-            <a class="register" href="/register">¿No tenes cuenta?</a>
+            <a class="register" href="/user/register">¿No tenes cuenta?</a>
             <div class="btn-ingresar">
                 <button class="btn-login" type="submit">Ingresar</button>
             </div>
@@ -21,7 +21,7 @@
     </main>
 
     <footer id="footer">
-        <%- include("./partials/footer.ejs") %> 
+        <%- include("../partials/footer.ejs") %> 
     </footer>
 </body>
 </html>
