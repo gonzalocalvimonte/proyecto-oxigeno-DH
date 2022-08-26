@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/agregarProd.css">
 </head>
 <body>
     <header id="header">
@@ -9,7 +10,7 @@
     </header>
     
     <main class="mainAddProd">
-        <form action="/products/save" class="formAddProd" method="post">
+        <form action="/products/update?_m=PUT" class="formAddProd" method="post">
 
             <span class="title-formAdd">Completar registro de producto nuevo</span>
 

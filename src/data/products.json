@@ -4,8 +4,8 @@
     "price": 2000,
     "description": "un gato yoda a la venta",
     "category": "Remera",
-    "sku": null,
-    "image": "default.png"
+    "sku": 0,
+    "image": "silvatoPorUno.jpg"
   },
   {
     "name": "cat yoda",
@@ -13,7 +13,7 @@
     "description": "un gato yoda a la venta",
     "category": "Remera",
     "sku": 1,
-    "image": "default.png"
+    "image": "silvatoPorUno.jpg"
   },
   {
     "name": "kayak",
@@ -21,7 +21,7 @@
     "description": "un kayak para andar en kayak",
     "category": "Deportes acuaticos",
     "sku": 2,
-    "image": "default.png"
+    "image": "kayak.png"
   },
   {
     "name": "salvavidas",
@@ -29,7 +29,7 @@
     "description": "un kayak para andar en kayak",
     "category": "Deportes acuaticos",
     "sku": 3,
-    "image": "default.png"
+    "image": "salvavidas-.png"
   },
   {
     "name": "Kayak",
@@ -37,6 +37,6 @@
     "description": "kayak para el agua",
     "category": "Deportes acuaticos",
     "sku": 4,
-    "image": "default.png"
+    "image": "kayak-2p.png"
   }
 ]

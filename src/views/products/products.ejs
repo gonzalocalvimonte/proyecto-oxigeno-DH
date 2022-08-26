@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/productList.css">
 </head>
 
 <body>
@@ -10,8 +11,17 @@
     </header>
 
 <!-- agregar modificacion (agregar producos para modificar (/productsEdit))  y eliminar (saca el producto /productList) -->
-    <main>
-        aca va la lista de productos, el parametro es: "products"
+    <main id="main-products">
+        <h2>Productos</h2>
+        <% if (products.length > 0) { %>
+            <ul class="product-list">
+                <% products.forEach(element => { %>
+                    <%- include("../partials/productlist.ejs", {element:element}) %> 
+                <% }) %>
+            </ul>
+            <% } else { %>
+            <h2>NO HAY PRODUCTOS</h2>
+        <% } %>
     </main>
 
     <footer id="footer">

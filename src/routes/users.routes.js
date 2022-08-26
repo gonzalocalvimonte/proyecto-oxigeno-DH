@@ -3,8 +3,6 @@ const route = Router()
 const controller = require('../controllers/user.controllers');
 
 
-
-
 // const destination = function(req,file,cb){
   //  let folder = resolve(__dirname, '..', '..', 'Uploads', 'products')
 

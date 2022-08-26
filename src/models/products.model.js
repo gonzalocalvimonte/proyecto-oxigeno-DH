@@ -1,5 +1,6 @@
 const {resolve} = require('path')
 const fs = require('fs')
+const { render } = require('ejs')
 
 let model = {
     all: function(){

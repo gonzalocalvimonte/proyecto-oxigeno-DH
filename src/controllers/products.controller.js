@@ -5,8 +5,8 @@ const {all,one,write,generate} = require('../models/products.model')
 const controller = {
     index: (req, res) =>{
         let products = all();
-        if(req.params.categoria){
-            products = products.filter(e => e.category == req.params.categoria);
+        if(req.params.category){
+            products = products.filter(e => e.category == req.params.category);
             return res.render('products/products',{products});
         }
         return res.render('products/products',{products});
