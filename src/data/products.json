@@ -2,41 +2,40 @@
   {
     "name": "cat yoda",
     "price": 2000,
-    "description": "un gato yoda a la venta",
-    "category": "Remera",
-    "sku": 0,
-    "image": "silvatoPorUno.jpg"
-  },
-  {
-    "name": "cat yoda",
-    "price": 2000,
     "description": "un gato yoda a la venta es un gato muy gato que tiene espcaio en las palabras y no sabe escribir entonces yo lo ayudo a que pueda contar un poco de su vida diaria que come que toma que hace mientras no duerma su siesta numero45 del dia sabado a la ncohe cuando se va de parranda con su amigos gatunos que son de todos los colores y tamanios no tengo enie entonces pongo la enie de esa manera",
     "category": "Remera",
     "sku": 1,
-    "image": "silvatoPorUno.jpg"
+    "image": "image-1661556112573.jpg"
   },
   {
-    "name": "kayak",
-    "price": 150,
-    "description": "un kayak para andar en kayak",
-    "category": "Deportes acuaticos",
-    "sku": 2,
-    "image": "kayak.png"
+    "name": "salvavidas redondo naranja",
+    "price": 4562325,
+    "description": "ajsdhasshfksd sddk djssk aks ks kaksadu ks ",
+    "category": "Equipamiento",
+    "sku": 11,
+    "image": "default.png"
   },
   {
-    "name": "salvavidas",
-    "price": 2,
-    "description": "un kayak para andar en kayak",
-    "category": "Deportes acuaticos",
-    "sku": 3,
-    "image": "salvavidas-.png"
+    "name": "salvavidas redondo ",
+    "price": 2500,
+    "description": "un salvavidas redonde para no ahogarse.. usalo por favor y comprame que quiero plata",
+    "category": "Equipamiento",
+    "sku": 12,
+    "image": "default.png"
   },
   {
-    "name": "Kayak",
-    "price": 150000,
-    "description": "kayak para el agua",
-    "category": "Deportes acuaticos",
-    "sku": 4,
-    "image": "kayak-2p.png"
+    "name": "cat yoda 2500 1link mega",
+    "price": 8000,
+    "description": "un cat yoda 4000 modelo viejo pero es lo que me queda",
+    "category": "Equipamiento",
+    "sku": 14,
+    "image": "image-1661553916398.jpg"
+  },
+  {
+    "name": "otyro cat yoda 9000",
+    "price": 25,
+    "description": "esta regalado llevatelo",
+    "sku": 15,
+    "image": "image-1661556168088.jpg"
   }
 ]

@@ -1,10 +1,12 @@
 const {Router} = require('express')
 const route = Router()
 const controller = require('../controllers/products.controller');
+const {resolve,extname} = require('path')
 
 //Multer
+const {existsSync,mkdirSync} = require('fs');
 const destination = function(req,file,cb){
-    let folder = resolve(__dirname, '..', '..', 'Uploads', 'products')
+    let folder = resolve(__dirname, '..', '..','public','images','Uploads','products')
 
     if(!existsSync(folder)){
         mkdirSync(folder)
@@ -18,21 +20,21 @@ const filename = function(req,file,cb){
 }
 const multer = require('multer');
 const { diskStorage } = require('multer');
-const upload = multer({storage:multer.diskStorage({destination,filename})})
+const upload = multer({storage:diskStorage({destination,filename})})
 
 //CRUD
 //Crud CREATE
-route.get("/create", upload.any(), controller.create);
-route.post("/save", controller.save);
+route.get("/create", controller.create);
+route.post("/save", upload.any(), controller.save);
 //cRud READ
 route.get('/', controller.index);
 route.get("/:category?", controller.index);
 route.get("/detail/:id", controller.detail);
 //crUd UPDATE
 route.get("/edit/:id", controller.edit);
-route.put("/update", controller.update)
+route.put("/update",upload.any(), controller.update)
 //cruD DELETE
-route.delete("/delete/:id", controller.delete)
+route.delete("/delete", controller.remove)
 
 
 module.exports = route

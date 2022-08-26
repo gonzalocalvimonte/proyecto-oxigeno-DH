@@ -29,8 +29,8 @@
              <a href="/products/edit/<%= product.sku %> ">Editar</a>
         </button>
         
-        <form action="/productos/borrar?m=DELETE" method="post">
-            <input type="hidden" name="sku" value="<%= product.sku %> ">
+        <form action="/products/delete?m=DELETE" method="post">
+            <input type="hidden" name="sku" value="<%=product.sku%>">
             <button type="submit" class="boton-eliminar">Borrar</button>
         </form>
         </article>
