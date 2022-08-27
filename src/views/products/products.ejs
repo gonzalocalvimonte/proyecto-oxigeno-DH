@@ -3,6 +3,7 @@
 <head>
     <%- include('../partials/head.ejs')  %> 
     <link rel="stylesheet" href="/css/productList.css">
+    <link rel="stylesheet" href="/css/cart.css">
 </head>
 
 <body>
@@ -14,11 +15,26 @@
     <main id="main-products">
         <h2>Productos</h2>
         <% if (products.length > 0) { %>
-            <ul class="product-list">
-                <% products.forEach(element => { %>
-                    <%- include("../partials/productlist.ejs", {element:element}) %> 
-                <% }) %>
-            </ul>
+            <section id="table">
+                <table>
+                    <tr>
+                        <th class="item">Nombre</th>
+                        <th class="total">Precio</th>
+                    <tr>
+           
+                    <% products.forEach(element => { %>
+                        <tr>
+                            <td class="item"><a href="/products/detail/<%= element.sku %> ">
+                                <%= element.name %> </a></td> 
+                            <td class="total"><a href="/products/detail/<%= element.sku %> "><%= element.price %> </a></td> 
+                        </tr>
+                        
+                    <% }) %>
+                 </table>
+                  
+            </section>
+           
+
             <% } else { %>
             <h2>NO HAY PRODUCTOS</h2>
         <% } %>
