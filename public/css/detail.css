@@ -9,6 +9,7 @@
 }
 
 #main-detail-ejs{
+   
     margin: auto;
     width: 60%;
     display:flex;
@@ -87,4 +88,54 @@
 
 .boton-eliminar:hover{
     background-color: var(--blue-2);
+}
+
+@media all and  (max-width: 768px){
+
+    #main-detail-ejs{
+        border: red solid;
+   
+        margin: 0;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    
+
+    #imagen-producto{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 1rem
+    }
+
+    #detalles-producto{
+
+        border: blue solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 100%;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+
+    #footer .categorias{
+        font-size: 1rem;
+    }
+    #footer h6{
+        font-size: 1rem;
+    }
+}
+@media all and  (min-width:1200px) {
+
 }
