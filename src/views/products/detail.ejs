@@ -12,11 +12,11 @@
 
     <main id="main-detail-ejs">
         <% if (product) { %>
-       <picture id="imagen-producto">
-        <img src="/images/Uploads/products/<%= product.image %> " alt="imagen del producto">
-       </picture>
+        <picture id="imagen-producto">
+            <img src="/images/Uploads/products/<%= product.image %> " alt="imagen del producto">
+        </picture>
 
-       <section class="section-detalles-botones">
+        <section class="section-detalles-botones">
         
         <article id="detalles-producto">
         <h2 class="detalle-nombre"><%= product.name%> </h2>
@@ -26,7 +26,7 @@
         
         <article id="botones">
         <button class="boton-editar">
-             <a href="/products/edit/<%= product.sku %> ">Editar</a>
+            <a href="/products/edit/<%= product.sku %> ">Editar</a>
         </button>
         
         <form action="/products/delete?m=DELETE" method="post">
@@ -37,11 +37,10 @@
 
         <% } else { %>
             <h2>
-               No se encontro un producto <a href="/productos">Volver</a>
+                No se encontro un producto <a href="/productos">Volver</a>
             </h2>
         </section>
-          <% } %>
-       
+        <% } %>
     </main>
 
     <footer id="footer">
