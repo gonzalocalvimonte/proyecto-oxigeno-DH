@@ -6,16 +6,8 @@ const {unlinkSync} = require('fs')
 const controller = {
     index: (req, res) =>{
         let products = all();
-        if(req.params.category){
-            products = products.filter(e => e.category == req.params.category);
-            return res.render('products/products',{products});
-        }
-        return res.render('products/products',{products});
-    },
-    category:(req, res) =>{
-        let products = all();
-        if(req.params.category){
-            products = products.filter(e => e.category == req.params.category);
+        if(req.query.category){
+            products = products.filter(e => e.category == req.query.category);
             return res.render('products/products',{products});
         }
         return res.render('products/products',{products});

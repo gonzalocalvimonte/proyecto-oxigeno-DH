@@ -28,7 +28,7 @@ route.get("/create", controller.create);
 route.post("/save", upload.any(), controller.save);
 //cRud READ
 route.get('/', controller.index);
-route.get("/:category?", controller.category);
+route.get("/:category?", controller.index);
 route.get("/detail/:id", controller.detail);
 //crUd UPDATE
 route.get("/edit/:id", controller.edit);
