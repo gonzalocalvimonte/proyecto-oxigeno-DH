@@ -12,6 +12,14 @@ const controller = {
         }
         return res.render('products/products',{products});
     },
+    category:(req, res) =>{
+        let products = all();
+        if(req.params.category){
+            products = products.filter(e => e.category == req.params.category);
+            return res.render('products/products',{products});
+        }
+        return res.render('products/products',{products});
+    },
     detail: (req, res) => {
         let product = one(req.params.id);
         if(product){
