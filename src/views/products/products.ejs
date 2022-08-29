@@ -13,6 +13,20 @@
 <!-- agregar modificacion (agregar producos para modificar (/productsEdit))  y eliminar (saca el producto /productList) -->
     <main id="main-products">
         <h2>Productos</h2>
+        <form action="/products/category"
+        method="get">
+            <select id="category" name="category" required>
+                <option value="null" disabled selected>Elegir una categoria</option>
+                <option value="Deportes acuaticos">Deportes acuaticos</option>
+                <option value="Remera">Remera</option>
+                <option value="Iluminacion">Iluminacion</option>
+                <option value="Fondeo y amarre">Fondeo y amarre</option>
+                <option value="Cocina">Cocina</option>
+                <option value="Indumentaria">Indumentaria</option>
+                <option value="Equipamiento">Equipamiento</option>
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
         <% if (products.length > 0) { %>
             <ul class="product-list">
                 <% products.forEach(element => { %>
