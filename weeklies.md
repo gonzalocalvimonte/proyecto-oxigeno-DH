@@ -1,4 +1,4 @@
-# Weelies
+# Weeklies
 
 ## Sprint 3
 
@@ -46,4 +46,9 @@ Queda firme el proceso.
 
 Compartimos resultados hasta el momento.
 Re-distribución de tareas (editar y eliminar prodcutos + Listado de productos)
-Queeda agendada reunión para el 24/08 y revisión de resultados hasta el momento
+Queda agendada reunión para el 24/08 y revisión de resultados hasta el momento
+
+### Reunión 28/08
+
+Se revisa opciones a modificar y mejorar.
+Se pacta cumplir con lo restante diviendo tareas para culminar detalles.
