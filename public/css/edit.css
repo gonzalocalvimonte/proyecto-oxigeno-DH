@@ -138,3 +138,29 @@
         width: 40%;
     }
 }
+
+@media all and  (max-width:430px) {
+
+    .title-formAdd{
+        align-items: center
+    };
+
+    .formAddProd{
+        width: 90%;
+    }
+    #image-prod{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    #image-prod label,input{
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+    .button-add{
+        width: 40%;
+    }
+}
