@@ -29,3 +29,17 @@ Logramos consolidar el canal formal mediante Trello, Git, weeklies; sin perder l
 ### Aspectos negativos
 
 Tuvimos algunos inconvenientes técnicos en el uso de Pull y Push en github, logrando algunas sobreescrituras indecesadas. 
+
+
+##Sprint 4
+
+### Aspectos positivos
+No dejamos trasitar el periodo para ejecutar, desde el primer momento comenzamos a mejorar verisones anteriores y a implementar nuevos requerimientos.
+
+Tuvimos un muy buen entendimiento de los conceptos, pudiendo desarrollar todas las consignas sin mmucha cantidad de errores.
+
+Hubo muy buena sinergia e equipo, logramos meets espontáneas entre colaboradores para solucionar dudas y avanzar en momentos concretos.
+
+### Aspectos negativos
+
+El inconveniente que tuvimos en este sprint fue no haber hecho un correcto seguimiento de las tareas asignadas y el avance de las mismas, provocando diferencias en los desarrollos individuales dentro del proyecto.
