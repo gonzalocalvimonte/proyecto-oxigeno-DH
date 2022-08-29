@@ -1,28 +1,11 @@
 [
   {
-<<<<<<< HEAD
     "name": "cat yoda",
     "price": 2000,
     "description": "un gato yoda a la venta es un gato muy gato que tiene espcaio en las palabras y no sabe escribir entonces yo lo ayudo a que pueda contar un poco de su vida diaria que come que toma que hace mientras no duerma su siesta numero45 del dia sabado a la ncohe cuando se va de parranda con su amigos gatunos que son de todos los colores y tamanios no tengo enie entonces pongo la enie de esa manera",
     "category": "Remera",
     "sku": 1,
     "image": "image-1661556112573.jpg"
-=======
-    "name": "salvavidas redondo naranja",
-    "price": 4562325,
-    "description": "ajsdhasshfksd sddk djssk aks ks kaksadu ks ",
-    "category": "Equipamiento",
-    "sku": 11,
-    "image": "default.png"
-  },
-  {
-    "name": "salvavidas redondo ",
-    "price": 2500,
-    "description": "un salvavidas redonde para no ahogarse.. usalo por favor y comprame que quiero plata",
-    "category": "Equipamiento",
-    "sku": 12,
-    "image": "default.png"
->>>>>>> 1b7e6f133afd8dc4b2d0abcd374f18ac101ed3c1
   },
   {
     "name": "cat yoda 2500 1link mega",
