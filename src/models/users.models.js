@@ -15,13 +15,14 @@ let model = {
         let all = model.all();
         let last = all.pop();
         let user = {}
+        user.sku = last.sku + 1
         user.nombre = data.nombre
         user.apellido = data.apellido 
         user.email = data.email
         user.contraseña = data.contraseña
-        user.sku = last.sku + 1
         user.nacimiento = data.nacimiento
         user.domicilio = data.domicilio
+        user.image = data.image
         return user
     },
     write: function(data){
