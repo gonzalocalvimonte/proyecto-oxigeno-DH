@@ -59,6 +59,7 @@
 .list-envio{
     font-size: .9rem;
 }
+
 @media all and (min-width:768px){
     .product-list{
         display: flex;

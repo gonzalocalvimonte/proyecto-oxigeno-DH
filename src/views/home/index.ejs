@@ -1,26 +1,23 @@
 <%- include('../partials/head.ejs')  %> 
 <link rel="stylesheet" href="/css/mainHome.css">
 
-<body>  
-            <header id="header">
-            <%- include("../partials/header.ejs")  %>
-            </header>
+<body>
+
+    <header id="header">
+        <%- include("../partials/header.ejs")  %>
+    </header>
       
     <main id="main">
-
-    <section id="main-section-1">    
-            <picture>
-                <img src="images/kayak.png" alt="kayak">
-                <section>
-                    <a href="/products"> ¡Ofertas! </a>
-                </section>
-            </picture>   
-    </section>
+   
+    <picture id="main-section-1">
+        <a href="/products">
+            <img src="images/fondoEditado.jpg" alt="kayak">
+        </a>
+    </picture>   
 
     <section id="main-section-2">
-        <article class="titles">
-            <h1>Más vendidos</h1>
-        </article>
+        
+        <h2 class="titles">Más vendidos</h2>
 
         <section class="section-productos">
 
@@ -65,9 +62,7 @@
 
         </section>
 
-        <article class="titles">
-            <h1>Últimos buscados</h1>
-        </article>
+        <h2 class="titles">Últimos buscados</h2>
 
         <section class="section-productos">
             
@@ -112,6 +107,7 @@
             </article>
 
         </section>
+        
     </section>
     </main>
 
