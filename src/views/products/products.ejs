@@ -10,20 +10,24 @@
         <%- include("../partials/header.ejs")  %> 
     </header>
 
-<!-- agregar modificacion (agregar producos para modificar (/productsEdit))  y eliminar (saca el producto /productList) -->
     <main id="main-products">
         <h2>Productos</h2>
         <form action="/products"
         method="get">
             <select id="category" name="category" required>
                 <option value="null" disabled selected>Elegir una categoria</option>
-                <option value="Deportes acuaticos">Deportes acuaticos</option>
-                <option value="Remera">Remera</option>
-                <option value="Iluminacion">Iluminacion</option>
-                <option value="Fondeo y amarre">Fondeo y amarre</option>
-                <option value="Cocina">Cocina</option>
-                <option value="Indumentaria">Indumentaria</option>
-                <option value="Equipamiento">Equipamiento</option>
+                <option value="Chalecos">Chalecos</option>
+                <option value="Juegos de amarre">Juegos de amarre</option>
+                <option value="Accesorios">Accesorios</option>
+                <option value="Linternas">Linternas</option>
+                <option value="Luces">Luces</option>
+                <option value="Faros">Faros</option>
+                <option value="Anclas">Anclas</option>
+                <option value="Cabos">Cabos</option>
+                <option value="Boyas">Boyas</option>
+                <option value="Conservadoras">Conservadoras</option>
+                <option value="Frigobares">Frigobares</option>
+                <option value="Anafes">Anafes</option>
             </select>
             <button type="submit">Filtrar</button>
         </form>

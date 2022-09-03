@@ -14,6 +14,7 @@
     justify-content: center;
     width: 100%;
     background-color: var(--grey);
+    margin: auto;
 }
 #main-products h2{
     width: 100%;
