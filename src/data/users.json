@@ -57,5 +57,23 @@
     "password": "adminoxigeno2022",
     "nacimiento": "1995-11-07",
     "domicilio": "Brandsen 805"
+  },
+  {
+    "id": 8,
+    "nombre": "Julian",
+    "apellido": "Lapido",
+    "email": "lapidojulian@gmail.com",
+    "password": "123456789",
+    "nacimiento": "2022-09-28",
+    "domicilio": "rivadavia 8981"
+  },
+  {
+    "id": 8,
+    "nombre": "Julian",
+    "apellido": "Lapido",
+    "email": "lapidojulian@gmail.com",
+    "password": "123456789",
+    "nacimiento": "2022-09-28",
+    "domicilio": "rivadavia 8981"
   }
 ]
