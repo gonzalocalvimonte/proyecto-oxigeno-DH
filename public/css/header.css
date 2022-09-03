@@ -9,7 +9,7 @@
 }
 
 #header{
-    background-color: var(--blue-3);
+    background-color: var(--blue-2);
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -50,12 +50,14 @@
     align-items: center;
     font-size: 1.5rem;
     order: 1;
-    color: var(--black);
     background-color: var(--blue-2);
     border: none;
     border-radius: 5px;
     padding: 3px;
     margin-left: 1rem;
+}
+#search a{
+    color: var(--white);
 }
 #search label{
     display: none;
@@ -66,7 +68,7 @@
     justify-content: center;
 }
 #nav i{
-    color: var(--black);
+    color: var(--white);
     font-size: 1.5rem;
     padding: .5rem;
     margin: 1rem;
@@ -109,6 +111,13 @@
     .submenu{
         margin: 0 1rem;
         font-weight: bold;
+    }
+    .submenu a{
+        color: var(--white);
+        letter-spacing: 1px;
+    }
+    .submenu a:hover{
+        color: var(--grey);
     }
 }
 @media all and  (min-width:1200px) {

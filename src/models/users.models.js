@@ -7,19 +7,19 @@ let model = {
         let data = fs.readFileSync(file)
         return JSON.parse(data)
     },
-    one: function(sku){
+    one: function(id){
         let all = model.all();
-        return all.find(e => e.sku == sku)
+        return all.find(e => e.id == id)
     },
     generate:function(data){
         let all = model.all();
         let last = all.pop();
         let user = {}
-        user.sku = last.sku + 1
+        user.id = last.id + 1
         user.nombre = data.nombre
         user.apellido = data.apellido 
         user.email = data.email
-        user.contraseña = data.contraseña
+        user.password = data.password
         user.nacimiento = data.nacimiento
         user.domicilio = data.domicilio
         user.image = data.image

@@ -20,6 +20,7 @@
     width: 100%;
     text-align: center;
     padding: 1rem;
+    color: var(--blue-2);
 }
 .product-list{
     display: flex;
@@ -36,13 +37,17 @@
     text-align: center;
     margin: 1rem;
     background-color: var(--white);
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 5px 0px rgb(100, 100, 100);
     border-radius: 5px;
 }
 
 .product article{
-    border-top: solid .5px var(--black);
+    background-color: var(--blue-2);
+    border-radius: 5px;
     margin: .5rem;
+}
+.product p{
+    color: var(--white);
 }
 .product picture img{
     margin: .5rem;
@@ -59,6 +64,10 @@
 }
 .list-envio{
     font-size: .9rem;
+}
+.product:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: -webkit-box-shadow .5s,-moz-box-shadow .5s;
 }
 
 @media all and (min-width:768px){
