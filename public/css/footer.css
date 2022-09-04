@@ -43,16 +43,20 @@
 #footer li{
     padding: 0.125rem;
 }
-#logo-whatsapp a i{
-    background-color: white;
-    padding: 0.75rem;
-    border-radius: 50%;
-    color: green;
+#logo-whatsapp a {
     position: fixed;
-    font-size: 2.5rem;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    right: 1rem;
+    
 }
+
+.logo-editar{
+
+    max-width: 8vw;
+
+}
+
+
 .categorias a{
     color: var(--white);
     font-size: 0.9rem;
@@ -68,3 +72,14 @@
 @media all and  (min-width:1200px) {
 
 }
+
+@media all and  (max-width:500px) {
+
+    .logo-editar{
+
+        max-width: 20vw;
+    
+    }
+
+}
+
