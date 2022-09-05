@@ -1,0 +1,60 @@
+
+*{
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+.whoMain{
+    box-sizing: border-box;
+    border-radius: red solid;
+}
+
+.logoWho{
+    box-sizing: border-box;
+
+}
+
+.seccion1Who{
+    box-sizing: border-box;
+    border-radius: violet solid;
+}
+
+.textoWho1{
+    box-sizing: border-box;
+}
+
+.fotoWho1{
+    box-sizing: border-box;
+}
+
+.seccion1¿2Who{
+    box-sizing: border-box;
+    border-radius: blue solid;
+}
+
+.textoWho2{
+    box-sizing: border-box;
+}
+
+.fotoWho2{
+    box-sizing: border-box;
+}
+
+.fotoWho3{
+    box-sizing: border-box;
+}
+
+
+
+
+
+
