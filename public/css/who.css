@@ -11,48 +11,101 @@
     padding: 0px;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+   
 }
 
 .whoMain{
-    box-sizing: border-box;
-    border-radius: red solid;
+    display: flex;
+    
+    background-color: #f2f2f2 ;
+        display: flex;
+        flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    
 }
 
 .logoWho{
+    border-top: 2rem;
     box-sizing: border-box;
-
+    width: 25vw
 }
 
 .seccion1Who{
-    box-sizing: border-box;
-    border-radius: violet solid;
+    flex-wrap: wrap ;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+    line-height: 3rem;
+    margin-top: 4rem;
+   
 }
 
 .textoWho1{
-    box-sizing: border-box;
+    font-size: 2rem;
+    width: 65vw;
 }
 
 .fotoWho1{
-    box-sizing: border-box;
+    width: 25vw;
 }
 
-.seccion1¿2Who{
-    box-sizing: border-box;
-    border-radius: blue solid;
+.seccion2Who{
+    flex-wrap: wrap ;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+    line-height: 3rem;
+    margin-top: 4rem;
+   
 }
 
 .textoWho2{
-    box-sizing: border-box;
+    font-size: 2rem;
+    width: 65vw;
 }
 
 .fotoWho2{
-    box-sizing: border-box;
+    width: 25vw;
 }
+
+
+
 
 .fotoWho3{
     box-sizing: border-box;
+    width: 75vw;
+    margin-top: 4rem;
 }
 
+
+@media all and (max-width:768px){
+
+    .textoWho2{
+        font-size: 1.5rem;
+        width: 85vw;
+    }
+
+    .textoWho1{
+        font-size: 1.5rem;
+        width: 85vw;
+    }
+
+    .fotoWho2{
+        display: none;
+    }
+
+    .fotoWho1{
+        display: none;
+    }
+    
+}
+@media all and (min-width:1200px){
+}
 
 
 
