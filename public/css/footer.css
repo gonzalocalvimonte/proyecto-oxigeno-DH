@@ -49,17 +49,19 @@
     right: 1rem;
     
 }
-
 .logo-editar{
-
     max-width: 8vw;
-
 }
-
-
 .categorias a{
     color: var(--white);
     font-size: 0.9rem;
+}
+.categorias a:hover{
+    background-color: var(--white);
+    color: var(--blue-2);
+    border-radius: 50px;
+    transition: .3s;
+    padding: 3px;
 }
 @media all and  (min-width: 768px){
     #footer .categorias{
