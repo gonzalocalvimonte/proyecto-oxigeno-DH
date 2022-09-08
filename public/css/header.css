@@ -122,18 +122,21 @@
         background-color: var(--white);
         color: var(--blue-2);
         border-radius: 50px;
-        transition: .3s;
+        transition: .75s;
         padding: 6px;
+        transition: .75s ;
     }
     .test:hover {
         background-color: var(--white);
         border-radius: 30px;
-        transition: .5s;
+        transition: .75s;
         padding: 1.5px;
     }
     #nav:hover  i{
         color: var(--blue-2);
+        transition: .75s;
     }
+
 }
 @media all and  (min-width:1200px) {
     #search{

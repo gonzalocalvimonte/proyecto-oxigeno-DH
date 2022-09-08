@@ -47,7 +47,6 @@
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    
 }
 .logo-editar{
     max-width: 6vw;
@@ -60,7 +59,7 @@
     background-color: var(--white);
     color: var(--blue-2);
     border-radius: 50px;
-    transition: .3s;
+    transition: .75s;
     padding: 3px;
 }
 @media all and  (min-width: 768px){
@@ -72,15 +71,11 @@
     }
 }
 @media all and  (min-width:1200px) {
-
 }
 
 @media all and  (max-width:500px) {
-
     .logo-editar{
-
         max-width: 20vw;
-    
     }
 
 }

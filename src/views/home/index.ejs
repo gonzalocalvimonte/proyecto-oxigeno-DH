@@ -1,114 +1,132 @@
 <%- include('../partials/head.ejs')  %> 
 <link rel="stylesheet" href="/css/mainHome.css">
-
+<link rel="stylesheet" href="/css/productlistHome.css">
 <body>
 
     <header id="header">
         <%- include("../partials/header.ejs")  %>
     </header>
-      
+
     <main id="main">
-   
-    <picture id="main-section-1">
-        <a href="/products">
-            <img src="images/fondoEditado.jpg" alt="kayak">
-        </a>
-    </picture>   
+        <picture id="main-section-1">
+            <a href="/products">
+                <img src="/images/banner/banner0000.png" alt="banner">
+            </a>
+        </picture>   
 
-    <section id="main-section-2">
-        
-        <h2 class="titles">Más vendidos</h2>
-
-        <section class="section-productos">
-
-            <section class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas-x4.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 15000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas x 4u</p>
-                </article>
-            </section>
-
-            <section class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidasConSilvato.jpg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 5000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas</p>
-                </article>
-            </section>
-
-            <section class="productos">
-                <picture>
-                    <a href="/products">
-                        <img src="images/salvavidas-x4.jpeg" alt="salvavidas">
-                    </a>
-                </picture>
-                <article>
-                    <p>$ 15000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas x 4u</p>
-                </article>
-            </section>
-
-        </section>
-
-        <h2 class="titles">Últimos buscados</h2>
-
-        <section class="section-productos">
+        <section id="main-section-2">
             
-
-            <article class="productos">
-                <picture>
+            <h2 class="titles">Más vendidos</h2>
+            <ul class="product-list">
+                <li class="product">
                     <a href="/products">
-                        <img src="images/salvavidasConSilvato.jpg" alt="salvavidas">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662154666608.png " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Chaleco Salvavidas</p>
+                            <p class="list-price"> $10000</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
                     </a>
-                </picture>
-                <article>
-                    <p>$ 5000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas</p>
-                </article>
-            </article>
+                </li>
 
-            <article class="productos">
-                <picture>
+                <li class="product">
                     <a href="/products">
-                        <img src="images/salvavidas-x4.jpeg" alt="salvavidas">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662156830868.png  " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Inflador Eléctrico</p>
+                            <p class="list-price"> $ 2500</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
                     </a>
-                </picture>
-                <article>
-                    <p>$ 15000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas x 4u</p>
-                </article>
-            </article>
+                </li>
 
-            <article class="productos">
-                <picture>
+                <li class="product">
                     <a href="/products">
-                        <img src="images/salvavidasConSilvato.jpg" alt="salvavidas">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662154948364.png " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Chaleco Salvavidas</p>
+                            <p class="list-price"> $ 10000</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
                     </a>
-                </picture>
-                <article>
-                    <p>$ 5000</p>
-                    <p class="p-envio">Envio gratis</p>
-                    <p>Salvavidas</p>
-                </article>
-            </article>
+                </li>
 
+                <li class="product">
+                    <a href="/products">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662154948364.png " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Chaleco Salvavidas</p>
+                            <p class="list-price"> $ 10000</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+
+            <h2 class="titles">Últimos buscados</h2>
+
+            <ul class="product-list">
+                <li class="product">
+                    <a href="/products">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662154666608.png " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Chaleco Salvavidas</p>
+                            <p class="list-price"> $10000</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
+                    </a>
+                </li>
+
+                <li class="product">
+                    <a href="/products">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662156830868.png  " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Inflador Eléctrico</p>
+                            <p class="list-price"> $ 2500</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
+                    </a>
+                </li>
+                
+                <li class="product">
+                    <a href="/products">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662154948364.png " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Chaleco Salvavidas</p>
+                            <p class="list-price"> $ 10000</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
+                    </a>
+                </li>
+
+                <li class="product">
+                    <a href="/products">
+                        <picture>
+                            <img src="/images/Uploads/products/image-1662154948364.png " alt="salvavidas">
+                        </picture>
+                        <article>
+                            <p class="list-name">Chaleco Salvavidas</p>
+                            <p class="list-price"> $ 10000</p>
+                            <p class="list-envio">Envio gratis</p>
+                        </article>
+                    </a>
+                </li>
+            </ul>
         </section>
-        
-    </section>
     </main>
 
     <footer id="footer">
