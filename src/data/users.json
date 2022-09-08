@@ -7,19 +7,9 @@
     "nombre": "matias",
     "apellido": "tolosa",
     "email": "matolox88@gmail.com",
-    "password": "$2a$10$jRPa0Gm4T8/tcgHff5qRSul9dx95DGq0EQFH6yui/V1cSfR2wJkiu",
-    "nacimiento": "2030-11-11",
+    "password": "$2a$10$lUxp4yFmc1IlebAFojtipuA7eLfUNk36TqyY131RhrmoqtcGqZyMy",
+    "nacimiento": "2020-02-15",
     "domicilio": "callao 2070",
-    "avatar": "avatar-1662667926928.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "matias",
-    "apellido": "tolosa",
-    "email": "matolox88@gmail.com",
-    "password": "$2a$10$ZiT4j7JTCiGiOp7EVCUUieVgSpEIcaGuS0J3AsxCUIGPwUjphoBUS",
-    "nacimiento": "2020-11-11",
-    "domicilio": "callao 2070",
-    "avatar": "avatar-1662669316296.jpeg"
+    "avatar": "default.png"
   }
 ]

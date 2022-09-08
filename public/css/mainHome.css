@@ -23,7 +23,7 @@
 #main-section-1{
     margin: auto;
     position: relative;
-    width: 85%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,12 +34,12 @@
     width: 100%;
 }
 #main-section-2{
-    width: 70%;
+    width: 100%;
     margin-bottom: 2rem;
     display: flex;
     flex-direction:column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
 }
 .section-productos{
     margin:auto;
@@ -54,107 +54,46 @@
 .titles{
     margin: 1rem 0 1rem 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     font-size: 1.5rem;
     color: var(--blue-2);
 }
-.productos{
-    width: 30%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 5px;
-    
-}
-.productos:hover{
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
-    transition: -webkit-box-shadow 1s,-moz-box-shadow 1s;
-}
-.productos picture{
-    width: 100%;
-    height: 75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: 0.0625rem solid var(--grey);
-}
-.productos picture img{
-    width: 80%;
-    height: 90%;
-}
-.productos article{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    text-align: left;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-}
-.productos article p{
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-.p-envio{
-    color: rgb(102, 208, 102);
-}
-@media all and  (min-width: 768px) and (max-width:1024px){
+@media all and (min-width:768px){
     main{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-    #main-section-1{
-        width: 90%;
-    }
-    #main-section-2{
-        width: 90%;
-    }
-    .productos{
-        width: 30%;
-    }
-}
-@media all and  (max-width:767px) {
-    main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    #main-section-1{
-        width: 90%;
-    }
-    #main-section-2{
-        width: 90%;
-    }
-    .productos{
-        width: 60%;
-        margin-top: 1rem;
-    }
-    .section-productos{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
     }
     .titles{
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        margin: 1rem;
+        display: flex;
         width: 100%;
         color: var(--blue-2);
+    }
+    #main-section-1{
+        width: 90%;
+    }
+    #main-section-2{
+        width: 90%;
+    }
+
+}
+@media all and (min-width:1200px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #main-section-1{
+        width: 90%;
+    }
+    #main-section-2{
+        width: 90%;
     }
 }

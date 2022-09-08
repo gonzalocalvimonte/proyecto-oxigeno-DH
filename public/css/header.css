@@ -14,6 +14,8 @@
     flex-wrap: wrap;
     align-items: start;
     width: 100%;
+    /*overflow: hidden;*/
+    /*position: fixed;*/
 }
 .top-header{
     display: flex;
@@ -110,15 +112,31 @@
     }
     .submenu{
         margin: 0 1rem;
-        font-weight: bold;
+        font-weight: 450;
     }
     .submenu a{
         color: var(--white);
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
     .submenu a:hover{
-        color: var(--grey);
+        background-color: var(--white);
+        color: var(--blue-2);
+        border-radius: 50px;
+        transition: .75s;
+        padding: 6px;
+        transition: .75s ;
     }
+    .test:hover {
+        background-color: var(--white);
+        border-radius: 30px;
+        transition: .75s;
+        padding: 1.5px;
+    }
+    #nav:hover  i{
+        color: var(--blue-2);
+        transition: .75s;
+    }
+
 }
 @media all and  (min-width:1200px) {
     #search{
