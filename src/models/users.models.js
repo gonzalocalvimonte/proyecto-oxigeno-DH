@@ -1,3 +1,4 @@
+const bcryptjs = require('bcryptjs');
 const {resolve} = require('path')
 const fs = require('fs')
 
@@ -19,12 +20,13 @@ let model = {
         user.nombre = data.nombre
         user.apellido = data.apellido 
         user.email = data.email
-        user.password = data.password
+        user.password = bcryptjs.hashSync(data.password, 10),
         user.nacimiento = data.nacimiento
         user.domicilio = data.domicilio
-        user.image = data.image
+        user.avatar = data.avatar
         return user
     },
+
     write: function(data){
         let file = resolve(__dirname,'../data','users.json')
         let json = JSON.stringify(data,null,2)

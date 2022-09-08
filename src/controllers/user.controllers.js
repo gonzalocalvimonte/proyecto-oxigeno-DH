@@ -9,6 +9,7 @@ const controller = {
   register: (req, res) => {
     return res.render("user/register")
   },
+
  /*  index: function(req,res){
    let products = all();
        if(req.params.categoria){
