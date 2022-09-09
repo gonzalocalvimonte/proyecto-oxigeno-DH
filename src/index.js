@@ -16,6 +16,11 @@ server.set("view engine", "ejs");
 server.use(statics(join(__dirname, "../public")));
 server.use(express.urlencoded({extended:true}));
 server.use(method('m'))
+
+// Middleware para rememberMe
+const rememberMe = require ('./middlewares/rememberme');
+server.use(rememberMe)
+
 //session
 server.use(session({
     secret:'proyecto-oxigeno',

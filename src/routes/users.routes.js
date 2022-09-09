@@ -13,6 +13,12 @@ const destination = function(req,file,cb){
     }
     return cb(null,folder)
 }
+// Middlewares para controlar rutas de usuario logueado o visitante no logueado
+const guestNotLogged = require ('../middlewares/guestNotLogged');
+const userLogged = require ('../middlewares/userLogged');
+
+// Middleware para registrar usuario recordado
+const rememberMe = require('../middlewares/rememberme')
 
 const filename = function(req,file,cb){
     let name = file.fieldname + '-' +  Date.now() + extname(file.originalname)
@@ -22,7 +28,7 @@ const multer = require('multer');
 const { diskStorage } = require('multer');
 const upload = multer({storage:diskStorage({destination,filename})})
 
-route.get('/login', controller.login);
+route.get('/login',userLogged, controller.login);
 route.get('/register', controller.register);
 route.post('/save',upload.any(), controller.save);
 route.post('/access',controller.access)

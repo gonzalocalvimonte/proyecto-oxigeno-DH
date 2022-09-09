@@ -1,9 +1,9 @@
 function userLogged(req, res, next){
-    /* poner la redirección que acordemos
+    
     if (req.session.user){
-        return (res.redirect('/'))
+        return (res.redirect('/user/profile'))
     }
-    */
+    
     next();
 }
 
