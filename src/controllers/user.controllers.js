@@ -10,15 +10,6 @@ const controller = {
     return res.render("user/register")
   },
 
- /*  index: function(req,res){
-   let products = all();
-       if(req.params.categoria){
-       products = products.filter(e => e.category == req.params.categoria)
-       return res.render('productsList',{products})
-        }
-    return res.render('productsList',{products})
-    }, */ 
-
     create:function(req,res){
         return res.render('register')
     },
@@ -42,11 +33,19 @@ const controller = {
       res.cookie('user', req.body.email,{maxAge: 1000 * 60 * 3});
       let list = all();
       req.session.user = list.find(user => user.email == req.body.email);
+
+      /* Recordarme */
+      if (req.body.rememberMe != undefined){
+          res.cookie('rememberMe', req.body.usuario,{maxAge: 1000 * 60 * 10})
+      }
+
       return res.render('home/indexOn')
   },
   logout:(req,res) => {
     delete req.session.user
-    res.cookie('user', null,{maxAge: -1});
+    
+    /* Destruir la cookie de recordar usuario*/
+    res.clearCookie('rememberMe');
     return res.redirect('/')
 }
 }
