@@ -32,7 +32,7 @@ const controller = {
     access:(req,res) => {
       res.cookie('user', req.body.email,{maxAge: 1000 * 60 * 3});
       let list = all();
-      req.session.user = list.find(user => user.email == req.body.email);
+      req.session.user = list.find(user => user.email == req.body.usuario);
 
       /* Recordarme */
       if (req.body.rememberMe != undefined){
