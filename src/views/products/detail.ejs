@@ -28,16 +28,18 @@
                 <a href="">Agregar</a> 
             </button>
         </div>
-        <article id="botones">
-        <button class="boton-editar">
-            <a href="/products/edit/<%= product.sku %> ">Editar</a>
-        </button>
-        
-        <form action="/products/delete?m=DELETE" method="post">
-            <input type="hidden" name="sku" value="<%=product.sku%>">
-            <button type="submit" class="boton-eliminar">Borrar</button>
-        </form>
-        </article>
+        <% if (user) { %>
+            <article id="botones">
+                <button class="boton-editar">
+                    <a href="/products/edit/<%= product.sku %> ">Editar</a>
+                </button>
+                <form action="/products/delete?m=DELETE" method="post">
+                    <input type="hidden" name="sku" value="<%=product.sku%>">
+                    <button type="submit" class="boton-eliminar">Borrar</button>
+                </form>
+                </article
+        <% } %>
+
 
         <% } else { %>
             <h2>

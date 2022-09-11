@@ -27,6 +27,7 @@ server.use(session({
     saveUninitialized:true,
 }))
 server.use(cookie());
+server.use(require("./middlewares/user"));
 //rutas
 server.use(require('./routes/home.routes'));
 server.use("/products", require('./routes/products.routes'));
