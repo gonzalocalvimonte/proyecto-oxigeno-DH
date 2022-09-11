@@ -38,12 +38,12 @@
     margin: 1rem;
     background-color: var(--white);
     box-shadow: 0px 0px 5px 0px rgb(100, 100, 100);
-    border-radius: 5px;
+    border-radius: 40px;
 }
 
 .product article{
-    background-color: var(--blue-2);
-    border-radius: 5px;
+    background-color: var(--blue-1);
+    border-radius: 40px;
     margin: .5rem;
 }
 .product p{
