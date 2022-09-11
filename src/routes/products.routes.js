@@ -2,6 +2,8 @@ const {Router} = require('express')
 const route = Router()
 const controller = require('../controllers/products.controller');
 const {resolve,extname} = require('path')
+const isLogged = require("../middlewares/userLogged")
+const isAdmin = require("../middlewares/userAdmin")
 
 //Multer
 const {existsSync,mkdirSync} = require('fs');
@@ -24,17 +26,17 @@ const upload = multer({storage:diskStorage({destination,filename})})
 
 //CRUD
 //Crud CREATE
-route.get("/create", controller.create);
+route.get("/create", isLogged, isAdmin, controller.create);
 route.post("/save", upload.any(), controller.save);
 //cRud READ
 route.get('/', controller.index);
 route.get("/:category?", controller.index);
 route.get("/detail/:id", controller.detail);
 //crUd UPDATE
-route.get("/edit/:id", controller.edit);
+route.get("/edit/:id", isLogged, isAdmin, controller.edit);
 route.put("/update",upload.any(), controller.update)
 //cruD DELETE
-route.delete("/delete", controller.remove)
+route.delete("/delete", isLogged, isAdmin, controller.remove)
 
 
 module.exports = route

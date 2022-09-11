@@ -1,7 +1,5 @@
 const {all,write,generate} = require('../models/users.models')
 
-
-
 const controller = {
   login: (req, res) => {
     return res.render("user/login")
@@ -39,11 +37,10 @@ const controller = {
           res.cookie('rememberMe', req.body.usuario,{maxAge: 1000 * 60 * 10})
       }
 
-      return res.render('home/indexOn')
+      return res.render('home')
   },
   logout:(req,res) => {
     delete req.session.user
-    
     /* Destruir la cookie de recordar usuario*/
     res.clearCookie('rememberMe');
     return res.redirect('/')

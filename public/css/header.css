@@ -133,7 +133,7 @@
         padding: 1.5px;
     }
     #nav:hover  i{
-        color: var(--blue-2);
+        color: var();
         transition: .75s;
     }
 

@@ -16,17 +16,17 @@ server.set("view engine", "ejs");
 server.use(statics(join(__dirname, "../public")));
 server.use(express.urlencoded({extended:true}));
 server.use(method('m'))
-
-// Middleware para rememberMe
+server.use(require("./middlewares/user"));
+//
 const rememberMe = require ('./middlewares/rememberme');
 server.use(rememberMe)
-
 //session
 server.use(session({
     secret:'proyecto-oxigeno',
-    resave:false,
+    resave:true,
     saveUninitialized:true,
 }))
+server.use(cookie());
 //rutas
 server.use(require('./routes/home.routes'));
 server.use("/products", require('./routes/products.routes'));

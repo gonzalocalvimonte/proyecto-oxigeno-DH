@@ -1,10 +1,9 @@
-function userLogged(req, res, next){
+const userLogged = (req, res, next) => {
     
-    if (req.session.user){
-        return (res.redirect('/user/profile'))
+    if (req.session && req.session.user){
+        return next()
     }
-    
-    next();
+    return res.redirect('/')
 }
 
 module.exports = userLogged;
