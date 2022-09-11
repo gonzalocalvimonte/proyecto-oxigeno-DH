@@ -9,7 +9,9 @@
 }
 
 #header{
-    background-color: var(--blue-2);
+    background: #67a0cc;
+background: -webkit-linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+background: linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -52,7 +54,7 @@
     align-items: center;
     font-size: 1.5rem;
     order: 1;
-    background-color: var(--blue-2);
+    background-color: var(--blue-1);
     border: none;
     border-radius: 5px;
     padding: 3px;
@@ -72,8 +74,8 @@
 #nav i{
     color: var(--white);
     font-size: 1.5rem;
-    padding: .5rem;
-    margin: 1rem;
+    padding: .3rem;
+    margin: .7rem;
 }
 #menu{
     display: none;
@@ -123,20 +125,39 @@
         color: var(--blue-2);
         border-radius: 50px;
         transition: .75s;
-        padding: 6px;
+        padding: 4px;
         transition: .75s ;
     }
-    .test:hover {
+    .user:hover {
         background-color: var(--white);
         border-radius: 30px;
         transition: .75s;
         padding: 1.5px;
     }
-    #nav:hover  i{
-        color: var();
+    .cart:hover {
+        background-color: var(--white);
+        border-radius: 30px;
+        transition: .75s;
+        padding: 1.5px;
+    }
+    .outtwo:hover {
+        background-color: var(--white);
+        border-radius: 30px;
+        transition: .75s;
+        padding: 1.5px;
+    }
+    #nav .user:hover .usertwo{
+        color: var(--blue-2);
         transition: .75s;
     }
-
+    #nav .cart:hover .carttwo{
+        color: var(--blue-2);
+        transition: .75s;
+    }
+    #nav .out:hover .outtwo{
+        color: var(--blue-2);
+        transition: .75s;
+    }
 }
 @media all and  (min-width:1200px) {
     #search{

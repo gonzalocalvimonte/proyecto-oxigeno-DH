@@ -58,7 +58,7 @@
     align-items: center;
     width: 100%;
     font-size: 1.5rem;
-    color: var(--blue-2);
+    color: var(--blue-1);
 }
 @media all and (min-width:768px){
     main{

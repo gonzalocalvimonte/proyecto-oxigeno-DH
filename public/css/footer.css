@@ -11,7 +11,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    background-color: var(--blue-2);
+    background: #0487d9;
+background: -webkit-linear-gradient(0deg, #0487d9 0%, #0487d9 70%, #67a0cc 100%);
+background: linear-gradient(0deg, #0487d9 0%, #0487d9 70%, #67a0cc 100%);
 }
 #footer .categorias{
     display: flex;

@@ -80,6 +80,29 @@
     
 }
 
+.btn-agregar{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.btn-agregar a{
+    color: var(--white);
+}
+.btn-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 2.5rem;
+    color: var(--white);
+    background-color: var(--blue-1);
+    border: none;
+    border-radius: 4px;   
+}
+.btn-add:hover{
+    background-color: var(--blue-2);
+}
+
 .boton-editar,.boton-eliminar{
     padding: 0.25rem;
     font-size: 1rem;
@@ -92,6 +115,7 @@
 .boton-eliminar:hover{
     background-color: var(--blue-2);
 }
+
 
 @media all and  (max-width: 768px){
 

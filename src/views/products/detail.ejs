@@ -23,7 +23,11 @@
         <p class="detalle-precio">$<%= product.price%> </p>
         <p class="detalle-descripcion"><%= product.description%> </p>
         </article>
-        
+        <div class="btn-agregar">
+            <button class="btn-add" type="submit">
+                <a href="">Agregar</a> 
+            </button>
+        </div>
         <article id="botones">
         <button class="boton-editar">
             <a href="/products/edit/<%= product.sku %> ">Editar</a>

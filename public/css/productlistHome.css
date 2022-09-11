@@ -20,7 +20,7 @@
     width: 100%;
     text-align: center;
     padding: 1rem;
-    color: var(--blue-2);
+    color: var(--blue-1);
 }
 .product-list{
     display: flex;
