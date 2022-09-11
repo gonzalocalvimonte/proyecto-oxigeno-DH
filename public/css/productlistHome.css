@@ -42,7 +42,9 @@
 }
 
 .product article{
-    background-color: var(--blue-1);
+    background: #67a0cc;
+    background: -webkit-linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+    background: linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
     border-radius: 40px;
     margin: .5rem;
 }

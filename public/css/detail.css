@@ -40,8 +40,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
-    background-color: rgb(237, 237, 237);
     width: 50%;
     height: auto;
 }
