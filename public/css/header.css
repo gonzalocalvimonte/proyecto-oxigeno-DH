@@ -147,7 +147,7 @@
         transition: .75s;
         padding: 1.5px;
     }
-    .outtwo:hover {
+    .out:hover {
         background-color: var(--white);
         border-radius: 30px;
         transition: .75s;

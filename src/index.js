@@ -17,9 +17,9 @@ server.use(statics(join(__dirname, "../public")));
 server.use(express.urlencoded({extended:true}));
 server.use(method('m'))
 server.use(require("./middlewares/user"));
-//
-const rememberMe = require ('./middlewares/rememberme');
-server.use(rememberMe)
+//Middleware
+// const rememberMe = require ('./middlewares/rememberme');
+// server.use(rememberMe)
 //session
 server.use(session({
     secret:'proyecto-oxigeno',
@@ -28,8 +28,6 @@ server.use(session({
 }))
 server.use(cookie());
 server.use(require("./middlewares/user"));
-// server.use(require("./middlewares/userLogged"));
-// server.use(require("./middlewares/userAdmin"));
 //rutas
 server.use(require('./routes/home.routes'));
 server.use("/products", require('./routes/products.routes'));
