@@ -14,7 +14,7 @@
         <ul id="nav">
                 <li class="test burger-menu"><a href="/"><i class="bars fa-solid fa-bars"></i> </a></li>
                 <% if (user) { %>
-                    <li class="test user"><a href="/user/profile"><i class="usertwo fa-solid fa-user"></i></a></li>
+                    <li class="test user"><a href="/user/profile"> <i class="usertwo fa-solid fa-user"></i></a></li>
                     <% } else { %>
                         <li class="test user"><a href="/user/login"><i class="usertwo fa-solid fa-user"></i></a></li>
                         <% } %>
@@ -31,7 +31,9 @@
             <li class="submenu"><a href="/who">¿Quiénes Somos?</a></li>
             <!-- <li class="submenu"><a href="/contact">Contacto</a></li> COMENTO POR CAMBIOS EN LA ESTRATEGIA-->
             <% if (user) { %>
-                <li class="submenu"><a href="/products/create">AgregarProd</a></li>
+                <% if (user.email.includes("o2admin")) { %>
+                    <li class="submenu"><a href="/products/create">AgregarProd</a></li>
+                <% } %>
             <% } %>
         </ul>
     </div>

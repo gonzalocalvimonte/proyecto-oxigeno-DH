@@ -28,6 +28,8 @@ server.use(session({
 }))
 server.use(cookie());
 server.use(require("./middlewares/user"));
+// server.use(require("./middlewares/userLogged"));
+// server.use(require("./middlewares/userAdmin"));
 //rutas
 server.use(require('./routes/home.routes'));
 server.use("/products", require('./routes/products.routes'));
