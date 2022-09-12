@@ -31,5 +31,25 @@
     "nacimiento": "1995-11-07",
     "domicilio": "prueba",
     "avatar": "default.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Julian",
+    "apellido": "Lapido",
+    "email": "lapidojulian@gmail.com",
+    "password": "$2a$10$ZBdFr6BhfHzZoKUCO.UQVerDO.pxtSvd3JvpdC.TeWvEZwsPkE1uu",
+    "nacimiento": "2022-09-06",
+    "domicilio": "rivadavia 8981",
+    "avatar": "avatar-1662941474388.jpeg"
+  },
+  {
+    "id": 5,
+    "nombre": "julian",
+    "apellido": "admin",
+    "email": "jadmin@o2admin.com",
+    "password": "$2a$10$/DlJNxtZzbdWy.vjLfYqiOnhwzwMphUnAjafsLDsF4NKDi0iw6oh.",
+    "nacimiento": "2022-09-29",
+    "domicilio": "rivadavia 8981",
+    "avatar": "avatar-1662941997264.jpeg"
   }
 ]

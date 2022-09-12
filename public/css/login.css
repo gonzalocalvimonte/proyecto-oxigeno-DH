@@ -56,6 +56,23 @@
 #login a:hover{
     color: #0022AA;
 }
+
+.registroBoton{
+    display: flex;
+   justify-content: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+
+    
+    
+}
+
+.register{
+    margin-right: 1rem;
+    
+}
+
+
 @media all and (min-width:768px){
     .form-log{
         max-width: 500px;
