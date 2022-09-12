@@ -77,15 +77,31 @@ delete:(req,res) => {
   let todos = all();
   let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
   write(noEliminados)
-  delete req.session.user
-  /* Destruir la cookie de recordar usuario*/
-  res.clearCookie('rememberMe');
-  return res.redirect('/')
+ 
+ if (user) { 
+    if (user.email.includes("o2admin")) {
+      let users = all();
+      return  res.render('user/usersList',{users});
+     } else {
+      delete req.session.user
+      /* Destruir la cookie de recordar usuario*/
+      res.clearCookie('rememberMe');
+      return res.redirect('/')
+     }
+ }
  
 },
 show:(req,res) => {
   let users = all();
   return res.render('user/usersList',{users});
+
+},
+detail: (req, res) => {
+  let user = one(req.params.id);
+  if(user){
+      return res.render("user/detailUser", {user})
+  }
+  return res.render("user/detailUser", {user:null});
 }
 }
 
