@@ -82,6 +82,10 @@ delete:(req,res) => {
   res.clearCookie('rememberMe');
   return res.redirect('/')
  
+},
+show:(req,res) => {
+  let users = all();
+  return res.render('user/usersList',{users});
 }
 }
 
