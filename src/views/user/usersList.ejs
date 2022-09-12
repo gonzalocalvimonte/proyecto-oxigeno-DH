@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')  %> 
-    
+    <link rel="stylesheet" href="/css/usersList.css">
 </head>
 
 <body>
@@ -10,10 +10,10 @@
         <%- include("../partials/header.ejs")  %> 
     </header>
 
-    <main id="register">
+    <main id="main-users">
         <h2>Usuarios Registrados</h2>
         <% if (users.length > 0) { %>
-            <ul class="product-list">
+            <ul class="user-list">
                 <% users.forEach(element => { %>
                     <%- include("../partials/user.ejs", {element:element}) %> 
                 <% }) %>
