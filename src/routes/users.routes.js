@@ -3,6 +3,7 @@ const route = Router()
 const controller = require('../controllers/user.controllers');
 const {resolve,extname} = require('path')
 const isLogged = require ('../middlewares/userLogged');
+const isAdmin = require ('../middlewares/userAdmin')
 
 //Multer
 const {existsSync,mkdirSync} = require('fs');
@@ -32,5 +33,6 @@ route.get('/profile', isLogged, controller.profile)
 route.get('/profile/edit/:id',isLogged,controller.edit)
 route.put('/update',upload.any(),controller.update)
 route.delete('/delete',controller.delete)
+route.get('/show',isLogged,isAdmin,controller.show)
 
 module.exports = route
