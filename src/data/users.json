@@ -23,16 +23,6 @@
     "avatar": "wosito.png"
   },
   {
-    "id": 3,
-    "nombre": "prueba",
-    "apellido": "prueba",
-    "email": "prueba@prueba.com",
-    "password": "$2a$10$WTQ/pirbZILHfCY75WiXC..3T53RReTI1bNaaa8.BlE5YoUWJLEmG",
-    "nacimiento": "1995-11-07",
-    "domicilio": "prueba",
-    "avatar": "default.png"
-  },
-  {
     "id": 4,
     "nombre": "Julian",
     "apellido": "Lapido",
