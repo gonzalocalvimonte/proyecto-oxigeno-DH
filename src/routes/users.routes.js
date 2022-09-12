@@ -29,5 +29,8 @@ route.post('/save',upload.any(), controller.save);
 route.post('/access',controller.access)
 route.get('/logout', controller.logout);
 route.get('/profile', isLogged, controller.profile)
+route.get('/profile/edit/:id',isLogged,controller.edit)
+route.put('/update',upload.any(),controller.update)
+route.delete('/delete',controller.delete)
 
 module.exports = route

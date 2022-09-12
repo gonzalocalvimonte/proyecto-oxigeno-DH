@@ -1,4 +1,7 @@
-const {all,write,generate} = require('../models/users.models')
+const {all,write,generate,one} = require('../models/users.models');
+const bcryptjs = require('bcryptjs');
+const {resolve} = require('path');
+const {unlinkSync} = require('fs');
 
 const controller = {
   login: (req, res) => {
@@ -43,6 +46,42 @@ const controller = {
     /* Destruir la cookie de recordar usuario*/
     res.clearCookie('rememberMe');
     return res.redirect('/')
+},
+edit:(req,res) => {
+  return res.render('user/editProfile')
+},
+update:(req,res) => {
+  let todos = all()
+        let update = todos.map(user => {
+            if (user.id == req.body.id){
+                user.nombre = req.body.nombre;
+                user.apellido = req.body.apellido;
+                user.email = req.body.email;
+                user.password = bcryptjs.hashSync(req.body.password, 10)
+                user.domicilio = req.body.domicilio;
+                user.nacimiento = req.body.nacimiento;
+                user.avatar = req.files && req.files.length > 0 ? req.files[0].filename : user.avatar
+            }
+            return user
+          })
+          write(update);
+          return res.redirect("/user/profile");
+        },
+          
+delete:(req,res) => {
+  let user = one(req.body.id)
+  if(user.avatar != 'default.png'){
+      let file = resolve(__dirname, '..','..','public','images','Uploads','users',user.avatar)
+      unlinkSync(file)
+  }
+  let todos = all();
+  let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
+  write(noEliminados)
+  delete req.session.user
+  /* Destruir la cookie de recordar usuario*/
+  res.clearCookie('rememberMe');
+  return res.redirect('/')
+ 
 }
 }
 

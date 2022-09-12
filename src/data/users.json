@@ -51,5 +51,15 @@
     "nacimiento": "2022-09-29",
     "domicilio": "rivadavia 8981",
     "avatar": "avatar-1662941997264.jpeg"
+  },
+  {
+    "id": 6,
+    "nombre": "gonza",
+    "apellido": "calvi",
+    "email": "gonza@o2admin",
+    "password": "$2a$10$Jpg8ZfQYUwF7YdgZRSoCyO1Z8zQUyPZ2cRH2vTWuTbLtEm7XajsUW",
+    "nacimiento": "1996-06-06",
+    "domicilio": "asdasdad 125",
+    "avatar": "default.png"
   }
 ]
