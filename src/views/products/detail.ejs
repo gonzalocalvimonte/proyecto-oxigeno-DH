@@ -29,27 +29,29 @@
             </button>
         </div>
         <% if (user) { %>
-            <article id="botones">
-                <button class="boton-editar">
-                    <a href="/products/edit/<%= product.sku %> ">Editar</a>
-                </button>
-                <form action="/products/delete?m=DELETE" method="post">
-                    <input type="hidden" name="sku" value="<%=product.sku%>">
-                    <button type="submit" class="boton-eliminar">Borrar</button>
-                </form>
-            </article>
-        <% } %>
+            <% if (user.email.includes("o2admin")) { %>
+                <article id="botones">
+                    <button class="boton-editar">
+                        <a href="/products/edit/<%= product.sku %> ">Editar</a>
+                    </button>
+                    <form action="/products/delete?m=DELETE" method="post">
+                        <input type="hidden" name="sku" value="<%=product.sku%>">
+                        <button type="submit" class="boton-eliminar">Borrar</button>
+                    </form>
+                </article>
+            <% } %>
 
+        <% } %>
 
         <% } else { %>
             <h2>
-                No se encontro un producto <a href="/productos">Volver</a>
+                No se encontro un producto <a href="/products">Volver</a>
             </h2>
         </section>
         <% } %>
     </main>
 
-   
+
 </body>
 <footer id="footer">
     <%- include("../partials/footer.ejs") %> 
