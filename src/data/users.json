@@ -1,9 +1,5 @@
 [
   {
-    "id": 0,
-    "avatar": "default.png"
-  },
-  {
     "id": 1,
     "nombre": "matias",
     "apellido": "tolosa",
