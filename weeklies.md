@@ -52,3 +52,18 @@ Queda agendada reunión para el 24/08 y revisión de resultados hasta el momento
 
 Se revisa opciones a modificar y mejorar.
 Se pacta cumplir con lo restante diviendo tareas para culminar detalles.
+
+## Sprint 5
+
+### Reunión 04/09
+
+División de tareas.
+
+### Reunión 08/09
+
+Adecuación en equipo de las tareas asignadas.
+Control de avances.
+
+### Reunión 11/09
+
+Detalles finales y conformación de entrega.

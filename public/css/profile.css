@@ -1,0 +1,100 @@
+*{
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+}
+
+#main-profile{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    width: 100%;
+    margin: auto;
+}
+
+.profile-avatar{
+    width: 70%;
+    max-width: 260px;
+    margin: .3rem auto ;
+}
+
+.profile-avatar img{
+    border: solid 2px var(--blue-1);
+    width: 100%;
+    border-radius: 60px;
+}
+
+.profile-description{
+    width: 100%;
+    max-width: 450px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    border: solid 2px var(--blue-1);
+    border-radius: 40px;
+}
+.profile-form{
+    margin: .5rem;
+}
+.edit-form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.delete-form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.profile-title{
+    font-size: 1.2rem;
+    margin: .2rem;
+    font-weight: bold;
+}
+
+.profile-title span{
+    font-weight: lighter;
+}
+
+.profile-form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 0.5rem;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;  
+}
+.edit-profile-btn{
+    background-color: var(--blue-1);
+}
+.delete-profile-btn{
+    background: rgba(189, 87, 87, 0.801);
+}
+@media all and (min-width: 768px){
+    .profile-avatar{
+        width: 40%;
+        max-width: 350px;
+        justify-content: flex-end;
+    }
+    .profile-description{
+        width: 40%;
+        max-width: 450px;
+        justify-content: flex-start;
+        text-align: start;
+        margin: auto;
+        padding: 2rem;
+    }
+    .profile-form button{
+        width: 15%;
+        max-width: 200px;
+        margin-top: 1rem;
+    }
+}

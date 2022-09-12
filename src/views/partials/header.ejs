@@ -1,3 +1,4 @@
+<!-- <link rel="stylesheet" href="/css/saludo.css"> -->
     <div class="top-header">
         <nav id="logo">
             <picture>
@@ -14,16 +15,14 @@
         <ul id="nav">
                 <li class="test burger-menu"><a href="/"><i class="bars fa-solid fa-bars"></i> </a></li>
                 <% if (user) { %>
-                    <li class="test user"><a href="/user/profile"><i class="usertwo fa-solid fa-user"></i></a></li>
+                    <li class="test user"><a href="/user/profile"> <img src="/images/Uploads/users/<%= user.avatar %> " alt=""></a></li>
                     <% } else { %>
                         <li class="test user"><a href="/user/login"><i class="usertwo fa-solid fa-user"></i></a></li>
                         <% } %>
                     <li class="test cart"><a href="/cart"><i class="carttwo fa-solid fa-cart-shopping"></i></a></li>
                 <% if (user) { %>
                     <li class="test out"><a href="/user/logout"><i class="outtwo fa-sharp fa-solid fa-right-from-bracket"></i></a></li>
-                <% } %>
-                
-                
+                <% } %>        
         </ul>
         <ul id="menu">
             <li class="submenu"><a href="/products">Productos</a></li>
@@ -31,7 +30,10 @@
             <li class="submenu"><a href="/who">¿Quiénes Somos?</a></li>
             <!-- <li class="submenu"><a href="/contact">Contacto</a></li> COMENTO POR CAMBIOS EN LA ESTRATEGIA-->
             <% if (user) { %>
-                <li class="submenu"><a href="/products/create">AgregarProd</a></li>
+                <% if (user.email.includes("o2admin")) { %>
+                    <li class="submenu"><a href="/products/create">AgregarProd</a></li>
+                    <li class="submenu"><a href="/user/show">ListaUsuarios</a></li>
+                <% } %>
             <% } %>
         </ul>
     </div>

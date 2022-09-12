@@ -11,6 +11,14 @@
         <picture id="main-section-1">
             <a href="/products">
                 <img src="/images/banner/banner1.png" alt="banner">
+                <div id="saludo">
+                    <p class="saludo">Bienvenido 
+                    <% if (user) { %>
+                        <%= user.nombre %> </p>
+                    <% } %>
+                    
+                </div>
+
             </a>
         </picture>   
 

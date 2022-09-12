@@ -1,8 +1,5 @@
 [
   {
-    "id": 0
-  },
-  {
     "id": 1,
     "nombre": "matias",
     "apellido": "tolosa",
@@ -17,20 +14,10 @@
     "nombre": "Franco ",
     "apellido": "Acosta",
     "email": "franco@o2admin",
-    "password": "$2a$10$3cBnc6G85B.zymWPTBlz2..bpcfSncBOqzAyTfGMWYaR5AUbBuuli",
+    "password": "$2a$10$x/E0k/Y9MrcopmpS/gjYu.qd7O72caCSHfEcJecSfMmFEtu2gK7Vu",
     "nacimiento": "1995-11-07",
     "domicilio": "Brandsen 805",
-    "avatar": "default.png"
-  },
-  {
-    "id": 3,
-    "nombre": "prueba",
-    "apellido": "prueba",
-    "email": "prueba@prueba.com",
-    "password": "$2a$10$WTQ/pirbZILHfCY75WiXC..3T53RReTI1bNaaa8.BlE5YoUWJLEmG",
-    "nacimiento": "1995-11-07",
-    "domicilio": "prueba",
-    "avatar": "default.png"
+    "avatar": "wosito.png"
   },
   {
     "id": 4,
@@ -51,5 +38,15 @@
     "nacimiento": "2022-09-29",
     "domicilio": "rivadavia 8981",
     "avatar": "avatar-1662941997264.jpeg"
+  },
+  {
+    "id": 6,
+    "nombre": "gonza",
+    "apellido": "calvi",
+    "email": "gonza@o2admin",
+    "password": "$2a$10$Jpg8ZfQYUwF7YdgZRSoCyO1Z8zQUyPZ2cRH2vTWuTbLtEm7XajsUW",
+    "nacimiento": "1996-06-06",
+    "domicilio": "asdasdad 125",
+    "avatar": "default.png"
   }
 ]

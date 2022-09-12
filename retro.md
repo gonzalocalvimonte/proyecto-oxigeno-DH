@@ -43,3 +43,16 @@ Hubo muy buena sinergia e equipo, logramos meets espontáneas entre colaboradore
 ### Aspectos negativos
 
 El inconveniente que tuvimos en este sprint fue no haber hecho un correcto seguimiento de las tareas asignadas y el avance de las mismas, provocando diferencias en los desarrollos individuales dentro del proyecto.
+
+
+##Sprint 5
+
+### Aspectos positivos
+Logramos poder participar en partes similares todos los integrantes del grupo.
+
+Logramos un entendimiento conjunto de las consignas y conceptos de este sprint.
+
+
+### Aspectos negativos
+
+Tuvimos commit muy distanciados en el tiempo, provocando que para solucionar inconvenientes estemoso hasta último momento. Nos queda por mejorar, la realización en tiempo y forma de la división de tareas.

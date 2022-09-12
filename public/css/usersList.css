@@ -1,0 +1,101 @@
+*{
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+}
+
+#main-users{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--grey);
+    margin: auto;
+}
+#main-users h2{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blue-2);
+}
+.user-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%; 
+    height: 70%;
+}
+.usuario{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px 0px rgb(100, 100, 100);
+    border-radius: 40px;
+}
+
+.usuario article{
+    background: #67a0cc;
+    background: -webkit-linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+    background: linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);;
+    border-radius: 40px;
+    margin: .5rem;
+}
+.usuario p{
+    color: var(--white);
+}
+.usuario picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.usuario picture img{
+    margin: .5rem;
+    width: 70%;
+    max-height: 400px;
+    max-width: 400px;
+    
+}
+.list-nombre{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.list-apeliido{
+    font-size: 1.1rem;
+}
+.list-email{
+    font-size: .9rem;
+}
+.product:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: -webkit-box-shadow .5s,-moz-box-shadow .5s;
+}
+
+@media all and (min-width:768px){
+    .user-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .usuario{
+        align-items: center;
+        width: 45%;
+    }
+    .usuario picture img{
+        min-height: 200px;
+    }
+}
+
+@media all and (min-width:1200px){
+    .usuario{
+        width: 25%;
+    }
+}

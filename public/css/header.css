@@ -75,7 +75,14 @@
     color: var(--white);
     font-size: 1.5rem;
     padding: .3rem;
-    margin: .7rem;
+    margin: auto .7rem;
+}
+.user img{
+    display: flex;
+    width: 27px;
+    height: 27px;
+    margin: auto .7rem;
+    border-radius: 50%;
 }
 #menu{
     display: none;
@@ -140,7 +147,7 @@
         transition: .75s;
         padding: 1.5px;
     }
-    .outtwo:hover {
+    .out:hover {
         background-color: var(--white);
         border-radius: 30px;
         transition: .75s;

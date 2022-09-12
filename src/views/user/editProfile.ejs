@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+
+    <main id="register">
+        <form class="form-reg" action="/user/update?m=PUT" method="post" enctype="multipart/form-data">
+    <span>Editar datos del usuario</span>
+    <input class="in-register" type="hidden" name="id" value="<%= user.id %> ">
+    <input class="in-register" type="text" name="nombre"  placeholder="Nombre" value="<%= user.nombre %>">
+    <input class="in-register" type="text" name="apellido"  placeholder="Apellido" value="<%= user.apellido%>">
+    <input class="in-register" type="text" name="email"  placeholder="email" value="<%= user.email%>">
+    <input class="in-register" type="text" name="domicilio"  placeholder="Domicilio" value="<%= user.domicilio%>">
+    <input class="in-register" type="file" name="avatar">
+    <div id="btn-enviar">
+        <button type="submit"class="btn-enviar">Guardar cambios</button>
+    </div>
+</form>
+</main>
+
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>

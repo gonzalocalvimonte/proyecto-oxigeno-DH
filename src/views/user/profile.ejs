@@ -2,15 +2,40 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')  %> 
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
     </header>   
+    
+    <main id="main-profile"> 
+        
+        <section class="profile-avatar">
+            <picture >
+                <img src="/images/Uploads/users/<%=user.avatar%>" alt="avatarDeUsuario">
+            </picture>
+        </section>
 
-    <main id="login">
-        <h1>PERFIL DEL USUARIO</h1>
+
+        <article class="profile-description">
+            <p class="" hidden ><%= user.id %></p>
+            <p class="profile-title">Nombre:  <span><%= user.nombre %></span> </p>
+            <p class="profile-title">Apellido:  <span><%= user.apellido %></span> </p>
+            <p class="profile-title">Email:  <span><%= user.email %></span>  </p>
+            <p class="profile-title">Domicilio:  <span><%= user.domicilio %></span></p>
+            <p class="profile-title">Fecha de nacimiento:  <span><%= user.nacimiento %></span>  </p>
+        </article>
+    
+    <form class="profile-form edit-form" action="/user/profile/edit/<%= user.id %> " method="get">
+        <button class="edit-profile-btn" type="submit">Editar perfil</button>
+    </form>
+    
+    <form class="profile-form delete-form" action="/user/delete?m=DELETE" method="post">
+        <input type="hidden" name="id" value="<%=user.id%>">
+        <button class="delete-profile-btn">Eliminar perfil</button>
+    </form>
+        
     </main>
 
     <footer id="footer">

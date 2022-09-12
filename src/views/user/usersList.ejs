@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/usersList.css">
+</head>
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+
+    <main id="main-users">
+        <h2>Usuarios Registrados</h2>
+        <% if (users.length > 0) { %>
+            <ul class="user-list">
+                <% users.forEach(element => { %>
+                    <%- include("../partials/user.ejs", {element:element}) %> 
+                <% }) %>
+            </ul>
+            <% } else { %>
+            <h2>NO HAY USUARIOS REGISTRADOS</h2>
+        <% } %>
+    </main>
+
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>
