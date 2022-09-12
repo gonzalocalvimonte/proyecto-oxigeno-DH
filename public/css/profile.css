@@ -17,30 +17,48 @@
 }
 
 .profile-avatar{
-    width: 250px;
-    height: 250px;
-    margin: auto;
+    width: 70%;
+    max-width: 260px;
+    margin: .3rem auto ;
 }
 
 .profile-avatar img{
+    border: solid 2px var(--blue-1);
     width: 100%;
-    border-radius: 40%;
+    border-radius: 60px;
 }
 
 .profile-description{
-    width: 40%;
+    width: 100%;
+    max-width: 450px;
+    justify-content: center;
+    text-align: center;
     margin: auto;
+    padding: 1rem;
+    border: solid 2px var(--blue-1);
+    border-radius: 40px;
 }
-
 .profile-form{
+    margin: .5rem;
+}
+.edit-form{
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: center;
 }
-
+.delete-form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .profile-title{
-    font-weight:400;
+    font-size: 1.2rem;
     margin: .2rem;
+    font-weight: bold;
+}
+
+.profile-title span{
+    font-weight: lighter;
 }
 
 .profile-form button{
@@ -50,8 +68,33 @@
     width: 25%;
     padding: 0.5rem;
     color: var(--white);
-    background-color: var(--blue-1);
     border: none;
     border-radius: 4px;
     cursor: pointer;  
+}
+.edit-profile-btn{
+    background-color: var(--blue-1);
+}
+.delete-profile-btn{
+    background: rgba(189, 87, 87, 0.801);
+}
+@media all and (min-width: 768px){
+    .profile-avatar{
+        width: 40%;
+        max-width: 350px;
+        justify-content: flex-end;
+    }
+    .profile-description{
+        width: 40%;
+        max-width: 450px;
+        justify-content: flex-start;
+        text-align: start;
+        margin: auto;
+        padding: 2rem;
+    }
+    .profile-form button{
+        width: 15%;
+        max-width: 200px;
+        margin-top: 1rem;
+    }
 }
