@@ -12,20 +12,20 @@
     <main id="">
         
         <picture>
-            <img src="/images/Uploads/users/<%=user.avatar%>" alt="avatarDeUsuario">
+            <img src="/images/Uploads/users/<%=usuario.avatar%>" alt="avatarDeUsuario">
         </picture>
 
         <article>
-            <p class=""><%= user.id %></p>
-            <p class="">Nombre: <%= user.nombre %></p>
-            <p class="">Apellido: <%= user.apellido %></p>
-            <p class="">Email: <%= user.email %> </p>
-            <p class="">Domicilio: <%= user.domicilio %> </p>
-            <p class="">Fecha de nacimiento: <%= user.nacimiento %> </p>
+            <p class=""><%= usuario.id %></p>
+            <p class="">Nombre: <%= usuario.nombre %></p>
+            <p class="">Apellido: <%= usuario.apellido %></p>
+            <p class="">Email: <%= usuario.email %> </p>
+            <p class="">Domicilio: <%= usuario.domicilio %> </p>
+            <p class="">Fecha de nacimiento: <%= usuario.nacimiento %> </p>
         </article>
     
     <form action="/user/delete?m=DELETE" method="post">
-        <input type="hidden" name="id" value="<%=user.id%>">
+        <input type="hidden" name="id" value="<%=usuario.id%>">
         <button>Eliminar perfil</button>
     </form>
         
