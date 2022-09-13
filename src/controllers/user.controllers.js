@@ -33,11 +33,13 @@ const controller = {
     access:(req,res) => {
       let list = all();
       req.session.user = list.find(user => user.email == req.body.usuario);
-
+      
       /* Recordarme */
+      
       if (req.body.rememberMe != undefined){
           res.cookie('rememberMe', req.body.usuario,{maxAge: 1000 * 60 * 10})
       }
+      
 
       return res.redirect('/')
   },
@@ -77,19 +79,9 @@ delete:(req,res) => {
   let todos = all();
   let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
   write(noEliminados)
- 
- if (user) { 
-    if (user.email.includes("o2admin")) {
-      let users = all();
-      return  res.render('user/usersList',{users});
-     } else {
-      delete req.session.user
-      /* Destruir la cookie de recordar usuario*/
-      res.clearCookie('rememberMe');
-      return res.redirect('/')
-     }
- }
- 
+  delete req.session.user
+  res.clearCookie('rememberMe');
+  return res.redirect('/')
 },
 show:(req,res) => {
   let users = all();
@@ -97,11 +89,11 @@ show:(req,res) => {
 
 },
 detail: (req, res) => {
-  let user = one(req.params.id);
-  if(user){
-      return res.render("user/detailUser", {user})
+  let usuario = one(req.params.id);
+  if(usuario){
+      return res.render("user/detailUser", {usuario})
   }
-  return res.render("user/detailUser", {user:null});
+  return res.render("user/detailUser", {usuario:null});
 }
 }
 
