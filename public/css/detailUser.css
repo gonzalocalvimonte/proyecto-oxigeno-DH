@@ -64,17 +64,14 @@
     align-items: center;
     width: 25%;
     padding: 0.5rem;
-    color: var(--white);
+    background: rgba(189, 87, 87, 0.801);
     border: none;
     border-radius: 4px;
     cursor: pointer;  
 }
 
-.delete-detailUser-btn{
-    background: rgba(189, 87, 87, 0.801);
-}
 
-.delete-detailUser-btn:hover{
+.detailUser-form button:hover{
     background: rgba(197, 57, 57, 0.801);
 }
 
