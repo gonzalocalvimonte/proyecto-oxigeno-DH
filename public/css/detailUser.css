@@ -9,27 +9,28 @@
     --white: #fff;
 }
 
-#main-profile{
+#main-detailUser{
     display: flex;
     flex-wrap: wrap;
     align-items: start;
     width: 100%;
     margin: auto;
+    
 }
 
-.profile-avatar{
+.profile-detailUser{
     width: 70%;
     max-width: 260px;
     margin: .3rem auto ;
 }
 
-.profile-avatar img{
+.profile-detailUser img{
     border: solid 2px var(--blue-1);
     width: 100%;
     border-radius: 60px;
 }
 
-.profile-description{
+.detailUser-description{
     width: 100%;
     max-width: 450px;
     justify-content: center;
@@ -39,30 +40,25 @@
     border: solid 2px var(--blue-1);
     border-radius: 40px;
 }
-.profile-form{
+.detailUser-form{
     margin: .5rem;
-}
-.edit-form{
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.delete-form{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.profile-title{
+
+
+.detailUser-title{
     font-size: 1.2rem;
     margin: .2rem;
     font-weight: bold;
 }
 
-.profile-title span{
+.detailUser-title span{
     font-weight: lighter;
 }
 
-.profile-form button{
+.detailUser-form button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,25 +69,22 @@
     border-radius: 4px;
     cursor: pointer;  
 }
-.edit-profile-btn{
-    background-color: var(--blue-1);
-}
-.delete-profile-btn{
+
+.delete-detailUser-btn{
     background: rgba(189, 87, 87, 0.801);
 }
-.edit-profile-btn:hover{
-    background-color: var(--blue-0);
-}
-.delete-profile-btn:hover{
+
+.delete-detailUser-btn:hover{
     background: rgba(197, 57, 57, 0.801);
 }
+
 @media all and (min-width: 768px){
-    .profile-avatar{
+    .profile-detailUser{
         width: 40%;
         max-width: 350px;
         justify-content: flex-end;
     }
-    .profile-description{
+    .detailUser-description{
         width: 40%;
         max-width: 450px;
         justify-content: flex-start;
@@ -99,7 +92,7 @@
         margin: auto;
         padding: 2rem;
     }
-    .profile-form button{
+    .detailUser-form button{
         width: 15%;
         max-width: 200px;
         margin-top: 1rem;

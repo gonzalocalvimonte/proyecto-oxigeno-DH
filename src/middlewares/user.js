@@ -12,7 +12,7 @@ const middleware = (req, res, next) => {
     if(req.session && req.session.user){
         user = req.session.user
     }
-    // console.log(user);
+    console.log(user);
     res.locals.user = user
     return next()
 }

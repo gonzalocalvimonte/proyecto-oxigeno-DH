@@ -2,30 +2,34 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')  %> 
-    <link rel="stylesheet" href="/css">
+    <link rel="stylesheet" href="/css/detailUser.css">
 </head>
 <body>
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
     </header>   
 
-    <main id="">
+    <main id="main-detailUser">
         
-        <picture>
-            <img src="/images/Uploads/users/<%=user.avatar%>" alt="avatarDeUsuario">
-        </picture>
 
-        <article>
-            <p class=""><%= user.id %></p>
-            <p class="">Nombre: <%= user.nombre %></p>
-            <p class="">Apellido: <%= user.apellido %></p>
-            <p class="">Email: <%= user.email %> </p>
-            <p class="">Domicilio: <%= user.domicilio %> </p>
-            <p class="">Fecha de nacimiento: <%= user.nacimiento %> </p>
+        <section class="profile-detailUser">
+        <picture>
+            <img src="/images/Uploads/users/<%=usuario.avatar%>" alt="avatarDeUsuario">
+        </picture>
+        </section>
+
+
+        <article class="detailUser-description">
+            <p class="" hidden><%= usuario.id %></p>
+            <p class="detailUser-title">Nombre: <%= usuario.nombre %></p>
+            <p class="detailUser-title">Apellido: <%= usuario.apellido %></p>
+            <p class="detailUser-title">Email: <%= usuario.email %> </p>
+            <p class="detailUser-title">Domicilio: <%= usuario.domicilio %> </p>
+            <p class="detailUser-title">Fecha de nacimiento: <%= usuario.nacimiento %> </p>
         </article>
     
-    <form action="/user/delete?m=DELETE" method="post">
-        <input type="hidden" name="id" value="<%=user.id%>">
+    <form class="detailUser-form" action="/user/delete?m=DELETE" method="post">
+        <input type="hidden" name="id" value="<%=usuario.id%>">
         <button>Eliminar perfil</button>
     </form>
         

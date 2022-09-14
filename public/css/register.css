@@ -1,4 +1,5 @@
 *{
+    --blue-0: #0061bb;
     --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
     --blue-2: #048abf;
     --blue-3: #79bed9;
@@ -12,6 +13,8 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
+    margin: auto;
+    width: 100%;
 }
 .form-reg{
     display: flex;
@@ -30,12 +33,12 @@
     margin: auto;
     width: 50%;
 }
-span{
+#register span{
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--gris);
+    color: var(--blue-1);
 }
 .tipo-usuario{
     text-align: center;
@@ -56,10 +59,11 @@ span{
     color: var(--white);
     background-color: var(--blue-1);
     border: none;
-    border-radius: 4px;   
+    border-radius: 4px;
+    cursor: pointer;   
 }
 .btn-enviar:hover{
-    background-color: var(--blue-1);
+    background-color: var(--blue-0);
 }
 @media all and (min-width:768px){
     .form-reg{
