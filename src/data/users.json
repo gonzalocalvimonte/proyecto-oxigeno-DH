@@ -48,6 +48,15 @@
     "nacimiento": "1996-06-06",
     "domicilio": "asdasdad 125",
     "avatar": "default.png"
+  },
+  {
+    "id": 7,
+    "nombre": "gonzalo",
+    "apellido": "calvimonte",
+    "email": "gonza@yahoo.com",
+    "password": "$2a$10$A5UXTR3.fQl.8/4fKKm5d./rpgmNUOYsdvpsqY.ihsINfQndMbp.C",
+    "nacimiento": "1993-07-06",
+    "domicilio": "asdasdasd 123",
+    "avatar": "avatar-1663166731992.webp"
   }
-  
 ]
