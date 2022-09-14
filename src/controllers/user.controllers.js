@@ -35,16 +35,17 @@ const controller = {
       req.session.user = list.find(user => user.email == req.body.usuario);
       
       /* Recordarme */
-      /* if (req.body.rememberMe != undefined){
+      if (req.body.rememberMe != undefined){
           res.cookie('rememberMe', req.body.usuario,{maxAge: 1000 * 60 * 10})
-      } */
+      
+        }
 
       return res.redirect('/')
   },
   logout:(req,res) => {
     delete req.session.user
     /* Destruir la cookie de recordar usuario*/
-   /*  res.clearCookie('rememberMe'); */
+    res.clearCookie('rememberMe');
     return res.redirect('/')
 },
 edit:(req,res) => {
