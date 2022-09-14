@@ -7,7 +7,12 @@
         <article>
             <p class="list-name"><%= element.name %></p>
             <p class="list-price">$ <%= element.price %></p>
-            <p class="list-envio">Envio gratis</p>
+            <p class="list-envio">
+            <% if (element.price > 6000) { %>
+            <p>Envio gratis</p>
+            <% } else { %>
+            <p>Consultar según CP</p>
+            <% } %> </p>
         </article>
     </a>
 </li>
