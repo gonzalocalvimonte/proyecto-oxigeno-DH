@@ -1,4 +1,4 @@
-const {all} = require('../models/users.models')
+/* const {all} = require('../models/users.models')
 
 function rememberMe(req, res, next){
 
@@ -10,4 +10,4 @@ function rememberMe(req, res, next){
     return next();
 }
 
-module.exports = rememberMe;
+module.exports = rememberMe; */
