@@ -58,5 +58,15 @@
     "nacimiento": "1993-07-06",
     "domicilio": "asdasdasd 123",
     "avatar": "avatar-1663166731992.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Franco",
+    "apellido": "Acosta",
+    "email": "francoaugustoacosta@gmail.com",
+    "password": "$2a$10$ur5DnxkkBGHAb/Rf.5nLROvCbSP5X4HLwban3b7bzmXWId7SLq6K6",
+    "nacimiento": "1995-11-07",
+    "domicilio": "Brandsen 805",
+    "avatar": "avatar-1663537156595.jpg"
   }
 ]

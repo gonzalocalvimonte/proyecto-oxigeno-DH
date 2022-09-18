@@ -3,15 +3,18 @@ const {resolve} = require('path')
 const fs = require('fs')
 
 let model = {
+    
     all: function(){
         let file = resolve(__dirname,'../data','users.json')
         let data = fs.readFileSync(file)
         return JSON.parse(data)
     },
+
     one: function(id){
         let all = model.all();
         return all.find(e => e.id == id)
     },
+
     generate:function(data){
         let all = model.all();
         let last = all.pop();

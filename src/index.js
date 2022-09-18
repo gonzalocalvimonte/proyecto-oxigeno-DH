@@ -16,10 +16,9 @@ server.set("view engine", "ejs");
 server.use(statics(join(__dirname, "../public")));
 server.use(express.urlencoded({extended:true}));
 server.use(method('m'))
-server.use(require("./middlewares/user"));
 //Middleware
- const rememberMe = require ('./middlewares/rememberme');
- server.use(rememberMe)
+const rememberMe = require ('./middlewares/rememberme');
+server.use(rememberMe)
 //session
 server.use(session({
     secret:'proyecto-oxigeno',

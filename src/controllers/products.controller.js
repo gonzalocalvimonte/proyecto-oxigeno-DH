@@ -4,6 +4,7 @@ const {unlinkSync} = require('fs')
 
 
 const controller = {
+
     index: (req, res) =>{
         let products = all();
         if(req.query.category){
@@ -12,6 +13,7 @@ const controller = {
         }
         return res.render('products/products',{products});
     },
+
     detail: (req, res) => {
         let product = one(req.params.id);
         if(product){
@@ -19,13 +21,15 @@ const controller = {
         }
         return res.render("products/detail", {product:null});
     },
+
     create: (req, res) =>{
         return res.render('products/create');
     },
+
     save: (req, res) =>{
         if(req.files && req.files.length > 0){
             req.body.image = req.files[0].filename
-        }else{
+        } else {
             req.body.image ='default.png'
         }
         let nuevo = generate(req.body)
@@ -34,10 +38,12 @@ const controller = {
         write(todos)
         return res.redirect('/products')
     },
+
     edit: (req, res) => {
         let product = one(req.params.id);
         return res.render('products/edit', {product});
     },
+
     update: (req, res) => {
         let todos = all()
         let update = todos.map(product => {
@@ -53,6 +59,7 @@ const controller = {
         write(update);
         return res.redirect("/products/detail/" + req.body.sku);
     },
+
     remove: (req, res) => {
         let product = one(req.body.sku)
         if(product.image != 'default.png'){

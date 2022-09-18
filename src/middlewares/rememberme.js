@@ -7,7 +7,6 @@ function rememberMe(req, res, next){
       req.session.user = list.find(user => user.email == req.cookies.rememberMe);
       console.log (req.cookies.rememberMe)
     } 
-
     return next();
 }
 
