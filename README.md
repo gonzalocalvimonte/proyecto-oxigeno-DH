@@ -67,3 +67,9 @@ https://www.canva.com/design/DAE_ALah1jM/Lnunu871XknvgrghDKgDhA/view?utm_content
 ## Tablero de trabajo
 
 https://trello.com/invite/b/Gd36Gcd4/b3cd367df2f596878fc581fa02ff4b7d/oxigeno-grupo-2
+
+
+
+## Diagrama Entidad Relación
+
+https://dbdiagram.io/d/63358a9e7b3d2034ffe86c01
