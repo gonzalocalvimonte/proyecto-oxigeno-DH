@@ -3,9 +3,9 @@ module.exports = function(sequelize, dataTypes  ) {
     
     let cols = {
         sku:{
-            type: dataTypes.INTEGRER,
+            type: dataTypes.INTEGER,
             primaryKEY: true,
-            autoIncrement: true,
+            //autoIncrement: true,
 
         },
         name:{
@@ -25,7 +25,7 @@ module.exports = function(sequelize, dataTypes  ) {
 
         },
         category:{
-            type: dataTypes.INTEGRER
+            type: dataTypes.INTEGER
 
         },
     }

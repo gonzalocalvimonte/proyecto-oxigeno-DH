@@ -1,0 +1,54 @@
+<%- include('../partials/head.ejs')  %> 
+<link rel="stylesheet" href="/css/agregarProd.css">
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+    
+    <main class="mainAddProd">
+        <form action="/products/save" class="formAddProd" method="post" enctype="multipart/form-data">
+
+            <span class="title-formAdd">Completar registro de producto nuevo</span>
+
+            <input type="hidden" name="sku">
+
+            <input type="text" placeholder="Nombre del Producto" name="name" required>
+
+            <input type="number" placeholder="Precio" name="price" required>
+
+            <textarea name="description" placeholder="Descripcion"></textarea>
+            
+            <select id="category" name="category" required>
+                <option value="null" disabled selected>Elegir una categoria</option>
+                <option value="Chalecos">Chalecos</option>
+                <option value="Juegos de amarre">Juegos de amarre</option>
+                <option value="Accesorios">Accesorios</option>
+                <option value="Linternas">Linternas</option>
+                <option value="Luces">Luces</option>
+                <option value="Faros">Faros</option>
+                <option value="Anclas">Anclas</option>
+                <option value="Cabos">Cabos</option>
+                <option value="Boyas">Boyas</option>
+                <option value="Conservadoras">Conservadoras</option>
+                <option value="Frigobares">Frigobares</option>
+                <option value="Anafes">Anafes</option>
+            </select>
+
+            <div id="image-prod">
+            <label  for="fotoProd">Selecionar foto del producto</label>
+            <input  type="file" name="image" id="fotoProd">
+            </div>
+
+            <div id="button-add">
+            <button type="submit" class="button-add"> Agregar producto </button>
+            </div>
+
+        </form>
+    </main>
+    
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>

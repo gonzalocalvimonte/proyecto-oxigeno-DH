@@ -3,11 +3,11 @@ module.exports = function(sequelize, dataTypes  ) {
     
     let cols = {
         cat_id:{
-            type: dataTypes.INTEGRER,
+            type: dataTypes.INTEGER,
             primaryKEY: true,
-            autoIncrement: true,
-
+            //autoIncrement: true,
         },
+        
         cat_name:{
             type: dataTypes.STRING
 
