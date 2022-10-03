@@ -25,7 +25,7 @@ use oxigeno_db;
 
 --
 
-INSERT INTO `categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
+INSERT INTO `categories` (`id`, `name`, `description`) VALUES
 (1, 'Chalecos', 'Chalecos'),
 (2, 'Juegos de amarre', 'Juegos de amarre'),
 (3, 'Accesorios', 'Accesorios'),
@@ -86,7 +86,7 @@ INSERT INTO `products` (`sku`, `name`, `price`, `description`, `image`, `categor
 
 --
 
-INSERT INTO `roles` (`rol_id`, `rol_nombre`) VALUES
+INSERT INTO `roles` (`id`, `nombre`) VALUES
 (1, 'superuser'),
 (2, 'administrador'),
 (3, 'cliente');
