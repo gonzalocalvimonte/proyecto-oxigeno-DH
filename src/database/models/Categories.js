@@ -2,18 +2,18 @@ module.exports = function(sequelize, dataTypes  ) {
     let alias = "categories"
     
     let cols = {
-        cat_id:{
+        id:{
             type: dataTypes.INTEGER,
-            primaryKEY: true,
+            primaryKey: true,
             //autoIncrement: true,
         },
         
-        cat_name:{
+        name:{
             type: dataTypes.STRING
 
         },
         
-        cat_descripcion:{
+        description:{
             type: dataTypes.TEXT
 
         },
@@ -40,4 +40,4 @@ module.exports = function(sequelize, dataTypes  ) {
     
 
     return categories;
-    }
+}

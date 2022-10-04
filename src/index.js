@@ -39,5 +39,5 @@ server.use("/products", require('./routes/products.routes'));
 server.use("/user", require('./routes/users.routes'));
 
 // Routes database
-const productsRouter = require('../src/routes/database/Products.routes')
-server.use('/databaseProducts', productsRouter);
+const productsRouter = require('./routes/database/Products.routes')
+server.use('/dbProducts', productsRouter);

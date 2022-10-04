@@ -4,7 +4,7 @@ module.exports = function(sequelize, dataTypes  ) {
     let cols = {
         sku:{
             type: dataTypes.INTEGER,
-            primaryKEY: true,
+            primaryKey: true,
             //autoIncrement: true,
 
         },
