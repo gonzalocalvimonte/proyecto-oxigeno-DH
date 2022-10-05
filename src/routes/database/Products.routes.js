@@ -6,6 +6,6 @@ const productsController = require('../../controllers/database/ProductsControlle
 //Creación
 router.get('/crear', productsController.create),
 
-router.get('/guardar', productsController.save),
+router.post('/guardar', productsController.save),
 
 module.exports = router;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+
+    <main id="main-detail-ejs">
+        <% if (product) { %>
+        <picture id="imagen-producto">
+            <img src="/images/Uploads/products/<%= product.image %> " alt="imagen del producto">
+        </picture>
+
+        <section class="section-detalles-botones">
+        
+        <article id="detalles-producto">
+        <h2 class="detalle-nombre"><%= product.name%> </h2>
+        <p class="detalle-precio">Precio del producto: $<%= product.price%> </p>
+        <p class="detalle-descripcion"><%= product.description%> </p>
+        </article>
+        
+        <article id="botones">
+        <button class="boton-editar">
+            <a href="/products/edit/<%= product.sku %> ">Editar</a>
+        </button>
+        
+        <form action="/products/delete?m=DELETE" method="post">
+            <input type="hidden" name="sku" value="<%=product.sku%>">
+            <button type="submit" class="boton-eliminar">Borrar</button>
+        </form>
+        </article>
+
+        <% } else { %>
+            <h2>
+                No se encontro un producto <a href="/productos">Volver</a>
+            </h2>
+        </section>
+        <% } %>
+    </main>
+
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>

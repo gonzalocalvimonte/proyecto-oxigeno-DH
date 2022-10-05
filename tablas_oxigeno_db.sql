@@ -5,9 +5,9 @@ create database oxigeno_db;
 use oxigeno_db;
 
 CREATE TABLE categories (
-  id int(10) UNSIGNED NOT NULL,
-  name varchar(50) DEFAULT NULL,
-  description varchar(256) DEFAULT NULL,
+  id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  name varchar(50) NOT NULL,
+  description varchar(256) NOT NULL,
   primary key(id)
 ) ;
 
@@ -17,7 +17,7 @@ CREATE TABLE products (
   price int(10) NOT NULL,
   description varchar(2048) NOT NULL,
   image varchar(128) NOT NULL,
-  category int(10) UNSIGNED Not NULL,
+  category int(10) UNSIGNED NOT NULL,
   primary key (sku),
   foreign key (category) references categories(id)
 ) ;

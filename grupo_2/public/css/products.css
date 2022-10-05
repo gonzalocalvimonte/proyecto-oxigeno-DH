@@ -1,0 +1,325 @@
+*{
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+    font-family: "Roboto", sans-serif;
+}
+.mainProducts{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.picturesProducts{
+    display: flex;
+    width: 90vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.blockBigPicturesProducts{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-around;
+}
+.navigationProducts{
+    display: flex;
+    width: 90vw;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0rem 0.8rem 0.8rem 0.8rem ;
+}
+.bigPicturesProducts{
+    width: 90%;
+    height: 80%;
+    /*margin:  1.875rem 1.875rem 0rem 1.875rem;*/
+    border: solid f2f2f2;
+}
+.navigationProductsLittles{
+    width: 20%;
+    height: 100%;
+}
+/************************************** DIVISION *********************************/
+.descriptionProducts{
+    display: flex;
+    width: 90vw;
+    /*padding: 2.5rem;*/
+}
+.descriptionProductsList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.descriptionCategory{
+    text-align: justify;
+    font-size: 1.2rem;
+    font-style: italic;
+    color:#79bed9
+}
+.descriptionTitle{
+    
+    /*line-height: 3.75rem;*/
+    font-weight: bolder;
+    font-size: 1.875rem;
+    margin-top: 3rem;
+    color:#0487d9
+}
+.descriptionPrice{
+    text-align: justify;
+    margin-top: 3rem;
+    font-weight: bolder;
+    font-size: 1.875rem;
+}
+.descriptionDescription{
+    margin-top: 3rem;
+    font-size: 1.3rem;
+}
+.descriptionDecriptionTitle{
+    text-align: justify;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-style: oblique;
+}
+.descriptionItem{
+    text-align: justify;
+    margin-bottom: 1rem;
+    list-style: circle;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-style: oblique;
+}
+.addCart{
+    display: flex;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        background-color: #0487d9;
+        justify-content: center;
+        align-items: center;
+        padding: 0.25rem 1.25rem 0.25rem 1.25rem;
+        border-radius: 0.75rem;
+        color: white;
+        font-size: 1.1rem;
+        font-style: bold;
+}
+@media all and  (min-width: 768px){
+
+    .mainProducts{
+    
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        
+    }
+    .picturesProducts{
+        display: flex;
+        width: 40vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    
+    .blockBigPicturesProducts{
+        
+        display: flex;
+        align-items: center;
+        width: 40vw;
+        /*justify-content: space-around;*/
+    
+    }
+    
+    .navigationProducts{
+        
+        display: flex;
+        width: 40vw;
+        height: 40hw;
+        align-items: flex-end;
+        justify-content: space-around;
+        padding: 0rem 0.8rem 0.8rem 0.8rem ;
+    }
+    .bigPicturesProducts{
+        width: 90%;
+        height: 80%;
+        /*margin:  1.875rem 1.875rem 0rem 1.875rem;*/
+        border: solid f2f2f2;
+    }
+    .navigationProductsLittles{
+        width: 20%;
+        height: 90%;
+    }
+    /************************************** DIVISION *********************************/
+    .descriptionProducts{
+        display: flex;
+        width: 40vw;
+        /*padding: 2.5rem;*/
+    }
+    .descriptionProductsList{
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .descriptionCategory{
+        text-align: justify;
+        font-size: 1.2rem;
+        font-style: italic;
+        color:#79bed9
+    }
+    .descriptionTitle{
+        text-align: justify;
+        /*line-height: 3.75rem;*/
+        font-weight: bolder;
+        font-size: 1.875rem;
+        margin-top: 3rem;
+        color:#0487d9
+    }
+    .descriptionPrice{
+        text-align: justify;
+        margin-top: 3rem;
+        font-weight: bolder;
+        font-size: 1.875rem;
+    }
+    .descriptionDescription{
+        text-align: justify;
+        margin-top: 3rem;
+        font-size: 1.3rem;
+    }
+    .descriptionDecriptionTitle{
+        text-align: justify;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        font-style: oblique;
+    }
+    .descriptionItem{
+        text-align: justify;
+        margin-bottom: 1rem;
+        list-style: circle;
+        margin-left: 1rem;
+        font-size: 1.1rem;
+        font-style: oblique;
+    }
+    .addCart{
+        display: flex;
+        text-align: center;
+        margin-top: 3rem;
+        background-color: #0487d9;
+        justify-content: center;
+        padding: 0.25rem 1.25rem 0.25rem 1.25rem;
+        border-radius: 0.75rem;
+        color: white;
+        font-size: 1.1rem;
+        font-style: bold;
+    }
+}
+
+@media all and  (min-width:1200px) {
+    .mainProducts{
+        display: flex;
+        justify-content: space-around;
+    }
+    .picturesProducts{
+        display: flex;
+        width: 40vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .blockBigPicturesProducts{
+        display: flex;
+        align-items: center;
+        width: 40vw;
+        justify-content: space-around;
+    }
+    
+    .navigationProducts{
+        display: flex;
+        width: 40vw;
+        align-items: flex-end;
+        justify-content: space-around;
+        padding: 0rem 0.8rem 0.8rem 0.8rem ;
+    }
+    .bigPicturesProducts{
+        width: 90%;
+        height: 80%;
+        /*margin:  1.875rem 1.875rem 0rem 1.875rem;*/
+        border: solid f2f2f2;
+    }
+    .navigationProductsLittles{
+        width: 20%;
+        height: 100%;
+    }
+    /************************************** DIVISION *********************************/
+    .descriptionProducts{
+        display: flex;
+        width: 40vw;
+        /*padding: 2.5rem;*/
+    }
+    .descriptionProductsList{
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .descriptionCategory{
+        text-align: justify;
+        font-size: 1.2rem;
+        font-style: italic;
+        color:#79bed9
+    }
+    
+    .descriptionTitle{
+        text-align: justify;
+        /*line-height: 3.75rem;*/
+        font-weight: bolder;
+        font-size: 1.875rem;
+        margin-top: 3rem;
+        color:#0487d9
+    }
+    
+    .descriptionPrice{
+        text-align: justify;
+        margin-top: 3rem;
+        font-weight: bolder;
+        font-size: 1.875rem;
+    }
+    .descriptionDescription{
+        text-align: justify;
+        margin-top: 3rem;
+        font-size: 1.3rem;
+    }
+    .descriptionDecriptionTitle{
+        text-align: justify;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        font-style: oblique;
+    }
+    .descriptionItem{
+        text-align: justify;
+        margin-bottom: 1rem;
+        list-style: circle;
+        margin-left: 1rem;
+        font-size: 1.1rem;
+        font-style: oblique;
+    }
+    .addCart{
+        display: flex;
+        text-align: center;
+        margin-top: 3rem;
+        background-color: #0487d9;
+        justify-content: center;
+        padding: 0.25rem 1.25rem 0.25rem 1.25rem;
+        border-radius: 0.75rem;
+        color: white;
+        font-size: 1.1rem;
+        font-style: bold;
+    }
+}
+
+

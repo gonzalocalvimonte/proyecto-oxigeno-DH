@@ -1,0 +1,70 @@
+[
+  {
+    "id": 0
+  },
+  {
+    "nombre": "Julian",
+    "apellido": "Lapido",
+    "email": "lapidojulian@gmail.com",
+    "password": [
+      "40732041",
+      "40732041"
+    ],
+    "id": 1,
+    "nacimiento": "2022-08-23",
+    "domicilio": "rivadavia 8981"
+  },
+  {
+    "id": 2,
+    "nombre": "Julian",
+    "apellido": "fernanez",
+    "email": "lapid@gmail.com",
+    "password": "789456",
+    "nacimiento": "2022-08-04",
+    "domicilio": "rivadavia 8981"
+  },
+  {
+    "id": 3,
+    "nombre": "pedro",
+    "apellido": "lopez",
+    "email": "plopez@oxigeno.com",
+    "password": "123456",
+    "nacimiento": "2022-08-17",
+    "domicilio": "rivadavia 8981"
+  },
+  {
+    "id": 4,
+    "nombre": "Gonzalo",
+    "apellido": "Calvimonte",
+    "email": "gonzalocalvimonte@gmail.com",
+    "nacimiento": "0456-03-12",
+    "domicilio": "asdasd 123"
+  },
+  {
+    "id": 5,
+    "nombre": "Gonzalo",
+    "apellido": "Calvimonte",
+    "email": "gonzalocalvimonte@gmail.com",
+    "password": "123456",
+    "nacimiento": "1998-12-06",
+    "domicilio": "asdasd 1234"
+  },
+  {
+    "id": 7,
+    "nombre": "Franco ",
+    "apellido": "Acosta",
+    "email": "francoaugustoacosta@gmail.com",
+    "password": "adminoxigeno2022",
+    "nacimiento": "1995-11-07",
+    "domicilio": "Brandsen 805"
+  },
+  {
+    "id": 8,
+    "nombre": "matias",
+    "apellido": "tolosa",
+    "email": "matolox88@gmail.com",
+    "password": "Otorrinonalingologia3",
+    "nacimiento": "2000-10-10",
+    "domicilio": "callao 2070"
+  }
+]

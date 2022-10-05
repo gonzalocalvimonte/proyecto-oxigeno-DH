@@ -1,0 +1,28 @@
+<%- include('../partials/head.ejs')  %> 
+<link rel="stylesheet" href="/css/agregarProd.css">
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+    
+    <main class="mainAddProd">
+        <form action="/dbCategory/guardado" class="formAddProd" method="POST" enctype="multipart/form-data">
+
+            <span class="title-formAdd">Completar registro de categoria nueva</span>
+
+            <input type="text" placeholder="Nombre de la categoria" name="category" required>
+
+            <input name="description" placeholder="Descripcion">
+
+            <div id="button-add">
+            <button type="submit" class="button-add"> Agregar categoria </button>
+            </div>
+
+        </form>
+    </main>
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>

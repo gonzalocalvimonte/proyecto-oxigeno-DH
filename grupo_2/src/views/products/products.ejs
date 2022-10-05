@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %> 
+    <link rel="stylesheet" href="/css/productList.css">
+</head>
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+
+    <main id="main-products">
+        <h2>Productos</h2>
+        <form action="/products"
+        method="get">
+            <select id="category" name="category" required>
+                <option value="null" disabled selected>Elegir una categoria</option>
+                <option value="Chalecos">Chalecos</option>
+                <option value="Juegos de amarre">Juegos de amarre</option>
+                <option value="Accesorios">Accesorios</option>
+                <option value="Linternas">Linternas</option>
+                <option value="Luces">Luces</option>
+                <option value="Faros">Faros</option>
+                <option value="Anclas">Anclas</option>
+                <option value="Cabos">Cabos</option>
+                <option value="Boyas">Boyas</option>
+                <option value="Conservadoras">Conservadoras</option>
+                <option value="Frigobares">Frigobares</option>
+                <option value="Anafes">Anafes</option>
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
+        <% if (products.length > 0) { %>
+            <ul class="product-list">
+                <% products.forEach(element => { %>
+                    <%- include("../partials/productlist.ejs", {element:element}) %> 
+                <% }) %>
+            </ul>
+            <% } else { %>
+            <h2>NO HAY PRODUCTOS</h2>
+        <% } %>
+    </main>
+
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>
