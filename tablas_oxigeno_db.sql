@@ -12,14 +12,14 @@ CREATE TABLE categories (
 ) ;
 
 CREATE TABLE products (
-  sku int(10) UNSIGNED NOT NULL,
+  id int(10) UNSIGNED NOT NULL auto_increment,
   name varchar(64) NOT NULL,
   price int(10) NOT NULL,
   description varchar(2048) NOT NULL,
   image varchar(128) NOT NULL,
-  category int(10) UNSIGNED Not NULL,
-  primary key (sku),
-  foreign key (category) references categories(id)
+  category_id int(10) UNSIGNED Not NULL,
+  primary key (id),
+  foreign key (category_id) references categories(id)
 ) ;
 
 

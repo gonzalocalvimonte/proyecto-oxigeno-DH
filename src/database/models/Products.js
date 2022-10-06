@@ -2,10 +2,10 @@ module.exports = function(sequelize, dataTypes  ) {
     let alias = "Products"
     
     let cols = {
-        sku:{
+        id:{
             type: dataTypes.INTEGER,
             primaryKey: true,
-            //autoIncrement: true,
+            autoIncrement: true
 
         },
         name:{
@@ -16,7 +16,7 @@ module.exports = function(sequelize, dataTypes  ) {
             type: dataTypes.DOUBLE
 
         },
-        descripcion:{
+        description:{
             type: dataTypes.TEXT
 
         },
@@ -24,7 +24,7 @@ module.exports = function(sequelize, dataTypes  ) {
             type: dataTypes.STRING
 
         },
-        category:{
+        category_id:{
             type: dataTypes.INTEGER
 
         },
@@ -39,9 +39,8 @@ module.exports = function(sequelize, dataTypes  ) {
 
     Products.associate = function (models) {
         Products.belongsTo(models.categories, {
-            as: "categories",
-            foreingnKey: "cat_id",
-
+            as: "category",
+            foreingnKey: "category_id",
         } )
 
     };
