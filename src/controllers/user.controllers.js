@@ -1,5 +1,6 @@
 const db = require('../database/models/index');
-const Users = require('../database/models/Users');
+const {resolve} = require('path');
+const {unlinkSync} = require('fs');
 
 const controller = {
     login: (req, res) => {
