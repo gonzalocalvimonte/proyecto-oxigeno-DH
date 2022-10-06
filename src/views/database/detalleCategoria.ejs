@@ -6,24 +6,24 @@
         <%- include("../partials/header.ejs")  %> 
     </header>
     <main class="listadoCat">
-        <h1><%= categories.name%></h1>
-    <ul>
+        <h1 class="listadoTit"><%= categories.name%></h1>
+    <ul class="listadoTit">
             <li>
             Descripcion: <%= categories.description%>
             </li>
     </ul>
-    <a href="/dbCategory/editar/<%=categories.id%>">
+    <a class="buton" href="/dbCategory/editar/<%=categories.id%>">
         
-        <button>EDITAR</button>
+        <button class="button-cat">EDITAR</button>
 
     </a>
-    <form action="/dbCategory/borrar/<%=categories.id%>" method="POST">
+    <form class="buton" action="/dbCategory/borrar/<%=categories.id%>" method="POST">
         
-        <button type = "submit">BORRAR</button>
+        <button class="button-cat" type = "submit">BORRAR</button>
 
     </form>
-        <a href="/dbCategory/listado">
-            <button>CATEGORIAS</button>
+        <a class = 'buton'href="/dbCategory/listado">
+            <button class="button-cat">CATEGORIAS</button>
         </a>
     </main>
     

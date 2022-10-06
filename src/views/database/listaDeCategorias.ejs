@@ -5,8 +5,9 @@
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
     </header>
-    <main class="listadoCat">
-        <h1>Listado de categorías</h1>
+    <main>
+        <h1 class="listadoTit">Listado de categorías</h1>
+    <div id="listadoCat">
     <ul>
         <% for (let i = 0; i < categories.length; i++) { %>
             <li>
@@ -16,9 +17,10 @@
             </li>
             <% } %>
     </ul>
-    <a href="/dbCategory/crear">
+    </div>
+    <a class="buton" href="/dbCategory/crear">
         
-        <button>CREAR CATEGORIA</button>
+        <button class="button-cat">CREAR CATEGORIA</button>
 
     </a>
     </main>
