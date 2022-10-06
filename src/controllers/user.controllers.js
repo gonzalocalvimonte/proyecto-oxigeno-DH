@@ -1,6 +1,9 @@
 const db = require('../database/models/index');
-const {resolve} = require('path');
+const {join} = require('path');
 const {unlinkSync} = require('fs');
+
+// const bcryptjs = require('bcryptjs');
+// bcryptjs.hashSync(data.password, 10),
 
 const controller = {
     login: (req, res) => {
@@ -21,7 +24,7 @@ const controller = {
             domicilio: req.body.domicilio,
             avatar: req.files && req.files.length ? req.body.image = req.files[0].filename : req.body.image = "default.png"
         })
-        return res.redirect("/user/login")
+        return res.redirect("user/login")
     },
     
     profile:function(req,res){
@@ -40,58 +43,77 @@ const controller = {
             })
     },
     
-    logout:(req,res) => {
+    logout: (req,res) => {
         delete req.session.user
         res.clearCookie('rememberMe');
         return res.redirect('/')
     },
     
-    edit:(req,res) => {
+    edit: (req,res) => {
         return res.render('user/editProfile')
     },
     
-    update:(req,res) => {
-        let todos = all()
-        let update = todos.map(user => {
-            if (user.id == req.body.id){
-            user.nombre = req.body.nombre;
-            user.apellido = req.body.apellido;
-            user.email = req.body.email;              
-            user.domicilio = req.body.domicilio;             
-            user.avatar = req.files && req.files.length > 0 ? req.files[0].filename : user.avatar
+    update: (req,res) => {
+        db.Users.update({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            domicilio: req.body.domicilio,
+            avatar: req.files && req.files.length ? req.body.image = req.files[0].filename : req.body.image = "default.png"
+        },
+        {
+            where:{
+                id : req.params.id
             }
-            return user
         })
-        write(update);
-        return res.redirect("/user/profile");
+        res.redirect('/user/profile')
+
+        // let todos = all()
+        // let update = todos.map(user => {
+        //     if (user.id == req.body.id){
+        //     user.nombre = req.body.nombre;
+        //     user.apellido = req.body.apellido;
+        //     user.email = req.body.email;              
+        //     user.domicilio = req.body.domicilio;             
+        //     user.avatar = req.files && req.files.length > 0 ? req.files[0].filename : user.avatar
+        //     }
+        //     return user
+        // })
+        // write(update);
+        // return res.redirect("/user/profile");
     },
             
-    delete:(req,res) => {
-        let user = one(req.body.id);
-        if(user.avatar != 'default.png'){
-        let file = resolve(__dirname, '..','..','public','images','Uploads','users',user.avatar)
-        unlinkSync(file)
-        };
-        let todos = all();
-        let noEliminados = todos.filter(elemento => elemento.id != req.body.id);
-        write(noEliminados)
-        delete req.session.user
-        /* Destruir la cookie de recordar usuario*/
-        res.clearCookie('rememberMe');
-        return res.redirect('/')
+    delete: (req,res) => {
+        if(req.body.avatar != 'default.png'){
+            let file = join(__dirname,'../../public/images/Uploads/users/' + req.body.avatar)
+            unlinkSync(file)
+        }
+        db.Users.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/')
     },
     
     show:(req,res) => {
-        let users = all();
-        return res.render('user/usersList',{users});
+        db.Users.findAll()
+        .then((users) => {
+            res.render('user/userslist',{users:users})
+        })
     },
     
     detail: (req, res) => {
-        let usuario = one(req.params.id);
-        if(usuario){
-        return res.render("user/detailUser", {usuario})
-        }
-        return res.render("user/detailUser", {usuario:null});
+        db.Users.findByPk(req.params.id)
+        .then((user) => {
+            if(user){
+                return res.render("user/detailUser", {usuario:user})
+                }
+                return res.render("user/detailUser", {usuario:null});
+        })
+
+        
+
     }
 }
 
