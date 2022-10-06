@@ -96,10 +96,14 @@
     border-radius: 0.25rem;
     cursor: pointer;   
 }
+
 .button-add:hover{
     background-color: var(--blue-0);
 }
-
+.listadoCat ul li{
+    list-style: none;
+    padding: 20px;
+}
 @media all and  (min-width: 768px) and (max-width:1024px){
     .formAddProd{
         width: 70%;
