@@ -41,12 +41,7 @@ module.exports = function(sequelize, dataTypes  ) {
         Products.belongsTo(models.categories, {
             as: "categories",
             foreingnKey: "cat_id",
-
         } )
-
     };
-
-    
-
     return Products;
     }

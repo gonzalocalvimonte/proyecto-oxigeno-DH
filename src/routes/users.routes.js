@@ -26,14 +26,14 @@ const upload = multer({storage:diskStorage({destination,filename})})
 
 route.get('/login', controller.login);
 route.get('/register', controller.register);
-route.post('/save',upload.any(), controller.save);
-route.post('/access',controller.access)
+route.post('/save', upload.any(), controller.save);
+route.post('/access', controller.access)
 route.get('/logout', controller.logout);
 route.get('/profile', isLogged, controller.profile)
-route.get('/profile/edit/:id',isLogged,controller.edit)
-route.put('/update',upload.any(),controller.update)
-route.delete('/delete',controller.delete)
-route.get('/show',isLogged,isAdmin,controller.show)
-route.get("/detail/:id",isLogged,isAdmin,controller.detail);
+route.get('/profile/edit/:id', isLogged,controller.edit)
+route.put('/update', upload.any(), controller.update)
+route.delete('/delete', controller.delete)
+route.get('/show', isLogged,isAdmin,controller.show)
+route.get("/detail/:id", isLogged,isAdmin,controller.detail);
 
 module.exports = route

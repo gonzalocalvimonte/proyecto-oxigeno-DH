@@ -12,7 +12,7 @@ CREATE TABLE categories (
 ) ;
 
 CREATE TABLE products (
-  sku int(10) UNSIGNED NOT NULL,
+  sku int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   name varchar(64) NOT NULL,
   price int(10) NOT NULL,
   description varchar(2048) NOT NULL,
@@ -24,14 +24,14 @@ CREATE TABLE products (
 
 
 CREATE TABLE roles (
-  id int(10) UNSIGNED NOT NULL,
+  id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre varchar(50) DEFAULT NULL,
   primary key (id)
 ) ;
 
 
 CREATE TABLE users (
-  id int(10) UNSIGNED NOT NULL,
+  id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre varchar(100) NOT NULL,
   apellido varchar(100) NOT NULL,
   password varchar(100) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE users (
   nacimiento datetime NOT NULL,
   domicilio varchar(100) NOT NULL,
   avatar varchar(100) NOT NULL,
-  rol int(10) UNSIGNED not NULL,
+  roleId int(10) UNSIGNED NOT NULL,
   primary key (id),
-  foreign key (rol) references roles (id)
+  foreign key (roleId) references roles (id)
 ) ;

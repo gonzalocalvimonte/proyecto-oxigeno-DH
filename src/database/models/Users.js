@@ -5,7 +5,7 @@ module.exports = function(sequelize, dataTypes  ) {
         id:{
             type: dataTypes.INTEGER,
             primaryKey: true,
-            //autoIncrement: true,
+            autoIncrement: true,
 
         },
         nombre:{
@@ -37,9 +37,9 @@ module.exports = function(sequelize, dataTypes  ) {
 
         },
 
-        rol:{
-            type: dataTypes.INTEGER
-
+        roleId:{
+            type: dataTypes.INTEGER,
+            defaultValue: 3
         },
     }
 
@@ -52,14 +52,9 @@ module.exports = function(sequelize, dataTypes  ) {
 
     Users.associate = function (models) {
         Users.belongsTo(models.roles, {
-            as: "roles",
-            foreingnKey: "rol_id",
-
+            as: "role",
+            foreingnKey: "roleId",
         } )
-
     };
-
-    
-
     return Users;
     }

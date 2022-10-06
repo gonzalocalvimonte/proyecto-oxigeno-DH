@@ -21,14 +21,14 @@ server.use(express.urlencoded({extended:true}));
 server.use(method('m'))
 
 //Middleware
-const rememberMe = require ('./middlewares/rememberme');
-server.use(rememberMe)
+//const rememberMe = require ('./middlewares/rememberme');
+//server.use(rememberMe)
 
 //session
 server.use(session({
     secret:'proyecto-oxigeno',
-    resave:true,
-    saveUninitialized:true,
+    resave:false,
+    saveUninitialized:false,
 }))
 server.use(cookie());
 server.use(require("./middlewares/user"));

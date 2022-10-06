@@ -17,8 +17,6 @@ module.exports = function(sequelize, dataTypes  ) {
             type: dataTypes.TEXT
 
         },
-        
-
     }
 
     let config = {
@@ -32,12 +30,8 @@ module.exports = function(sequelize, dataTypes  ) {
         categories.hasMany(models.Products, {
             as: "Products",
             foreingnKey: "category",
-
-        } )
+        })
 
     }
-
-    
-
     return categories;
 }

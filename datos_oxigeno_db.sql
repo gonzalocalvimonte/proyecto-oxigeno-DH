@@ -93,7 +93,7 @@ INSERT INTO `roles` (`id`, `nombre`) VALUES
 
 
 
-INSERT INTO `users` (`id`, `nombre`, `apellido`, `password`, `email`, `nacimiento`, `domicilio`, `avatar`, `rol`) VALUES
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `password`, `email`, `nacimiento`, `domicilio`, `avatar`, `roleId`) VALUES
 (1, 'matias', 'tolosa', '$2a$10$lUxp4yFmc1IlebAFojtipuA7eLfUNk36TqyY131RhrmoqtcGqZyMy', 'matolox88@gmail.com', '2020-02-15 00:00:00', 'callao 2070', 'default.png', 2),
 (2, 'Franco', 'Acosta', '$2a$10$3cBnc6G85B.zymWPTBlz2..bpcfSncBOqzAyTfGMWYaR5AUbBuuli', 'franco@o2admin', '1995-11-07 00:00:00', 'Brandsen 805', 'default.png', 2),
 (3, 'prueba', 'prueba', '$2a$10$WTQ/pirbZILHfCY75WiXC..3T53RReTI1bNaaa8.BlE5YoUWJLEmG', 'prueba@prueba.com', '1995-11-07 00:00:00', 'prueba', 'default.png', 2),
