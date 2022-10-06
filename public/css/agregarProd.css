@@ -96,10 +96,50 @@
     border-radius: 0.25rem;
     cursor: pointer;   
 }
+
 .button-add:hover{
     background-color: var(--blue-0);
 }
-
+.listadoTit{
+    border: 0.7vh solid lightblue;
+    padding: 20px;
+    color: #f2f2f2;
+    background-color: #048abf;
+}
+#listadoCat ul li a{
+    
+    padding: 7px;
+    background-color: #048abf;
+    border-radius: 25px;
+    color: #f2f2f2;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+}
+#listadoCat ul li{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 2px solid #ebebeb;
+    background-color: lightblue;
+}
+.button-cat{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 2.5rem;
+    color: var(--white);
+    background-color: var(--blue-1);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;   
+}
+.buton{
+    display: flex;
+    justify-content: center;
+    padding: 2vh;
+}
 @media all and  (min-width: 768px) and (max-width:1024px){
     .formAddProd{
         width: 70%;

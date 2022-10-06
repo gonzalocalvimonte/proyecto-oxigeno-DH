@@ -1,0 +1,34 @@
+<%- include('../partials/head.ejs')  %> 
+<link rel="stylesheet" href="/css/agregarProd.css">
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+    <main class="listadoCat">
+        <h1 class="listadoTit"><%= categories.name%></h1>
+    <ul class="listadoTit">
+            <li>
+            Descripcion: <%= categories.description%>
+            </li>
+    </ul>
+    <a class="buton" href="/dbCategory/editar/<%=categories.id%>">
+        
+        <button class="button-cat">EDITAR</button>
+
+    </a>
+    <form class="buton" action="/dbCategory/borrar/<%=categories.id%>" method="POST">
+        
+        <button class="button-cat" type = "submit">BORRAR</button>
+
+    </form>
+        <a class = 'buton'href="/dbCategory/listado">
+            <button class="button-cat">CATEGORIAS</button>
+        </a>
+    </main>
+    
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>

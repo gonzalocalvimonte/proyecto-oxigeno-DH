@@ -45,3 +45,4 @@ server.use('/dbProducts', productsRouter);
 
 const categoryRouter = require('./routes/database/category.routes')
 server.use('/dbCategory', categoryRouter);
+server.use(express.json())
