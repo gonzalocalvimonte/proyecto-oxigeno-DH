@@ -1,0 +1,32 @@
+<%- include('../partials/head.ejs')  %> 
+<link rel="stylesheet" href="/css/agregarProd.css">
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+    <main>
+        <h1 class="listadoTit">Listado de categorías</h1>
+    <div id="listadoCat">
+    <ul>
+        <% for (let i = 0; i < categories.length; i++) { %>
+            <li>
+                <a href="/dbCategory/<%=categories[i].id%>">
+                    <%= categories[i].name%>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+    </div>
+    <a class="buton" href="/dbCategory/crear">
+        
+        <button class="button-cat">CREAR CATEGORIA</button>
+
+    </a>
+    </main>
+    
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>

@@ -2,16 +2,14 @@ module.exports = function(sequelize, dataTypes  ) {
     let alias = "roles"
     
     let cols = {
-        rol_id:{
+        id:{
             type: dataTypes.INTEGER,
-            primaryKEY: true,
+            primaryKey: true,
             //autoIncrement: true,
         },
         
-        rol_nombre:{
+        nombre:{
             type: dataTypes.STRING
-
-    
     },
     }
 
@@ -26,12 +24,8 @@ module.exports = function(sequelize, dataTypes  ) {
         roles.hasMany(models.Users, {
             as: "Users",
             foreingnKey: "rol",
-
         } )
-
     }
-
     
-
     return roles;
     }

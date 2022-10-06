@@ -21,14 +21,14 @@ server.use(express.urlencoded({extended:true}));
 server.use(method('m'))
 
 //Middleware
-const rememberMe = require ('./middlewares/rememberme');
-server.use(rememberMe)
+//const rememberMe = require ('./middlewares/rememberme');
+//server.use(rememberMe)
 
 //session
 server.use(session({
     secret:'proyecto-oxigeno',
-    resave:true,
-    saveUninitialized:true,
+    resave:false,
+    saveUninitialized:false,
 }))
 server.use(cookie());
 server.use(require("./middlewares/user"));
@@ -41,3 +41,8 @@ server.use("/user", require('./routes/users.routes'));
 // Routes database
 const productsRouter = require('./routes/database/Products.routes')
 server.use('/dbProducts', productsRouter);
+
+
+const categoryRouter = require('./routes/database/category.routes')
+server.use('/dbCategory', categoryRouter);
+server.use(express.json())

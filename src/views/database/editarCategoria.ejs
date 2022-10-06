@@ -1,0 +1,28 @@
+<%- include('../partials/head.ejs')  %> 
+<link rel="stylesheet" href="/css/agregarProd.css">
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+    
+    <main class="mainAddProd">
+        <form action="/dbCategory/editar/<%=categories.id%>" class="formAddProd" method="POST">
+
+            <span class="title-formAdd">Editar Categoría</span>
+
+            <input type="text" placeholder="Nombre de la categoria" name="category" value="<%=categories.name%>">
+
+            <input name="description" placeholder="Descripcion" value="<%=categories.description%>">
+
+            <a class="buton">
+            <button type="submit" class="button-add">  Editar </button>
+            </a>
+
+        </form>
+    </main>
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+</body>
+</html>
