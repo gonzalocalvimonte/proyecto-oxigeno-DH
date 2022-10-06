@@ -30,7 +30,7 @@ const controller = {
   },
 
   profile:function(req,res){
-    return res.render('user/profile')
+    return res.render('/user/profile')
   },
 
   access:(req,res) => {

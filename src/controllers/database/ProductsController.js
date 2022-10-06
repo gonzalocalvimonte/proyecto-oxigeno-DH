@@ -64,7 +64,7 @@ update:function(req,res){
 },
 remove:function(req,res){
     if(req.body.image != 'default.png'){
-        let file = resolve(__dirname, '..','..','..','public','images','Uploads','products',req.body.image)
+        let file = resolve(__dirname, '..','..','..','public','images','Uploads','products', req.body.image)
         unlinkSync(file)
     }
     db.Products.destroy({
