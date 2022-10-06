@@ -7,11 +7,9 @@
     </header>
     
     <main class="mainAddProd">
-        <form action="/products/save" class="formAddProd" method="post" enctype="multipart/form-data">
+        <form action="/products/guardar" class="formAddProd" method="post" enctype="multipart/form-data">
 
             <span class="title-formAdd">Completar registro de producto nuevo</span>
-
-            <input type="hidden" name="sku">
 
             <input type="text" placeholder="Nombre del Producto" name="name" required>
 
@@ -20,19 +18,11 @@
             <textarea name="description" placeholder="Descripcion"></textarea>
             
             <select id="category" name="category" required>
-                <option value="null" disabled selected>Elegir una categoria</option>
-                <option value="Chalecos">Chalecos</option>
-                <option value="Juegos de amarre">Juegos de amarre</option>
-                <option value="Accesorios">Accesorios</option>
-                <option value="Linternas">Linternas</option>
-                <option value="Luces">Luces</option>
-                <option value="Faros">Faros</option>
-                <option value="Anclas">Anclas</option>
-                <option value="Cabos">Cabos</option>
-                <option value="Boyas">Boyas</option>
-                <option value="Conservadoras">Conservadoras</option>
-                <option value="Frigobares">Frigobares</option>
-                <option value="Anafes">Anafes</option>
+                <% for ( let i = 0; i < categories.length; i++ ) { %>
+                    <option value=" <%=categories[i].id%> ">
+                        <%=categories[i].name%> 
+                    </option>
+                <% } %>
             </select>
 
             <div id="image-prod">

@@ -39,13 +39,8 @@ module.exports = function(sequelize, dataTypes  ) {
 
     Products.associate = function (models) {
         Products.belongsTo(models.categories, {
-<<<<<<< HEAD
             as: "category",
             foreingnKey: "category_id",
-=======
-            as: "categories",
-            foreingnKey: "cat_id",
->>>>>>> d1c57d10dd902def30bea98b85982152cfbabd86
         } )
     };
     return Products;

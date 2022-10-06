@@ -11,7 +11,7 @@
         <picture id="imagen-producto">
             <img src="/images/Uploads/products/<%= product.image %> " alt="imagen del producto">
         </picture>
-
+        
         <section class="section-detalles-botones">
         
         <article id="detalles-producto">
@@ -19,31 +19,36 @@
         <p class="detalle-precio">$<%= product.price%> </p>
         <p class="detalle-descripcion"><%= product.description%> </p>
         </article>
+
         <div class="btn-agregar">
+
             <button class="btn-add" type="submit">
                 <a href="">Agregar</a> 
             </button>
-        </div>
+
+        </div>      
         <% if (user) { %>
             <% if (user.email.includes("o2admin")) { %>
                 <article id="botones">
+        
                     <button class="boton-editar">
-                        <a href="/products/edit/<%= product.sku %> ">Editar</a>
+                        <a href="/products/editar/<%= product.id %> ">Editar</a>
                     </button>
-                    <form action="/products/delete?m=DELETE" method="post">
-                        <input type="hidden" name="sku" value="<%=product.sku%>">
+        
+                    <form action="/products/borrar/<%= product.id  %>?m=DELETE" method="post">
+                        <input type="hidden" name="image" value="<%= product.image %>">         
                         <button type="submit" class="boton-eliminar">Borrar</button>
                     </form>
+                    
                 </article>
-            <% } %>
-
-        <% } %>
-
+                
         <% } else { %>
             <h2>
                 No se encontro un producto <a href="/products">Volver</a>
             </h2>
         </section>
+        <% } %>
+        <% } %>
         <% } %>
     </main>
 

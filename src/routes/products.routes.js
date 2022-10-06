@@ -1,18 +1,19 @@
-const {Router} = require('express')
-const route = Router()
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/products.controller');
+
 const {resolve,extname} = require('path')
 
 const multer = require('multer');
 const { diskStorage } = require('multer');
 const {existsSync,mkdirSync} = require('fs');
 
-const controller = require('../controllers/products.controller');
 const isLogged = require("../middlewares/userLogged")
 const isAdmin = require("../middlewares/userAdmin")
 
 //Multer
 const destination = function(req,file,cb){
-    let folder = resolve(__dirname, '..', '..','public','images','Uploads','products')
+    let folder = resolve(__dirname,'..', '..','public','images','Uploads','products')
     if(!existsSync(folder)){
         mkdirSync(folder)
     }
@@ -24,19 +25,24 @@ const filename = function(req,file,cb){
 }
 const upload = multer({storage:diskStorage({destination,filename})})
 
-//CRUD
-//Crud CREATE
-route.get("/create", isLogged, isAdmin, controller.create);
-route.post("/save", upload.any(), controller.save);
-//cRud READ
-route.get('/', controller.index);
-route.get("/:category?", controller.index);
-route.get("/detail/:id", controller.detail);
-//crUd UPDATE
-route.get("/edit/:id", isLogged, isAdmin, controller.edit);
-route.put("/update",upload.any(), controller.update)
-//cruD DELETE
-route.delete("/delete", isLogged, isAdmin, controller.remove)
+//Create
+router.get('/crear',  isLogged, isAdmin, controller.create),
 
+router.post('/guardar',upload.any(), controller.save),
 
-module.exports = route
+//Read
+
+router.get('/',controller.show),
+
+router.get('/detalle/:id',controller.detail)
+
+//Update
+
+router.get("/editar/:id",isLogged, isAdmin, controller.edit);
+
+router.put("/actualizar/:id",upload.any(), controller.update)
+
+//Delete
+router.delete("/borrar/:id",  isLogged, isAdmin, controller.remove)
+
+module.exports = router;

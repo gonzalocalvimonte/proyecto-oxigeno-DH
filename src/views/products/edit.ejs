@@ -7,11 +7,11 @@
     </header>
     
     <main class="mainAddProd">
-        <form action="/products/update?m=PUT" class="formAddProd" method="post" enctype="multipart/form-data">
+        <form action="/products/actualizar/<%= product.id %>?m=PUT " class="formAddProd" method="POST" enctype="multipart/form-data">
 
             <span class="title-formAdd">Editar datos del producto cargado</span>
 
-            <input type="hidden" name="sku" value="<%= product.sku %>">
+            <input type="hidden" name="id" value="<%= product.id %>">
 
             <input type="text" placeholder="Nombre del Producto" name="name" required value="<%= product.name %>">
 
@@ -20,24 +20,23 @@
             <textarea name="description" placeholder="Descripcion" value=""><%= product.description %></textarea>
             
             <select id="category" name="category" required>
-                <option value="null" disabled selected>Elegir una categoria</option>
-                <option value="Deportes acuaticos" <%= product.category == 'Deportes acuaticos' ? "selected" : "" %>>Deportes acuaticos</option>
-                
-                <option value="null" disabled selected>Elegir una categoria</option>
-                <option value="Chalecos" <%= product.category == 'Chalecos' ? "selected" : "" %>>Chalecos</option>
-                <option value="Juegos de amarre" <%= product.category == 'Juegos de amarre' ? "selected" : "" %>>Juegos de amarre</option>
-                <option value="Accesorios" <%= product.category == 'Accesorios' ? "selected" : "" %>>Accesorios</option>
-                <option value="Linternas" <%= product.category == 'Linternas' ? "selected" : "" %>>Linternas</option>
-                <option value="Luces" <%= product.category == 'Luces' ? "selected" : "" %>>Luces</option>
-                <option value="Faros" <%= product.category == 'Faros' ? "selected" : "" %>>Faros</option>
-                <option value="Anclas" <%= product.category == 'Anclas' ? "selected" : "" %>>Anclas</option>
-                <option value="Cabos" <%= product.category == 'Cabos' ? "selected" : "" %>>Cabos</option>
-                <option value="Boyas" <%= product.category == 'Boyas' ? "selected" : "" %>>Boyas</option>
-                <option value="Conservadoras" <%= product.category == 'Conservadoras' ? "selected" : "" %>>Conservadoras</option>
-                <option value="Frigobares" <%= product.category == 'Frigobares' ? "selected" : "" %>>Frigobares</option>
-                <option value="Anafes" <%= product.category == 'Anafes' ? "selected" : "" %>>Anafes</option>
-            </select>
+                <% for ( let i = 0; i < categories.length; i++ ) { %>
+                    <% if (categories[i].id == product.category_id) { %>
+                        
+                        <option value="<%= categories[i].id%>" selected>
+                            <%=categories[i].name%> 
+                        </option>
+                     
+                    <% } else { %>
 
+                        <option value="<%= categories[i].id%>">
+                            <%=categories[i].name%> 
+                        </option>
+
+                        <% } %> 
+                <% } %>
+            </select>
+            <input type="hidden" value="<%=product.image%>" name="oldImage">
             <div id="image-prod">
             <label  for="fotoProd">Selecionar foto del producto</label>
             <input  type="file" name="image" id="fotoProd">

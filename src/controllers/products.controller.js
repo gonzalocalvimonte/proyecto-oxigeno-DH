@@ -1,76 +1,94 @@
-const {all,one,write,generate} = require('../models/products.model')
+const { Association } = require('sequelize');
+let db = require('../database/models/index')
 const {resolve} = require('path')
 const {unlinkSync} = require('fs')
 
+let ProductsController = {
 
-const controller = {
-
-    index: (req, res) =>{
-        let products = all();
-        if(req.query.category){
-            products = products.filter(e => e.category == req.query.category);
-            return res.render('products/products',{products});
-        }
-        return res.render('products/products',{products});
-    },
-
-    detail: (req, res) => {
-        let product = one(req.params.id);
-        if(product){
-            return res.render("products/detail", {product})
-        }
-        return res.render("products/detail", {product:null});
-    },
-
-    create: (req, res) =>{
-        return res.render('products/create');
-    },
-
-    save: (req, res) =>{
-        if(req.files && req.files.length > 0){
-            req.body.image = req.files[0].filename
-        } else {
-            req.body.image ='default.png'
-        }
-        let nuevo = generate(req.body)
-        let todos = all()
-        todos.push(nuevo)
-        write(todos)
-        return res.redirect('/products')
-    },
-
-    edit: (req, res) => {
-        let product = one(req.params.id);
-        return res.render('products/edit', {product});
-    },
-
-    update: (req, res) => {
-        let todos = all()
-        let update = todos.map(product => {
-            if (product.sku == req.body.sku){
-                product.name = req.body.name;
-                product.price = parseInt(req.body.price);
-                product.description = req.body.description;
-                product.category = req.body.category;
-                product.image = req.files && req.files.length > 0 ? req.files[0].filename : product.image
-            }
-            return product
+create: function (req, res) {
+    db.categories.findAll()
+        .then(function(categories){
+            return res.render("products/create", {categories: categories});
         })
-        write(update);
-        return res.redirect("/products/detail/" + req.body.sku);
-    },
+},
+save: function(req,res) {
+    db.Products.create({
+        name:req.body.name,
+        price:req.body.price,
+        description:req.body.description,
+        image:req.files && req.files.length? req.body.image = req.files[0].filename : req.body.image = 'default.png',
+        category_id:req.body.category
+    })
+    res.redirect("/products")
+},
+show: function(req,res){
 
-    remove: (req, res) => {
-        let product = one(req.body.sku)
-        if(product.image != 'default.png'){
-            let file = resolve(__dirname, '..','..','public','images','Uploads','products',product.image)
-            unlinkSync(file)
+    /* contenido que no puedo comentar del render
+    contenido que iria dentro del select de la linea 13
+     <% for ( let i = 0; i < categories.length; i++ ) { %>
+                <option value=" <%=categories[i].id%> ">
+                    <%=categories[i].name%> 
+                </option>
+            <% } %>
+    */
+
+    /* let pedidoCategoria = db.categories.findAll({
+        attributes:['name','description','id']});
+
+    let productos =  */db.Products.findAll({attributes:['name','description','price','image','id']})
+
+   /*  Promise.all([productos, pedidoCategoria]) */
+    .then(function(producto/* ,categories */){
+        return res.render("products/products" , {products:producto/* ,categories:categories */})
+    })
+},
+detail:function(req,res){
+    db.Products.findByPk(req.params.id,{
+        attributes:['name','description','price','image','id']
+    })
+    .then(function(producto){
+        res.render("products/detail",{product:producto})
+     })
+},
+edit:function(req,res){
+   let pedidoProducto = db.Products.findByPk(req.params.id,{
+        attributes:['id','name','description','price','image','category_id']
+    });
+    let pedidoCategoria = db.categories.findAll({
+        attributes:['name','description','id']});
+    
+        Promise.all([pedidoProducto, pedidoCategoria])
+        .then(function([producto,categories]){
+        res.render("products/edit",{product:producto,categories:categories})
+    })
+},
+update:function(req,res){
+    db.Products.update({
+        name:req.body.name,
+        price:req.body.price,
+        description:req.body.description,
+        image:req.files && req.files.length > 0 ? req.body.image = req.files[0].filename : req.body.oldImage ,
+        category_id:req.body.category
+    },
+    {
+        where:{
+            id : req.params.id
         }
-        let todos = all();
-        let noEliminados = todos.filter(elemento => elemento.sku != req.body.sku);
-        write(noEliminados)
-        return res.redirect('/products')
+    })
+    res.redirect('/products/detalle/' + req.params.id)
+},
+remove:function(req,res){
+    if(req.body.image != 'default.png'){
+        let file = resolve(__dirname,'..','..','public','images','Uploads','products',req.body.image)
+        unlinkSync(file)
     }
+    db.Products.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    res.redirect('/products')
+}
 }
 
-module.exports = controller
+module.exports = ProductsController;
