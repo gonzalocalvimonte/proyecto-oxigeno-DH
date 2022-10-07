@@ -23,7 +23,17 @@ save: function(req,res) {
 },
 show: function(req,res){
 
-    /* contenido que no puedo comentar del render
+    /* index: (req, res) =>{
+        let products = all();
+        if(req.query.category){
+            products = products.filter(e => e.category == req.query.category);
+            return res.render('products/products',{products});
+        }
+        return res.render('products/products',{products});
+    },  
+    */
+
+    /* contenido que no puedo comentar del render products.ejs
     contenido que iria dentro del select de la linea 13
      <% for ( let i = 0; i < categories.length; i++ ) { %>
                 <option value=" <%=categories[i].id%> ">
@@ -35,7 +45,8 @@ show: function(req,res){
     /* let pedidoCategoria = db.categories.findAll({
         attributes:['name','description','id']});
 
-    let productos =  */db.Products.findAll({attributes:['name','description','price','image','id']})
+    let productos =  */
+    db.Products.findAll({attributes:['name','description','price','image','id']})
 
    /*  Promise.all([productos, pedidoCategoria]) */
     .then(function(producto/* ,categories */){
