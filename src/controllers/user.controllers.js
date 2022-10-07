@@ -1,9 +1,8 @@
 const db = require('../database/models/index');
 const {join} = require('path');
 const {unlinkSync} = require('fs');
+const bcryptjs = require('bcryptjs');
 
-// const bcryptjs = require('bcryptjs');
-// bcryptjs.hashSync(data.password, 10),
 
 const controller = {
     login: (req, res) => {
@@ -15,16 +14,18 @@ const controller = {
     },
     
     save:(req,res) => {
+        let password = req.body.password
+        let hash = bcryptjs.hashSync(password, 10)
         db.Users.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
-            password: req.body.password,
+            password: hash,
             email: req.body.email,
             nacimiento: req.body.nacimiento,
             domicilio: req.body.domicilio,
             avatar: req.files && req.files.length ? req.body.image = req.files[0].filename : req.body.image = "default.png"
         })
-        return res.redirect("user/login")
+        return res.redirect("/user/login")
     },
     
     profile:function(req,res){
@@ -68,19 +69,6 @@ const controller = {
         })
         res.redirect('/user/profile')
 
-        // let todos = all()
-        // let update = todos.map(user => {
-        //     if (user.id == req.body.id){
-        //     user.nombre = req.body.nombre;
-        //     user.apellido = req.body.apellido;
-        //     user.email = req.body.email;              
-        //     user.domicilio = req.body.domicilio;             
-        //     user.avatar = req.files && req.files.length > 0 ? req.files[0].filename : user.avatar
-        //     }
-        //     return user
-        // })
-        // write(update);
-        // return res.redirect("/user/profile");
     },
             
     delete: (req,res) => {
@@ -93,7 +81,7 @@ const controller = {
                 id: req.params.id
             }
         })
-        res.redirect('/')
+        res.redirect('/user/show')
     },
     
     show:(req,res) => {

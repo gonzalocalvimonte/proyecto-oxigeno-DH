@@ -26,7 +26,7 @@ const filename = function(req,file,cb){
 const upload = multer({storage:diskStorage({destination,filename})})
 
 //Create
-router.get('/crear',  isLogged, isAdmin, controller.create),
+router.get('/create',  isLogged, isAdmin, controller.create),
 
 router.post('/guardar',upload.any(), controller.save),
 

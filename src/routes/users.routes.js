@@ -1,5 +1,5 @@
 const {Router} = require('express')
-const route = Router()
+const router = Router()
 const {resolve,extname} = require('path')
 
 const multer = require('multer');
@@ -24,16 +24,16 @@ const filename = function(req,file,cb){
 }
 const upload = multer({storage:diskStorage({destination,filename})})
 
-route.get('/login', controller.login);
-route.get('/register', controller.register);
-route.post('/save', upload.any(), controller.save);
-route.post('/access', controller.access)
-route.get('/logout', controller.logout);
-route.get('/profile', isLogged, controller.profile)
-route.get('/profile/edit/:id', isLogged,controller.edit)
-route.put('/update', upload.any(), controller.update)
-route.delete('/delete/:id', controller.delete)
-route.get('/show', isLogged,isAdmin,controller.show)
-route.get("/detail/:id", isLogged, isAdmin, controller.detail);
+router.get('/login', controller.login);
+router.get('/register', controller.register);
+router.post('/save', upload.any(), controller.save);
+router.post('/access', controller.access)
+router.get('/logout', controller.logout);
+router.get('/profile', isLogged, controller.profile)
+router.get('/profile/edit/:id', isLogged,controller.edit)
+router.put('/update/:id', upload.any(), controller.update)
+router.delete('/delete/:id', controller.delete)
+router.get('/show', isLogged,isAdmin,controller.show)
+router.get("/detail/:id", isLogged, isAdmin, controller.detail);
 
-module.exports = route
+module.exports = router

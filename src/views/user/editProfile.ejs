@@ -7,7 +7,7 @@
     </header>
 
     <main id="register">
-        <form class="form-reg" action="/user/update?m=PUT" method="post" enctype="multipart/form-data">
+        <form class="form-reg" action="/user/update/<%= user.id %>?m=PUT" method="post" enctype="multipart/form-data">
             <span>Editar datos del usuario</span>
             <input class="in-register" type="hidden" name="id" value="<%= user.id %> ">
             <input class="in-register" type="text" name="nombre"  placeholder="Nombre" value="<%= user.nombre %>">

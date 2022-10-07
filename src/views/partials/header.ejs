@@ -30,7 +30,7 @@
             <li class="submenu"><a href="/who">¿Quiénes Somos?</a></li>
             <!-- <li class="submenu"><a href="/contact">Contacto</a></li> COMENTO POR CAMBIOS EN LA ESTRATEGIA-->
             <% if (user) { %>
-                <% if (user.email.includes("o2admin")) { %>
+                <% if (user.roleId != 3) { %>
                     <li class="submenu"><a href="/products/create">AgregarProd</a></li>
                     <li class="submenu"><a href="/user/show">ListaUsuarios</a></li>
                     <li class="submenu"><a href="/category/show">ListaCategorias</a></li>

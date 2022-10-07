@@ -28,7 +28,7 @@
 
         </div>      
         <% if (user) { %>
-            <% if (user.email.includes("o2admin")) { %>
+            <% if (user.roleId != 3) { %>
                 <article id="botones">
         
                     <button class="boton-editar">
