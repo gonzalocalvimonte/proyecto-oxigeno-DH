@@ -11,7 +11,11 @@
         <form action="/products" method="get">
 
         <select id="category" name="category">
-           
+            <% for ( let i = 0; i < categories.length; i++ ) { %>
+                <option value=" <%=categories[i].id%> ">
+                    <%=categories[i].name%> 
+                </option>
+            <% } %>
         </select>
 
             <button type="submit">

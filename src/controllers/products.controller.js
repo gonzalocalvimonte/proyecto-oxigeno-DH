@@ -40,17 +40,21 @@ show: function(req,res){
                     <%=categories[i].name%> 
                 </option>
             <% } %>
-    */
+    */ //esto esta listo
 
     /* let pedidoCategoria = db.categories.findAll({
         attributes:['name','description','id']});
 
     let productos =  */
     db.Products.findAll({attributes:['name','description','price','image','id']})
+    db.categories.findAll()
+        .then(function(categories){
+            return res.render("products/products", {categories: categories});
+        })
 
    /*  Promise.all([productos, pedidoCategoria]) */
     .then(function(producto/* ,categories */){
-        return res.render("products/products" , {products:producto/* ,categories:categories */})
+        return res.render("products/products" , {products:producto, /*categories:categories*/ })
     })
 },
 detail:function(req,res){
