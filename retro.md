@@ -56,3 +56,17 @@ Logramos un entendimiento conjunto de las consignas y conceptos de este sprint.
 ### Aspectos negativos
 
 Tuvimos commit muy distanciados en el tiempo, provocando que para solucionar inconvenientes estemoso hasta último momento. Nos queda por mejorar, la realización en tiempo y forma de la división de tareas.
+
+
+
+##Sprint 6
+
+### Aspectos positivos
+Logramos dividir correctamente las tareas, lo que permitió organizar correctamente los tiempos y ejecución de cada parte.
+
+Pudimos resolver conflictos en conjunto con reuniones a demanda.
+
+
+### Aspectos negativos
+
+Tuvimos algunas fallas en XAMPP lo que no nos permitía constatar errores mientras avanzabamos en el código.

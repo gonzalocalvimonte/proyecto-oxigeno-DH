@@ -67,3 +67,17 @@ Control de avances.
 ### Reunión 11/09
 
 Detalles finales y conformación de entrega.
+
+## Sprint 6
+
+### Reunión 26/09
+
+División de tareas.
+
+### Reunión 03/10
+
+Relevamiento de avances.
+Re-distribución de tareas (cambio de modelos por controladores)
+
+### Reunión 08/10
+Revisión final y entrega.
