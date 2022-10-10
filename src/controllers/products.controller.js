@@ -21,7 +21,8 @@ save: function(req,res) {
     })
     res.redirect("/products")
 },
-show: function(req,res){
+show: async function(req,res){
+
 
     /* index: (req, res) =>{
         let products = all();
@@ -44,20 +45,29 @@ show: function(req,res){
 
     /* let pedidoCategoria = db.categories.findAll({
         attributes:['name','description','id']});
-
     let productos =  */
-    db.Products.findAll({attributes:['name','description','price','image','id']})
-    db.categories.findAll()
-        .then(function(categories){
-            return res.render("products/products", {categories: categories});
-        })
+    
+    let productos = await db.Products.findAll()
+    let categories = await db.categories.findAll()
+    let query = 0
+
+    if(req.query.category){
+        productos = productos.filter(e => e.category_id == req.query.category);
+        query = req.query.category
+    }
+
+    /* Promise.all([productos, pedidoCategoria])
+        .then(function(categoria,producto){
+            producto.filter(e => e.category == req.query.category)
+            return res.render("products/products", { categories: categoria,productos:producto});
+        }) */
 
    /*  Promise.all([productos, pedidoCategoria]) */
-    .then(function(producto/* ,categories */){
-        return res.render("products/products" , {products:producto, /*categories:categories*/ })
-    })
+   /*  .then(function(producto){ */
+        return res.render("products/products" , {productos,categories,query})
+  /*   }) */
 },
-detail:function(req,res){
+detail: function(req,res){
     db.Products.findByPk(req.params.id,{
         attributes:['name','description','price','image','id']
     })

@@ -10,9 +10,9 @@
         <h2>Productos</h2>
         <form action="/products" method="get">
 
-        <select id="category" name="category">
+        <select id="category" name="category" >
             <% for ( let i = 0; i < categories.length; i++ ) { %>
-                <option value=" <%=categories[i].id%> ">
+                <option value="<%=categories[i].id%>" <%= query && query == categories[i].id ? 'selected' : ''  %> >
                     <%=categories[i].name%> 
                 </option>
             <% } %>
@@ -24,9 +24,9 @@
 
         </form>
         
-        <% if (products.length > 0) { %>
+        <% if (productos.length > 0) { %>
             <ul class="product-list">
-                <% products.forEach(element => { %>
+                <% productos.forEach(element => { %>
                     <%- include("../partials/productlist.ejs", {element:element}) %> 
                 <% }) %>
             </ul>

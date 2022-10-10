@@ -26,7 +26,7 @@ const filename = function(req,file,cb){
 const upload = multer({storage:diskStorage({destination,filename})})
 
 //Create
-router.get('/create',  isLogged, isAdmin, controller.create),
+router.get('/create',  isLogged, controller.create),
 
 router.post('/guardar',upload.any(), controller.save),
 
@@ -41,11 +41,11 @@ router.get('/detalle/:id',controller.detail)
 
 //Update
 
-router.get("/editar/:id",isLogged, isAdmin, controller.edit);
+router.get("/editar/:id",isLogged, controller.edit);
 
 router.put("/actualizar/:id",upload.any(), controller.update)
 
 //Delete
-router.delete("/borrar/:id",  isLogged, isAdmin, controller.remove)
+router.delete("/borrar/:id",  isLogged, controller.remove)
 
 module.exports = router;
