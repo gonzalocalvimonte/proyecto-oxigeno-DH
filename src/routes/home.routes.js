@@ -1,11 +1,11 @@
 const {Router} = require("express");
-const route = Router();
+const router = Router();
 const homeController = require("../controllers/home.controller");
 
-route.get("/", homeController.home);
-route.get("/who", homeController.who);
+router.get("/", homeController.home);
+router.get("/who", homeController.who);
 // route.get("/contact", homeController.contact); CAMBIOS  ES  LA ESTRATEGIA, COMENTO POR LAS DUDAS
-route.get("/cart", homeController.cart);
+router.get("/cart", homeController.cart);
 
-module.exports = route;
+module.exports = router;
 

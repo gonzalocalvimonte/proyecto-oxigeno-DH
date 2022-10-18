@@ -1,4 +1,3 @@
-const { Association } = require('sequelize');
 let db = require('../database/models/index')
 const {resolve} = require('path')
 const {unlinkSync} = require('fs')
