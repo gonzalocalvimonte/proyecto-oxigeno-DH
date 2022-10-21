@@ -12,17 +12,17 @@
             Descripcion: <%= categories.description%>
             </li>
     </ul>
-    <a class="buton" href="/dbCategory/editar/<%=categories.id%>">
+    <a class="buton" href="/category/editar/<%=categories.id%>">
         
         <button class="button-cat">EDITAR</button>
 
     </a>
-    <form class="buton" action="/dbCategory/borrar/<%=categories.id%>" method="POST">
+    <form class="buton" action="/category/borrar/<%=categories.id%>" method="POST">
         
         <button class="button-cat" type = "submit">BORRAR</button>
 
     </form>
-        <a class = 'buton'href="/dbCategory/listado">
+        <a class = 'buton'href="/category/listado">
             <button class="button-cat">CATEGORIAS</button>
         </a>
     </main>
