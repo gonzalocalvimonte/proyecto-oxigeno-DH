@@ -38,6 +38,7 @@ server.use(require("./middlewares/user"));
 server.use(require('./routes/home.routes'));
 server.use("/products", require('./routes/products.routes'));
 server.use("/user", require('./routes/users.routes'));
+server.use("/api", require('./routes/api/products.api.routes'));
 server.use('/category', require('./routes/category.routes'));
 //api
 server.use("/api/", require('./routes/api/cart.routes'))

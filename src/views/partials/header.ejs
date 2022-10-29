@@ -7,13 +7,17 @@
                 </a>
             </picture>
         </nav>
-        <form action="" method="get" id="search">
-            <label for="query"><i class="fa-solid fa-search"></i></label>
+        <form action="/products/search" method="get" id="search">
+            <input type="text" name="q" id="searchInput" placeholder="Buscar productos" list="listProducts" autocomplete="off">
+            <nav id="listProducts">
+
+            </nav>
+            <label for="q"><i class="fa-solid fa-search"></i></label>
             <button type="submit"><a href="/"><i class="fa-solid fa-search"></i></a></button>
-            <input type="text" name="q" id="query" placeholder="Buscar productos">
         </form>
+        <script defer src="/scripts/search.js"></script>
         <ul id="nav">
-                <li class="test burger-menu"><a href="/"><i class="bars fa-solid fa-bars"></i> </a></li>
+                <li class="test burger-menu" id="menu-hamburguesa"><a href="#"><i class="bars fa-solid fa-bars"></i> </a></li>
                 <% if (user) { %>
                     <li class="test user"><a href="/user/profile"> <img src="/images/Uploads/users/<%= user.avatar %> " alt=""></a></li>
                     <% } else { %>
@@ -24,6 +28,7 @@
                     <li class="test out"><a href="/user/logout"><i class="outtwo fa-sharp fa-solid fa-right-from-bracket"></i></a></li>
                 <% } %>        
         </ul>
+       
         <ul id="menu">
             <li class="submenu"><a href="/products">Productos</a></li>
             <li class="submenu"><a href="/">Ofertas</a></li>
@@ -36,5 +41,6 @@
                     <li class="submenu"><a href="/category/show">ListaCategorias</a></li>
                 <% } %>
             <% } %>
+            <script defer src="/scripts/menuBurguer.js"></script>
         </ul>
     </div>
