@@ -72,6 +72,8 @@
     transition: -webkit-box-shadow .5s,-moz-box-shadow .5s;
 }
 
+
+
 @media all and (min-width:768px){
     .product-list{
         display: flex;

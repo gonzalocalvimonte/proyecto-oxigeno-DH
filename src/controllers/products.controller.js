@@ -1,7 +1,8 @@
-const { Association } = require('sequelize');
+const { Association,Op } = require('sequelize');
 let db = require('../database/models/index')
 const {resolve} = require('path')
 const {unlinkSync} = require('fs')
+
 
 let ProductsController = {
 
@@ -21,32 +22,25 @@ save: function(req,res) {
     })
     res.redirect("/products")
 },
+
+search: async function(req,res){
+    console.log(req.query.q)
+    let query = null
+    let productos = await db.Products.findAll({
+        where:{
+            name:{
+                [Op.like] : '%' + req.query.q + '%'
+            }
+        }
+    })
+    let categories = await db.categories.findAll()
+
+    return res.render("products/products" , {productos,categories,query})
+
+
+},
 show: async function(req,res){
 
-
-    /* index: (req, res) =>{
-        let products = all();
-        if(req.query.category){
-            products = products.filter(e => e.category == req.query.category);
-            return res.render('products/products',{products});
-        }
-        return res.render('products/products',{products});
-    },  
-    */
-
-    /* contenido que no puedo comentar del render products.ejs
-    contenido que iria dentro del select de la linea 13
-     <% for ( let i = 0; i < categories.length; i++ ) { %>
-                <option value=" <%=categories[i].id%> ">
-                    <%=categories[i].name%> 
-                </option>
-            <% } %>
-    */ //esto esta listo
-
-    /* let pedidoCategoria = db.categories.findAll({
-        attributes:['name','description','id']});
-    let productos =  */
-    
     let productos = await db.Products.findAll()
     let categories = await db.categories.findAll()
     let query = 0
@@ -56,21 +50,11 @@ show: async function(req,res){
         query = req.query.category
     }
 
-    /* Promise.all([productos, pedidoCategoria])
-        .then(function(categoria,producto){
-            producto.filter(e => e.category == req.query.category)
-            return res.render("products/products", { categories: categoria,productos:producto});
-        }) */
-
-   /*  Promise.all([productos, pedidoCategoria]) */
-   /*  .then(function(producto){ */
         return res.render("products/products" , {productos,categories,query})
-  /*   }) */
+  
 },
 detail: function(req,res){
-    db.Products.findByPk(req.params.id,{
-        attributes:['name','description','price','image','id']
-    })
+    db.Products.findByPk(req.params.id)
     .then(function(producto){
         res.render("products/detail",{product:producto})
      })
