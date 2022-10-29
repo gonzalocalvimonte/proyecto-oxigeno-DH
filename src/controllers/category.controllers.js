@@ -1,29 +1,29 @@
 const { name } = require('ejs');
-let db = require ('../../database/models/index')
+let db = require ('../database/models/index')
 const {
     validationResult
 } = require('express-validator');
 let categoryController = {
     crear: function (req, res) {
-            return res.render("database/creacionCategoria");
+            return res.render("categories/creacionCategoria");
     },
     guardado: function(req,res) {
     db.categories.create({
           description: req.body.description,
           name: req.body.category
         })
-        .then(() => res.redirect('/dbCategory/listado'))
+        .then(() => res.redirect('/categories/listado'))
     },
     listado: function(req, res) {
         db.categories.findAll()
         .then(function(categories){
-        res.render('database/listaDeCategorias', {categories: categories});
+        res.render('categories/listaDeCategorias', {categories: categories});
         })
     },
     detalle: function(req, res) {
         db.categories.findByPk(req.params.id)
         .then(function(categories){
-            res.render('database/detalleCategoria', {categories: categories} )
+            res.render('categories/detalleCategoria', {categories: categories} )
         })
     },
     editar: function(req, res) {
@@ -31,7 +31,7 @@ let categoryController = {
 
         Promise.all([pedidoCategoria])
             .then(function([categories]){
-                res.render('database/editarCategoria', {categories: categories})
+                res.render('categories/editarCategoria', {categories: categories})
             })
     },
     actualizar: function(req, res) {
@@ -43,7 +43,7 @@ let categoryController = {
                         id: req.params.id
                     }
                 })
-        .then(() => res.redirect('/dbCategory/' + req.params.id))
+        .then(() => res.redirect('/categories/' + req.params.id))
     },
     borrar: function(req, res) {
         db.categories.destroy({
@@ -51,7 +51,7 @@ let categoryController = {
                 id: req.params.id
             }
         })
-        .then(() => res.redirect('/dbCategory/listado'))
+        .then(() => res.redirect('/categories/listado'))
     }
 }
 
