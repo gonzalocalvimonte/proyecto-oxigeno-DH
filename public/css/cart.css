@@ -15,11 +15,13 @@
     width: 100%;
     margin-top: auto;
     margin-bottom: auto;
+    justify-content: center;
 }
 .cart-title{
     width: 100%;
     margin: 1rem;
     text-align: center;
+    color: var(--blue-1);
 }
 #table{
     display: flex;
@@ -30,16 +32,17 @@
     justify-content: center;
     text-align: center;
     border-collapse: collapse;
+    
 }
 #cart-page th{
+    background-color: var(--blue-1);
+    color: var(--white);
     padding: 0.5rem 2rem;
-    border: 1px solid var(--blue-2);
-    border-collapse: collapse;
+    font-size: 1.3rem;
+    
 }
 #cart-page td{
     padding: 0.5rem 2rem;
-    border: 1px solid var(--blue-2);
-    border-collapse: collapse;
 }
 #table button{
     width: 20px;
@@ -48,6 +51,16 @@
     text-align: center;
     margin: 0.5rem;
     padding: 4px;
+}
+td button{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    border-style: none;
+    margin: 0 3px;
+    font-size: 1.2rem;
+    color: var(--white);
+    cursor: pointer;
 }
 .mas{
     background-color: var(--blue-1);
@@ -66,13 +79,15 @@
 .pay-btn button{
     padding: 0.7rem;
     border: none;
-    background-color: var(--blue-2);
+    background-color: var(--blue-1);
+    color: var(--white);
     border-radius: 3px;
     font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
 }
 .pay-btn button:hover{
-    background-color: var(--blue-1);
+    background-color: var(--blue-2);
 }
 .envio{
     display: flex;

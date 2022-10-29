@@ -22,9 +22,11 @@
 
         <div class="btn-agregar">
 
-            <button class="btn-add" type="submit">
-                <a href="">Agregar</a> 
-            </button>
+            <div class="buy-btn">
+                <button class="btn-add add-cart" data-id="<%= product.id %>"  type="submit">
+                    Agregar
+                </button>
+            </div>
 
         </div>      
         <% if (user) { %>
@@ -52,7 +54,7 @@
         <% } %>
     </main>
 
-
+<script src="/js/cartAdd.js"></script>
 </body>
 <footer id="footer">
     <%- include("../partials/footer.ejs") %> 
