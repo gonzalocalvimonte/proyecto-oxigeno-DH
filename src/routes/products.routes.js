@@ -35,6 +35,8 @@ router.post('/guardar',upload.any(), validador, controller.save),
 
 router.get('/',controller.show),
 
+router.get('/search',controller.search)
+
 router.get("/:category?", controller.show); //ruta del filtro de la vista de los productos products.ejs*/
 
 router.get('/detalle/:id',controller.detail)

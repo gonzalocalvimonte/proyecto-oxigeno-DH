@@ -1,8 +1,14 @@
+const { Association,Op } = require('sequelize');
+let db = require('../database/models/index')
+const {resolve} = require('path')
+const {unlinkSync} = require('fs')
 
 const controller = {
     
-    home: (req, res) => {
-        res.render("home/index");
+    home: async (req, res) => {
+        let productos = await db.Products.findAll()
+
+        return res.render("home/index", {productos});
     },
 
     who: (req, res) => {

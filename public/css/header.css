@@ -66,6 +66,36 @@
 #search label{
     display: none;
 }
+
+#listProducts{
+    background-color: #fff;
+    box-shadow: var(--area-shadow);
+    max-height: 25rem;
+    overflow-y: scroll;
+    position: absolute;   
+    top: 6rem;  
+    width: 30%;
+    z-index:10;
+}
+#listProducts a{
+    align-items: center;
+    color: gray;
+    display: flex;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+}
+#listProducts a:hover{
+    background-color: var(--blue-3);
+}
+#listProducts a img{
+    width: 20%;
+}
+#listProducts a div{
+    align-items: center;
+    
+    margin-left: 2rem;
+}
 #nav{
     display: flex;
     width: 100vw;
@@ -85,7 +115,8 @@
     border-radius: 50%;
 }
 #menu{
-    display: none;
+   display: none;
+    
 }
 @media all and (min-width: 768px){
     #logo{
@@ -169,5 +200,50 @@
 @media all and  (min-width:1200px) {
     #search{
         width: 75%;
+    }
+}
+@media all and  (max-width:767px) {
+    #listProducts{
+        background-color: #fff;
+        box-shadow: var(--area-shadow);
+        max-height: 25rem;
+        overflow-y: scroll;
+        position: absolute;
+        top: 12rem;
+        width: 60%;
+        z-index:10;
+    }
+    #listProducts a:hover{
+        background-color: var(--blue-3);
+    }
+
+
+}
+@media all and  (max-width:766px) {
+    #menu{
+    position: relative;
+    
+    height: 0vh;
+    width: 100%;
+    
+    background: #67a0cc;
+    background: -webkit-linear-gradient(0deg, #67a0cc 0%, #0487d9 50%, #0487d9 100%);
+    background: linear-gradient(0deg, #67a0cc 0%, #0487d9 50%, #0487d9 100%);
+    
+    display: none;
+    gap: 1.5rem;
+    transition: all .3s ease-out;
+    
+}
+    #menu.active{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-out;
+        height: 15vh;
+    }
+    #menu.active a{
+        color: #fff;
     }
 }
