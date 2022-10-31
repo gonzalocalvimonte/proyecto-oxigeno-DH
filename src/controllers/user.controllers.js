@@ -38,7 +38,7 @@ const controller = {
                 req.session.user = user
 
                 if (req.body.rememberMe != undefined){
-                    res.cookie('rememberMe', req.body.usuario,{maxAge: 1000 * 60 * 10})
+                    res.cookie('user', req.body.usuario,{maxAge: 1000 * 60 * 10})
                 }
                 return res.redirect('/')
             })
@@ -46,7 +46,7 @@ const controller = {
     
     logout: (req,res) => {
         delete req.session.user
-        res.clearCookie('rememberMe');
+        res.clearCookie('user');
         return res.redirect('/')
     },
     

@@ -11,12 +11,24 @@
 
             <span class="title-formAdd">Completar registro de producto nuevo</span>
 
-            <input type="text" placeholder="Nombre del Producto" name="name" required>
+            <input type="text" placeholder="Nombre del Producto" name="name" id="name">
 
-            <input type="number" placeholder="Precio" name="price" required>
+            <% if (locals.errores && locals.errores.name) { %>
+                <p class="feedback"><%= locals.errores.name.msg  %></p>
+                <%  }%>
+
+            <input type="number" placeholder="Precio" name="price">
+
+            <% if (locals.errores && locals.errores.price) { %>
+                <p class="feedback"><%= locals.errores.price.msg  %></p>
+                <%  }%>
 
             <textarea name="description" placeholder="Descripcion"></textarea>
-            
+
+            <% if (locals.errores && locals.errores.description) { %>
+                <p class="feedback"><%= locals.errores.description.msg  %></p>
+                <%  }%>
+                
             <select id="category" name="category" required>
                 <% for ( let i = 0; i < categories.length; i++ ) { %>
                     <option value=" <%=categories[i].id%> ">

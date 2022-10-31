@@ -7,19 +7,36 @@
     </header>
     
     <main class="mainAddProd">
+        <% if(locals && locals.product){
+            product.id = product.id
+        }
+        %>
         <form action="/products/actualizar/<%= product.id %>?m=PUT " class="formAddProd" method="POST" enctype="multipart/form-data">
 
             <span class="title-formAdd">Editar datos del producto cargado</span>
 
             <input type="hidden" name="id" value="<%= product.id %>">
 
-            <input type="text" placeholder="Nombre del Producto" name="name" required value="<%= product.name %>">
+            <input type="text" placeholder="Nombre del Producto" name="name" value="<%= product.name ? product.name : locals.data && data.name %>">
 
-            <input type="number" placeholder="Precio" name="price" required value="<%= product.price%>">
+            <% if (locals.errores && locals.errores.name) { %>
+                <p class="feedback"><%= locals.errores.name.msg  %></p>
+                <%  }%>
 
-            <textarea name="description" placeholder="Descripcion" value=""><%= product.description %></textarea>
+            <input type="number" placeholder="Precio" name="price" value="<%= product.price ? product.price : locals.data && data.price%>">
             
+            <% if (locals.errores && locals.errores.price) { %>
+                <p class="feedback"><%= locals.errores.price.msg  %></p>
+                <%  }%>
+
+            <textarea name="description" placeholder="Descripcion" value=""><%= product.description ? product.description : locals.data && data.description%></textarea>
+            
+            <% if (locals.errores && locals.errores.description) { %>
+                <p class="feedback"><%= locals.errores.description.msg  %></p>
+                <%  }%>
+
             <select id="category" name="category" required>
+                
                 <% for ( let i = 0; i < categories.length; i++ ) { %>
                     <% if (categories[i].id == product.category_id) { %>
                         
@@ -28,11 +45,9 @@
                         </option>
                      
                     <% } else { %>
-
                         <option value="<%= categories[i].id%>">
                             <%=categories[i].name%> 
                         </option>
-
                         <% } %> 
                 <% } %>
             </select>
@@ -40,6 +55,11 @@
             <div id="image-prod">
             <label  for="fotoProd">Selecionar foto del producto</label>
             <input  type="file" name="image" id="fotoProd">
+
+            <% if (locals.errores && locals.errores.image) { %>
+                <p class="feedback"><%= locals.errores.image.msg  %></p>
+                <%  }%>
+
             </div>
 
             <div id="button-add">

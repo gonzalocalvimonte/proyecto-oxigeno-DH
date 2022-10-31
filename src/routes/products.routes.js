@@ -4,6 +4,7 @@ const controller = require('../controllers/products.controller');
 
 const {resolve,extname} = require('path')
 
+const validador = require('../validations/products');
 const multer = require('multer');
 const { diskStorage } = require('multer');
 const {existsSync,mkdirSync} = require('fs');
@@ -26,9 +27,9 @@ const filename = function(req,file,cb){
 const upload = multer({storage:diskStorage({destination,filename})})
 
 //Create
-router.get('/create',  isLogged, controller.create),
+router.get('/create', isLogged, controller.create),
 
-router.post('/guardar',upload.any(), controller.save),
+router.post('/guardar',upload.any(), validador, controller.save),
 
 //Read
 
@@ -43,7 +44,7 @@ router.get('/detalle/:id',controller.detail)
 
 router.get("/editar/:id",isLogged, controller.edit);
 
-router.put("/actualizar/:id",upload.any(), controller.update)
+router.put("/actualizar/:id",upload.any(), validador, controller.update)
 
 //Delete
 router.delete("/borrar/:id",  isLogged, controller.remove)
