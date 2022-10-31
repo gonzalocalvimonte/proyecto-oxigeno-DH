@@ -1,5 +1,6 @@
 <%- include('../partials/head.ejs')  %>
 <link rel="stylesheet" href="/css/edit.css"> 
+<script defer src="/scripts/edit.js"> </script>
 
 <body>
     <header id="header">
@@ -17,11 +18,12 @@
 
             <input type="hidden" name="id" value="<%= product.id %>">
 
-            <input type="text" placeholder="Nombre del Producto" name="name" value="<%= product.name ? product.name : locals.data && data.name %>">
+            <input type="text" placeholder="Nombre del Producto" name="name" id="name" value="<%= product.name ? product.name : locals.data && data.name %>">
 
             <% if (locals.errores && locals.errores.name) { %>
                 <p class="feedback"><%= locals.errores.name.msg  %></p>
                 <%  }%>
+                <p id="errorName" class="feedback"></p>
 
             <input type="number" placeholder="Precio" name="price" value="<%= product.price ? product.price : locals.data && data.price%>">
             
@@ -29,11 +31,13 @@
                 <p class="feedback"><%= locals.errores.price.msg  %></p>
                 <%  }%>
 
-            <textarea name="description" placeholder="Descripcion" value=""><%= product.description ? product.description : locals.data && data.description%></textarea>
+            <textarea name="description" placeholder="Descripcion" id="description" value=""><%= product.description ? product.description : locals.data && data.description%></textarea>
             
             <% if (locals.errores && locals.errores.description) { %>
                 <p class="feedback"><%= locals.errores.description.msg  %></p>
                 <%  }%>
+
+                <p id="errorDescription" class="feedback"></p>
 
             <select id="category" name="category" required>
                 
@@ -59,7 +63,7 @@
             <% if (locals.errores && locals.errores.image) { %>
                 <p class="feedback"><%= locals.errores.image.msg  %></p>
                 <%  }%>
-
+            <p id="errorImage" class="feedback"></p>
             </div>
 
             <div id="button-add">
