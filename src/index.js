@@ -1,4 +1,4 @@
-//dependencias
+//dependencies
 const express = require("express");
 const server = express();
 const {join} = require("path");
@@ -6,8 +6,7 @@ const method = require('method-override')
 const session = require('express-session')
 const cookie = require('cookie-parser')
 
-//server module
-const statics = require("./modules/static");
+//server
 const {port, start} = require("./modules/server");
 server.listen(port, start());
 
@@ -15,14 +14,17 @@ server.listen(port, start());
 server.set("views", join(__dirname, "./views"));
 server.set("view engine", "ejs");
 
-//server uses
+//statics
+const statics = require("./modules/static");
 server.use(statics(join(__dirname, "../public")));
-server.use(express.urlencoded({extended:true}));
+
+//method override
 server.use(method('m'))
 
+server.use(express.urlencoded({extended:true}));
+
 //Middleware
-//const rememberMe = require ('./middlewares/rememberme');
-//server.use(rememberMe)
+// server.use(require("./middlewares/cart"));
 
 //session
 server.use(session({
@@ -32,14 +34,15 @@ server.use(session({
 }))
 server.use(cookie());
 server.use(require("./middlewares/user"));
-// server.use(require("./middlewares/cart"));
 
 //rutas
 server.use(require('./routes/home.routes'));
 server.use("/products", require('./routes/products.routes'));
 server.use("/user", require('./routes/users.routes'));
-server.use("/api", require('./routes/api/products.api.routes'));
 server.use('/category', require('./routes/category.routes'));
+
 //api
 server.use("/api/", require('./routes/api/cart.routes'))
+server.use("/api", require('./routes/api/products.api.routes'));
+
 server.use(express.json())

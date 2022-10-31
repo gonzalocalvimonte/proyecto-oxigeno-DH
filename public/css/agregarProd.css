@@ -180,3 +180,8 @@
         width: 40%;
     }
 }
+.feedback {
+    padding: 1rem;
+    border-radius: 1px;
+    color: red;
+}

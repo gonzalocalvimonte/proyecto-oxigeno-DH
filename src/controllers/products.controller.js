@@ -2,6 +2,7 @@ const { Association,Op } = require('sequelize');
 let db = require('../database/models/index')
 const {resolve} = require('path')
 const {unlinkSync} = require('fs')
+const { validationResult } = require("express-validator");
 
 
 let ProductsController = {
@@ -13,6 +14,20 @@ create: function (req, res) {
         })
 },
 save: function(req,res) {
+    // Validaciones
+    const result = validationResult(req);
+    if ( !result.isEmpty() ){
+        return res.render ("products/create",
+          { 
+            style: 'edit',
+            errores: result.mapped(),
+            data: req.body, 
+            product: req.params.id,
+            categories: req.body.category,
+            
+        } )
+    }
+    // Fin validaciones, se continúa si pasaron ok
     db.Products.create({
         name:req.body.name,
         price:req.body.price,
@@ -71,7 +86,22 @@ edit:function(req,res){
         res.render("products/edit",{product:producto,categories:categories})
     })
 },
-update:function(req,res){
+update:async function(req,res){
+    // Validaciones
+    let pedidoCategoria = await db.categories.findAll({
+        attributes:['name','description','id']});
+    const result = validationResult(req);
+    if ( !result.isEmpty() ){
+        return res.render ("products/edit",
+          { 
+            style: 'edit',
+            errores: result.mapped(),
+            data: req.body, 
+            product: req.body,
+            categories: pedidoCategoria
+        } )
+    }
+    // Fin validaciones, se continúa si pasaron ok
     db.Products.update({
         name:req.body.name,
         price:req.body.price,
