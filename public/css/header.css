@@ -77,6 +77,15 @@
     width: 30%;
     z-index:10;
 }
+.syle-cart{
+    color:var(--blue-1);
+    position: relative;
+    right: 20px;
+    bottom: 8px;
+    font-size: .9rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
 #listProducts a{
     align-items: center;
     color: gray;

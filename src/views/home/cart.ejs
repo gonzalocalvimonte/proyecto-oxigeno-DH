@@ -11,36 +11,38 @@
 
     <main id="cart-page">
 
-        <h2 class="cart-title">Carrito de Compras</h2>
+        <h2 class="cart-title">Carrito de compras <span class="empty">vacío</span></h2>
+        
+        <table class="table-cart" hidden>
+            <thead>
+                <tr>
+                    <th class="item">Item</th>
+                    <th class="cantidad">Cantidad</th>
+                    <th class="total">Precio</th>
+                </tr>
+            </thead>
 
-        <table>
-            <tr>
-                <th class="item">Item</th>
-                <th class="cantidad">Cantidad</th>
-                <th class="total">Precio</th>
-            </tr>
-            
-            <tr>
-                <td class="item">Nombre</td>
-                <td class="cantidad"><button class="mas" type="button">+</button> 1 <button class="menos" type="button">-</button></td>
-                <td class="total">$1000</td>
-            </tr>
-
-            <tr>
-                <th class="total">Total</th>
-                <th></th>
-                <th class="total">$1000</th>
-            </tr>
+            <tbody id="data">
+            </tbody>   
+                
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th><i class="fa-solid fa-trash clear"></i></th>
+                    <th class="total">$<span class="total-price"></span></th>
+                </tr>
+            </tfoot>
         </table>
+
     
 
         <section class="envio">
-            <article>
+            <article class="shipping" hidden>
                 <p>Calcular envio: <input class="" type="text" name="c-postal" id="c-postal" required placeholder="Codido Postal"></p>
             </article>
         </section>
         <section class="pay-btn">
-            <button type="submit">
+            <button type="submit" class="payBtn" hidden>
                 Comprar
             </button>
         </section>
