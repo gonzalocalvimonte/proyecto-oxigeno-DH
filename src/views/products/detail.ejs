@@ -37,7 +37,7 @@
                         <a href="/products/editar/<%= product.id %> ">Editar</a>
                     </button>
         
-                    <form action="/products/borrar/<%= product.id  %>?m=DELETE" method="post">
+                    <form onsubmit="return confirm('Desea eliminar este producto?')" action="/products/borrar/<%= product.id  %>?m=DELETE" method="post">
                         <input type="hidden" name="image" value="<%= product.image %>">         
                         <button type="submit" class="boton-eliminar">Borrar</button>
                     </form>
