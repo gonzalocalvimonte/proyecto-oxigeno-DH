@@ -81,3 +81,24 @@ Re-distribución de tareas (cambio de modelos por controladores)
 
 ### Reunión 08/10
 Revisión final y entrega.
+
+## Sprint 7
+
+### Reunión 12/10
+
+Se divide  tareas segun trabajo realizado en sprints anteriores:
+Modalidad 1: equipo de implementacion sprint
+Modalidad 2: equipo de relevamiento de errores anteriores
+Modalidad 3: equipo de mejora estetica
+
+### Reunión 18/10
+
+Relevamiento de avances.
+Progresan las actividades, se decide avanzar con buscados, carrito y favicon
+
+### Reunión 30/10
+Revisión de avances: correca implementacion hasta el momento.
+Faltan validaciones de front.
+
+### Reunión 1/11
+Reunión final previa a la entrega
