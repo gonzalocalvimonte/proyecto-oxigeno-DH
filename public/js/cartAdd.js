@@ -41,3 +41,4 @@ window.addEventListener("load", () => {
         headerCart.innerText = cartQuantity()
     })
 })
+

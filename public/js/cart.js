@@ -14,13 +14,13 @@ const fetchData = async () => {
     }
 }
 
-const tableBody = document.querySelector("#data")
-const table = document.querySelector(".table-cart")
-const shipping = document.querySelector(".shipping")
-const payBtn = document.querySelector(".payBtn")
-const empty = document.querySelector(".empty")
-const clear = document.querySelector(".clear")
-const totalPrice = document.querySelector(".total-price")
+const table = document.querySelector(".table-cart")// tabla completa
+const tableBody = document.querySelector("#data")// cuerpo tabla
+const shipping = document.querySelector(".shipping")// envio
+const payBtn = document.querySelector(".payBtn")// boton comprar
+const empty = document.querySelector(".empty")// span titulo
+const clear = document.querySelector(".clear")// icono tacho basura
+const totalPrice = document.querySelector(".total-price")//precio total
 
 
 const findAndShow = (products) => {
@@ -42,7 +42,7 @@ const findAndShow = (products) => {
             <button data-id="${item.id}" class="mas" type="button">
             +
             </button>
-            ${item.quantity}
+            <span class='quantity'>${item.quantity}</span> 
             <button data-id="${item.id}" class="menos" type="button">
             -
             </button></td>
@@ -60,15 +60,39 @@ const findAndShow = (products) => {
 const btnsIncrDecr = (cart) => {
     const btnIncr = document.querySelectorAll(".mas")
     const btnDecr = document.querySelectorAll(".menos")
+    const quantity = document.querySelector('.quantity')
+    
+    // sumar 
     btnIncr.forEach(btn => {
-        btn.addEventListener("click", () => {
-
-            console.log(cart)
-            console.log(btn.dataset)
+        btn.addEventListener("click", () => {          
+            let btnId = parseInt(btn.dataset.id)
+            let search = cart.find(p => p.id == btnId)
+            let updateCart = cart 
+            if(search){
+                updateCart.map(p => {
+                    if(p.id == btnId){
+                        p.quantity ++
+                    } return p
+                })
+            } 
+            localStorage.setItem("cart", JSON.stringify( updateCart ))
         })
     })
+
+    // restar
     btnDecr.forEach(btn => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", () => {          
+            let btnId = parseInt(btn.dataset.id)
+            let search = cart.find(p => p.id == btnId)
+            let updateCart = cart 
+            if(search){
+                updateCart.map(p => {
+                    if(p.id == btnId && p.quantity > 0){
+                        p.quantity --
+                    } return p
+                })
+            } 
+            localStorage.setItem("cart", JSON.stringify( updateCart ))
         })
     })
 }
