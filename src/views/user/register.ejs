@@ -1,21 +1,45 @@
 <%- include('../partials/head.ejs')  %> 
 <link rel="stylesheet" href="/css/register.css">
 
+<script defer src="/scripts/register.js"> </script>
+
+
 <body>
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
     </header>
 
     <main id="register">
-                <form class="form-reg" action="/user/save" method="post" enctype="multipart/form-data">
+        <form class="form-reg" action="/user/save" method="post" enctype="multipart/form-data">
             <span>Datos usuario</span>
-            <input class="in-register" type="text" name="nombre" id="nombre" placeholder="Nombre">
+          
+                <input class="in-register" type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <% if (locals.errores && locals.errores.nombre) { %>
+                <p class="feedback"><%= locals.errores.nombre.msg%></p>
+            <%  }%>
+            <p id="errorNombre" class="feedback"></p>
             <input class="in-register" type="text" name="apellido" id="apellido" placeholder="Apellido">
+            <% if (locals.errores && locals.errores.apellido) { %>
+                <p class="feedback"><%= locals.errores.apellido.msg  %></p>
+            <%  }%>
+                <p id="errorApellido" class="feedback"></p>
             <input class="in-register" type="text" name="email" id="email" placeholder="email">
+            <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback"><%= locals.errores.email.msg  %></p>
+            <%  }%>
+            <p id="errorEmail" class="feedback"></p>
             <input class="in-register" type="password" name="password" id="password" placeholder="Contraseña">
+            <% if (locals.errores && locals.errores.password) { %>
+                <p class="feedback"><%= locals.errores.password.msg  %></p>
+            <%  }%>
+            <p id="errorPassword" class="feedback"></p>
             <input class="in-register" type="date" name="nacimiento" id="nacimiento" placeholder="Fecha Nacimiento">
             <input class="in-register" type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
-            <input class="in-register" type="file" name="avatar">
+            <input class="in-register" type="file" name="avatar" id="avatar">
+            <% if (locals.errores && locals.errores.avatar) { %>
+                <p class="feedback"><%= locals.errores.avatar.msg  %></p>
+            <%  }%>
+            <p id="errorAvatar" class="feedback"></p>
             <div id="btn-enviar">
                 <button type="submit"class="btn-enviar">Enviar</button>
             </div>
@@ -25,5 +49,5 @@
     <footer id="footer">
         <%- include("../partials/footer.ejs") %> 
     </footer>
+
 </body>
-</html>

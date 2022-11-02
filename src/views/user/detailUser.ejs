@@ -25,7 +25,7 @@
             <p class="detailUser-title">Fecha de nacimiento: <%= usuario.nacimiento %> </p>
         </article>
     
-    <form class="detailUser-form" action="/user/delete/<%= usuario.id %>?m=DELETE " method="post">
+    <form onsubmit="return confirm('Desea eliminar este usuario?')" class="detailUser-form" action="/user/delete/<%= usuario.id %>?m=DELETE " method="post">
         <input type="hidden" name="avatar" value="<%=usuario.avatar%>">
         <button>Eliminar perfil</button>
     </form>
