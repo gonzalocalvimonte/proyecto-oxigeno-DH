@@ -167,5 +167,6 @@
 .feedback {
     padding-left: 1rem;
     border-radius: 1px;
+    font-size: smaller;
     color: red;
 }
