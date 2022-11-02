@@ -1,5 +1,6 @@
 <%- include('../partials/head.ejs')  %> 
 <link rel="stylesheet" href="/css/agregarProd.css">
+<script defer src="/scripts/edit.js"> </script>
 
 <body>
     <header id="header">
@@ -16,30 +17,39 @@
             <% if (locals.errores && locals.errores.name) { %>
                 <p class="feedback"><%= locals.errores.name.msg  %></p>
                 <%  }%>
+                <p id="errorName" class="feedback"></p>
 
             <input type="number" placeholder="Precio" name="price">
 
             <% if (locals.errores && locals.errores.price) { %>
                 <p class="feedback"><%= locals.errores.price.msg  %></p>
                 <%  }%>
+                <p id="errorPrice" class="feedback"></p>
 
             <textarea name="description" placeholder="Descripcion"></textarea>
 
             <% if (locals.errores && locals.errores.description) { %>
                 <p class="feedback"><%= locals.errores.description.msg  %></p>
                 <%  }%>
-                
-            <select id="category" name="category" required>
-                <% for ( let i = 0; i < categories.length; i++ ) { %>
-                    <option value=" <%=categories[i].id%> ">
-                        <%=categories[i].name%> 
-                    </option>
-                <% } %>
-            </select>
+                <p id="errorDescription" class="feedback"></p>
+
+                <select id="category" name="category" required>
+                    <% for ( let i = 0; i < categories.length; i++ ) { %>
+                        <option value=" <%=categories[i].id%> ">
+                            <%=categories[i].name%> 
+                        </option>
+                    <% } %>
+                </select>
 
             <div id="image-prod">
             <label  for="fotoProd">Selecionar foto del producto</label>
             <input  type="file" name="image" id="fotoProd">
+            
+            <% if (locals.errores && locals.errores.image) { %>
+                <p class="feedback"><%= locals.errores.image.msg  %></p>
+                <%  }%>
+            <p id="errorImage" class="feedback"></p>
+            
             </div>
 
             <div id="button-add">

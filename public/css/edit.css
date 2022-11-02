@@ -165,7 +165,7 @@
     }
 }
 .feedback {
-    padding: 1rem;
+    padding-left: 1rem;
     border-radius: 1px;
     color: red;
 }

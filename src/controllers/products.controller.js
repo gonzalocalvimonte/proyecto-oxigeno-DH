@@ -13,7 +13,8 @@ create: function (req, res) {
             return res.render("products/create", {categories: categories});
         })
 },
-save: function(req,res) {
+save: async function(req,res) {
+    let categorias = await  db.categories.findAll()
     // Validaciones
     const result = validationResult(req);
     if ( !result.isEmpty() ){
@@ -22,8 +23,8 @@ save: function(req,res) {
             style: 'edit',
             errores: result.mapped(),
             data: req.body, 
-            product: req.params.id,
-            categories: req.body.category,
+            product: req.body,
+            categories: categorias,
             
         } )
     }

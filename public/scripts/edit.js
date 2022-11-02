@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
         // Validación del nombre del producto
         let name = document.querySelector("#name");
 
-        errorName = document.querySelector("#errorName");
+        let errorName = document.querySelector("#errorName");
         errorName.innerHTML = "";
         if ( name.value == "") {
           errorName.innerHTML += "¡Debe ingresarse nombre del producto!";
@@ -19,7 +19,7 @@ window.addEventListener("load", function() {
         // Validación de la descripción del producto 
         let description = document.querySelector("#description");
 
-        errorDescription = document.querySelector("#errorDescription");
+        let errorDescription = document.querySelector("#errorDescription");
         errorDescription.innerHTML = "";
         if ( description.value == "") {
           errorDescription.innerHTML += "¡Debe ingresarse descripción del producto!";
@@ -30,15 +30,17 @@ window.addEventListener("load", function() {
         }
         // Validación de la imagen del producto 
 
-        let image = document.querySelector("#fotoProd");
+        /*let image = document.querySelector("#fotoProd");
+        let errorImage = document.querySelector("#errorImage");
 
-        errorImage = document.querySelector("#errorImage");
         errorImage.innerHTML = "";
-        let extension = image.files[0].type;
-        
-        if ( ! extension.includes("image")){
-            errorimage.innerHTML += "¡Debe ingresar una imagen!";
-        } 
+        if ( image.value != "" ) {
+            let extension = image.value.split('.').pop().toUpperCase();
+            let imgType = [ "JPG", "JPEG", "PNG", "GIF"];
+             if ( imgType.indexOf(extension) <0 ){
+                 errorImage.innerHTML += "¡Debe ingresar un archivo de imagen";
+            } 
+        } */
         if (errorName.innerHTML !="" || errorDescription.innerHTML !="" || errorImage.innerHTML != ""){
             e.preventDefault();
         }
