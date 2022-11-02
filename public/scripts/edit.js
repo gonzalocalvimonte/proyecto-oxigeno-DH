@@ -3,6 +3,7 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector("form.formAddProd");
 
     formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
         
         // Validación del nombre del producto
         let name = document.querySelector("#name");
@@ -30,7 +31,7 @@ window.addEventListener("load", function() {
         }
         // Validación de la imagen del producto 
 
-        /*let image = document.querySelector("#fotoProd");
+        let image = document.querySelector("#fotoProd");
         let errorImage = document.querySelector("#errorImage");
 
         errorImage.innerHTML = "";
@@ -40,9 +41,9 @@ window.addEventListener("load", function() {
              if ( imgType.indexOf(extension) <0 ){
                  errorImage.innerHTML += "¡Debe ingresar un archivo de imagen";
             } 
-        } */
-        if (errorName.innerHTML !="" || errorDescription.innerHTML !="" || errorImage.innerHTML != ""){
-            e.preventDefault();
+        }
+        if (!(errorName.innerHTML !="" || errorDescription.innerHTML !="" || errorImage.innerHTML != "")){
+            e.submit();
         }
     })
 }
