@@ -1,6 +1,9 @@
 <%- include('../partials/head.ejs')  %> 
 <link rel="stylesheet" href="/css/login.css">
 
+<script defer src="/scripts/login.js"> </script>
+
+
 <body>
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
@@ -8,8 +11,16 @@
 
     <main id="login">
         <form class="form-log" action="/user/access" method="post">
-            <input class="in-log" type="text" name="usuario" id="usuario" required placeholder="Email">
-            <input class="in-log" type="password" placeholder="Contraseña" name="password" id="password" required>
+            <input class="in-log" type="text" name="usuario" id="usuario"  placeholder="Email" value="<%= locals.data && data.usuario %>">
+            <% if (locals.errores && locals.errores.usuario) { %>
+                <p class="feedback"><%= locals.errores.usuario.msg  %></p>
+        <%  }%>
+        <p id="errorUsuario" class="feedback"></p>
+            <input class="in-log" type="password" placeholder="Contraseña" name="password" id="password" >
+            <% if (locals.errores && locals.errores.password) { %>
+                <p class="feedback"><%= locals.errores.password.msg  %></p>
+        <%  }%>
+        <p id="errorPassword" class="feedback"></p>
             <section class="registroBoton">
                 <label class="register" for="rememberMe">Recordarme</label>
                 <input type="checkbox" value="rememberMe" name="rememberMe" id="rememberMe"> 
