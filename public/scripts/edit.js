@@ -10,10 +10,10 @@ window.addEventListener("load", function() {
         let errorName = document.querySelector("#errorName");
         errorName.innerHTML = "";
         if ( name.value == "") {
-          errorName.innerHTML += "¡Debe ingresarse nombre del producto!";
+          errorName.innerHTML += "Por favor, ingresá nombre para el producto.";
           
         } else if ( name.value.length < 5){
-        errorName.innerHTML += "<p>" + "¡El nombre no puede tener menos de 5 caracteres!" + "</p>";
+        errorName.innerHTML += "<p>" + "El nombre debe tener al menos de 5 caracteres." + "</p>";
     
         }
         // Validación de la descripción del producto 
@@ -22,10 +22,10 @@ window.addEventListener("load", function() {
         let errorDescription = document.querySelector("#errorDescription");
         errorDescription.innerHTML = "";
         if ( description.value == "") {
-          errorDescription.innerHTML += "¡Debe ingresarse descripción del producto!";
+          errorDescription.innerHTML += "Por favor, ingresá una descripción para el producto.";
           
         } else if ( description.value.length < 20){
-        errorDescription.innerHTML += "<p>" + "¡La descripción no puede tener menos de 20 caracteres!" + "</p>";
+        errorDescription.innerHTML += "<p>" + "La descripción debe tener al menos 20 caracteres." + "</p>";
     
         }
         // Validación de la imagen del producto 

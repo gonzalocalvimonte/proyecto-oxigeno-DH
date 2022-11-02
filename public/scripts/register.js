@@ -9,10 +9,10 @@ window.addEventListener("load", function() {
         let errorNombre = document.querySelector("#errorNombre");
         errorNombre.innerHTML = "";
         if ( nombre.value == "") {
-          errorNombre.innerHTML += "Debe ingresarse nombre!!!!!";
+          errorNombre.innerHTML += "Por favor, ingresá tu nombre.";
           
         } else if ( nombre.value.length < 2 ){
-            errorNombre.innerHTML += "El nombre no puede tener menos de 2 caracteres!!!!";
+            errorNombre.innerHTML += "Tu nombre no puede tener menos de 2 letras.";
             
         } 
         //Validación Apellido
@@ -20,20 +20,20 @@ window.addEventListener("load", function() {
         let errorApellido = document.querySelector("#errorApellido");
         errorApellido.innerHTML = "";
         if ( nombre.value == "") {
-          errorApellido.innerHTML += "Debe ingresarse apellido!!!!!";
+          errorApellido.innerHTML += "Por favor, ingresá tu apellido.";
           
         } else if ( apellido.value.length < 2 ){
-            errorApellido.innerHTML += "El apellido no puede tener menos de 2 caracteres!!!!";
+            errorApellido.innerHTML += "Tu nombre no puede tener menos de 2 letras.";
         }
         // Validación email
         let email = document.querySelector("#email");
         let errorEmail = document.querySelector("#errorEmail");
         errorEmail.innerHTML = "";
         if ( email.value == "") {
-          errorEmail.innerHTML += "Debe ingresarse email!!!!!";
+          errorEmail.innerHTML += "Por favor, ingresá tu mail.";
           
         } else if (! /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))  {
-            errorEmail.innerHTML += "Debe ingresarse una dirección de email válida!!!!";
+            errorEmail.innerHTML += "Por favor, ingresá una dirección de mail válida.";
         } 
 
         //Validación Password
@@ -41,14 +41,14 @@ window.addEventListener("load", function() {
         let errorPassword = document.querySelector("#errorPassword");
         errorPassword.innerHTML = "";
         if ( password.value == "") {
-            errorPassword.innerHTML += "Debe ingresarse password!!!!!"
+            errorPassword.innerHTML += "Por favor, ingresá una contraseña."
         } else if ( password.value.length < 8 ){
-                    errorPassword.innerHTML += "La password no puede tener menos de 8 caracteres!!!!";
+                    errorPassword.innerHTML += "La contraseña debe tener al menos 8 caracteres";
 
         } else if ( ! /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]$/.test(password.value)) {
            
             errorPassword.innerHTML += 
-                "La password debe tener letras mayúsculas, minúsculas, un número y un carácter especial";
+                "La contraseña debe tener mayúsculas, minúsculas, un número y un carácter especial";
         }
         
         // Validación Avatar
