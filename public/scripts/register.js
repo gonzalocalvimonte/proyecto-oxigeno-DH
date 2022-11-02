@@ -45,7 +45,7 @@ window.addEventListener("load", function() {
         } else if ( password.value.length < 8 ){
                     errorPassword.innerHTML += "La contraseña debe tener al menos 8 caracteres";
 
-        } else if ( ! /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]$/.test(password.value)) {
+        } else if ( /^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\\/:;"'<>,.?_₹]).*$/.test(password.value) === false ) {
            
             errorPassword.innerHTML += 
                 "La contraseña debe tener mayúsculas, minúsculas, un número y un carácter especial";
