@@ -70,3 +70,16 @@ Pudimos resolver conflictos en conjunto con reuniones a demanda.
 ### Aspectos negativos
 
 Tuvimos algunas fallas en XAMPP lo que no nos permitía constatar errores mientras avanzabamos en el código.
+
+
+
+##Sprint 7
+
+### Aspectos positivos
+Desde el primer momento hasta el último dividimos las tareas y respetamos los alcances de cada uno de ellas priorizando a los colaboradores que no habian podido participar activamente en sprints anteriores  (recuperando en este).
+
+Pudimos dividir al equipo en tareas especificas aprovechando el tiempo para mejorar la estetica y sumar funcionalidades.
+
+### Aspectos negativos
+
+Si bine la división de tareas fue correcta, estuvimos hasta el ultimo minuto terminando mejoras. Podriamos haber usado el tiempo de una manera mas estrategica. 
