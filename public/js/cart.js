@@ -25,12 +25,12 @@ const totalPrice = document.querySelector(".total-price")//precio total
 
 const findAndShow = (products) => {
     if (localStorage.cart){
+        let cart = JSON.parse(localStorage.cart)
         let total = 0
         removeAttribute(shipping)
         removeAttribute(payBtn)
         removeAttribute(table)
         empty.innerText = ""
-        let cart = JSON.parse(localStorage.cart)
         cart.forEach((item) => {
             let search = products.find(product => product.id === item.id)
             // console.log(search)
@@ -51,8 +51,9 @@ const findAndShow = (products) => {
             `
             btnsIncrDecr(cart)
             let res = (search.price * item.quantity)
-            total += res
+            total += res        
             totalPrice.innerText = total
+            console.log(item.quantity)
         })
     }
 }
@@ -60,8 +61,6 @@ const findAndShow = (products) => {
 const btnsIncrDecr = (cart) => {
     const btnIncr = document.querySelectorAll(".mas")
     const btnDecr = document.querySelectorAll(".menos")
-    const quantity = document.querySelector('.quantity')
-    
     // sumar 
     btnIncr.forEach(btn => {
         btn.addEventListener("click", () => {          
@@ -72,10 +71,11 @@ const btnsIncrDecr = (cart) => {
                 updateCart.map(p => {
                     if(p.id == btnId){
                         p.quantity ++
+                        location.reload()
                     } return p
                 })
             } 
-            localStorage.setItem("cart", JSON.stringify( updateCart ))
+            localStorage.setItem("cart", JSON.stringify( updateCart ))        
         })
     })
 
@@ -89,6 +89,7 @@ const btnsIncrDecr = (cart) => {
                 updateCart.map(p => {
                     if(p.id == btnId && p.quantity > 0){
                         p.quantity --
+                        location.reload()
                     } return p
                 })
             } 
