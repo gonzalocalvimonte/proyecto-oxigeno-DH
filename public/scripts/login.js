@@ -9,10 +9,10 @@ window.addEventListener("load", function() {
         let errorUsuario = document.querySelector("#errorEmail");
         errorUsuario.innerHTML = "";
         if ( usuario.value == "") {
-          errorUsuario.innerHTML += "Debe ingresarse email!!!!!";
+          errorUsuario.innerHTML += "Debe ingresarse email";
           
         } else if (! /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(usuario.value))  {
-            errorUsuario.innerHTML += "Debe ingresarse una dirección de email válida!!!!";
+            errorUsuario.innerHTML += "Debe ingresarse una dirección de email válida";
         } 
 
         //Validación Password
@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
         let errorPassword = document.querySelector("#errorPassword");
         errorPassword.innerHTML = "";
         if ( password.value == "") {
-            errorPassword.innerHTML += "Debe ingresarse password!!!!!"
+            errorPassword.innerHTML += "Debe ingresarse password"
         }   
 
         // Si hubo errores, no enviar el formulario
