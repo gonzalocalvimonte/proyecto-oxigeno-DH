@@ -1,9 +1,9 @@
-const cartQuantity = () => {
+const cartQuantity2 = () => {
     return localStorage.cart ? JSON.parse(localStorage.cart).length : 0
 }
 
 window.addEventListener('load', () => {
     let headerCart = document.querySelector(".header-cart")
-    headerCart.innerText = cartQuantity()
+    headerCart.innerText = cartQuantity2()
 })
 
