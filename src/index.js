@@ -23,9 +23,6 @@ server.use(method('m'))
 
 server.use(express.urlencoded({extended:true}));
 
-//Middleware
-// server.use(require("./middlewares/cart"));
-
 //session
 server.use(session({
     secret:'proyecto-oxigeno',

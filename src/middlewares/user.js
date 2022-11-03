@@ -4,8 +4,8 @@ const middleware = async (req, res, next) => {
     let user = null
     if(req.cookies.user) {
         try {
-         user = await db.Users.findOne({where:{email:req.cookies.user}})
-         req.session.user = user
+            user = await db.Users.findOne({where:{email:req.cookies.user}})
+            req.session.user = user
         } catch (error) {
             console.log(error);
         }
@@ -19,11 +19,6 @@ const middleware = async (req, res, next) => {
 }
 
 module.exports = middleware
-
-
-
-
-
 
 
 //para session con cookie

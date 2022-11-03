@@ -1,6 +1,6 @@
-let express = require('express');
-let router = express.Router();
-let categoryController = require('../controllers/category.controllers')
+const express = require('express');
+const router = express.Router();
+const categoryController = require('../controllers/category.controllers')
 
 // Creación
 router.get('/crear', categoryController.crear);
