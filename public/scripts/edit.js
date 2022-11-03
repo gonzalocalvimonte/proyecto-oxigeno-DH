@@ -3,8 +3,8 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector("form.formAddProd");
 
     formulario.addEventListener("submit", function (e) {
-        e.preventDefault();
         
+
         // Validación del nombre del producto
         let name = document.querySelector("#name");
 
@@ -42,8 +42,8 @@ window.addEventListener("load", function() {
                  errorImage.innerHTML += "¡Debe ingresar un archivo de imagen";
             } 
         }
-        if (!(errorName.innerHTML !="" || errorDescription.innerHTML !="" || errorImage.innerHTML != "")){
-            e.submit();
+        if ((errorName.innerHTML !="" || errorDescription.innerHTML !="" || errorImage.innerHTML != "")){
+            e.preventDefault();
         }
     })
 }

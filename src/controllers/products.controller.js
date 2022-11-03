@@ -14,7 +14,7 @@ create: function (req, res) {
         })
 },
 save: async function(req,res) {
-    let categorias = await  db.categories.findAll()
+    let categorias = await db.categories.findAll()
     // Validaciones
     const result = validationResult(req);
     if ( !result.isEmpty() ){
