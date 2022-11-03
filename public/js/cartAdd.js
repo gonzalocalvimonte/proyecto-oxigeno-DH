@@ -1,12 +1,5 @@
 const cartQuantity = () => {
     return localStorage.cart ? JSON.parse(localStorage.cart).length : 0
-    //              PREGUNTAR ! 
-    // if (localStorage.cart) {
-    //     let cart = JSON.parse(localStorage.cart)
-    //     cart.reduce((total, product) => {
-    //         return total + product.quantity
-    //     }, 0)
-    // }
 }
 
 window.addEventListener("load", () => {
@@ -41,4 +34,7 @@ window.addEventListener("load", () => {
         headerCart.innerText = cartQuantity()
     })
 })
+
+
+
 

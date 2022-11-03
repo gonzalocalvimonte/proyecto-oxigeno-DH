@@ -10,6 +10,11 @@ const controller = require('../controllers/user.controllers')
 const isLogged = require('../middlewares/userLogged')
 const isAdmin = require('../middlewares/userAdmin')
 
+// Validaciones
+const validationsRegUser = require('../validations/register');
+const validationsLogin = require('../validations/login');
+
+
 //Multer
 const destination = function(req,file,cb){
     let folder = resolve(__dirname, '..', '..','public','images','Uploads','users')
@@ -26,8 +31,8 @@ const upload = multer({storage:diskStorage({destination,filename})})
 
 router.get('/login', controller.login);
 router.get('/register', controller.register);
-router.post('/save', upload.any(), controller.save);
-router.post('/access', controller.access)
+router.post('/save', upload.any(), validationsRegUser, controller.save);
+router.post('/access',  validationsLogin, controller.access)
 router.get('/logout', controller.logout);
 router.get('/profile', isLogged, controller.profile)
 router.get('/profile/edit/:id', isLogged,controller.edit)

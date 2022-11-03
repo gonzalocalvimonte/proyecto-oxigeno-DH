@@ -27,8 +27,15 @@
                     Agregar
                 </button>
             </div>
+            <% } else { %>
+                <h2>
+                    No se encontro un producto <a href="/products">Volver</a>
+                </h2>
+            </section>
+            <% } %>
+        </div>
+        
 
-        </div>      
         <% if (user) { %>
             <% if (user.roleId != 3) { %>
                 <article id="botones">
@@ -43,13 +50,6 @@
                     </form>
                     
                 </article>
-                
-        <% } else { %>
-            <h2>
-                No se encontro un producto <a href="/products">Volver</a>
-            </h2>
-        </section>
-        <% } %>
         <% } %>
         <% } %>
     </main>
