@@ -32,7 +32,6 @@
     --grey: #f2f2f2;
     --white: #fff;
 }
-
 .mainAddProd{
     display: flex;
     justify-content: center;
@@ -101,25 +100,24 @@
     background-color: var(--blue-0);
 }
 .listadoTit{
-    border: 0.7vh solid lightblue;
+    border: 0.7vh solid;
     padding: 20px;
     color: #f2f2f2;
-    background-color: #048abf;
+    background-color: var(--blue-1);
 }
 #listadoCat ul li a{
-    
     padding: 7px;
-    background-color: #048abf;
+    background-color: var(--blue-1);
     border-radius: 25px;
     color: #f2f2f2;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+    padding-left: .5rem;
+    margin-left: 3rem;
 }
 #listadoCat ul li{
     display: flex;
     flex-direction: row;
     padding: 10px;
     border-bottom: 2px solid #ebebeb;
-    background-color: lightblue;
 }
 .button-cat{
     font-size: 1rem;

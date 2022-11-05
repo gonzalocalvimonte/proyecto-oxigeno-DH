@@ -5,18 +5,18 @@
     <header id="header">
         <%- include("../partials/header.ejs")  %> 
     </header>
-    <main>
+    <main class="cat-main">
         <h1 class="listadoTit">Listado de categorías</h1>
     <div id="listadoCat">
-    <ul>
-        <% for (let i = 0; i < categories.length; i++) { %>
-            <li>
-                <a href="/category/<%=categories[i].id%>">
-                    <%= categories[i].name%>
-                </a>
-            </li>
-            <% } %>
-    </ul>
+        <ul>
+            <% for (let i = 0; i < categories.length; i++) { %>
+                <li>
+                    <a href="/category/<%=categories[i].id%>">
+                        <%= categories[i].name%>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
     </div>
     <a class="buton" href="/category/crear">
         

@@ -15,19 +15,17 @@ const controller = {
     },
     
     save:(req,res) => {
-                 // Validaciones  Register
-
-                 const result = validationResult(req);
-                 if ( !result.isEmpty() ){
-                     return res.render ("user/register", 
-                       { 
-                         style: 'register',
-                         errores: result.mapped(),
-                         data: req.body 
-                     } )
-                 }
-              // Fin validaciones, se continúa si pasaron ok
-     
+        // Validaciones  Register
+        const result = validationResult(req);
+        if ( !result.isEmpty() ){
+            return res.render ("user/register", 
+            { 
+                style: 'register',
+                errores: result.mapped(),
+                data: req.body 
+            } )
+        }
+        // Fin validaciones, se continúa si pasaron ok
         let password = req.body.password
         let hash = bcryptjs.hashSync(password, 10)
         db.Users.create({
@@ -47,18 +45,17 @@ const controller = {
     },
     
     access:(req,res) => {
-
         // Validaciones Login
         const resultLogin = validationResult(req);
         if ( !resultLogin.isEmpty() ){
-           return res.render ("user/login", 
-             { 
-               style: 'login',
-               errores: resultLogin.mapped(),
-               data: req.body 
-              } )
-         }
-              // Fin validaciones, se continúa si pasaron ok
+            return res.render ("user/login", 
+                { 
+                style: 'login',
+                errores: resultLogin.mapped(),
+                data: req.body 
+                } )
+        }
+        // Fin validaciones, se continúa si pasaron ok
         db.Users.findOne({where:{email:req.body.usuario}})
             .then((user) => {
                 req.session.user = user
@@ -122,12 +119,9 @@ const controller = {
         .then((user) => {
             if(user){
                 return res.render("user/detailUser", {usuario:user})
-                }
-                return res.render("user/detailUser", {usuario:null});
+            }
+            return res.render("user/detailUser", {usuario:null});
         })
-
-        
-
     }
 }
 

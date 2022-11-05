@@ -9,8 +9,8 @@ window.addEventListener("load", function() {
         let errorNombre = document.querySelector("#errorNombre");
         errorNombre.innerHTML = "";
         if ( nombre.value == "") {
-          errorNombre.innerHTML += "Por favor, ingresá tu nombre.";
-          
+            errorNombre.innerHTML += "Por favor, ingresá tu nombre.";
+            
         } else if ( nombre.value.length < 2 ){
             errorNombre.innerHTML += "Tu nombre no puede tener menos de 2 letras.";
             
