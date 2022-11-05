@@ -41,5 +41,6 @@ server.use('/category', require('./routes/category.routes'));
 //api
 server.use("/api/", require('./routes/api/cart.routes'))
 server.use("/api", require('./routes/api/products.api.routes'));
+server.use("/api/", require('./routes/api/users.api.routes'))
 
 server.use(express.json())
