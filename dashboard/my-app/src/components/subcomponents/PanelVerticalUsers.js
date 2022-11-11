@@ -5,35 +5,40 @@ class PanelVerticalUsers extends Component {
   constructor(){
     super()
     this.state = {
-     productos : []
+     usuarios : []
     }
   }
 
    async componentDidMount(){
     try {
-    let peticion = await fetch('http://localhost:3001/api/users')
+    let peticion = await fetch('http://localhost:3000/api/users')
 
     let respuesta = await peticion.json()
 
-    let products = respuesta.data
     
-    let productos = data => {this.setState({productos:data.data})}
     
+    this.setState({usuarios:respuesta.data})
+    
+    console.log(this.state)
     } catch(error) {
       console.log(error)
     }
 
+    
   }
    render(){
     
    return (
       <div >
-        <h2>Hola mundo!</h2>
+        <h2>Somos los usuarios</h2>
         <ul>
-        {this.state.productos.map(elemento => {
-          <li>{elemento.name}</li>
-         
-         })}
+          {this.state.usuarios.map(e => 
+           <li>
+           <p>{e.id}</p>
+           <p>{e.nombre}</p>
+           </li>
+           )}
+          
         </ul>
         
          

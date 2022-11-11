@@ -5,6 +5,8 @@ const {join} = require("path");
 const method = require('method-override')
 const session = require('express-session')
 const cookie = require('cookie-parser')
+const cors = require('cors')
+server.use(cors())
 
 //server
 const {port, start} = require("./modules/server");

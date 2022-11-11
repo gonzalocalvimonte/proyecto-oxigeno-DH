@@ -2,35 +2,43 @@ import React, { Component } from 'react';
 
 class PanelVerticalProducts extends Component {
 
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
-     productos : []
+     products : []
     }
-      }
- 
-  componentDidMount(){
-    
-  fetch('http://localhost:3000/api/list',{
-    method: 'GET',
-    headers: new Headers({ 'Content-type': 'application/json'}),
-    mode: 'no-cors'
-  })
-  .then(response => {response.json()})
-  .then(data => {this.setState({productos:data.data})})
-  .catch(e => {console.log(e)})
   }
 
+   async componentDidMount(){
+    try {
+    let peticion = await fetch('http://localhost:3000/api/list')
+
+    let respuesta = await peticion.json()
+
+    
+    
+    this.setState({products:respuesta.data})
+    
+    console.log(this.state)
+    } catch(error) {
+      console.log(error)
+    }
+
+    
+  }
    render(){
-    console.log(this.state.productos)
+    
    return (
       <div >
-        <h2>Hola mundo!</h2>
+        <h2>Somos los productos</h2>
         <ul>
-         {this.state.productos.map(elemento => {
-          <li>{elemento.name}</li>
-         
-         })}
+          {this.state.products.map(e => 
+          <li>
+           <p>{e.name}</p>
+           <p>{e.price}</p>
+           </li>
+           )}
+          
         </ul>
         
          
