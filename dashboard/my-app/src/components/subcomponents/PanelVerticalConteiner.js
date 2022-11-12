@@ -1,12 +1,13 @@
 import PanelVerticalProducts from './PanelVerticalProducts'
-import PanelVerticalUsers from './PanelVerticalUsers'
+import PanelVerticalCategories from './PanelVerticalCategories'
+import './stylesSubcomponents/PanelVerticalConteiner.css'
 
 function PanelVerticalConteiner() {
    
     return (
-      <div >
+      <div id='conteneirPanelVertical'>
             <PanelVerticalProducts/>
-            <PanelVerticalUsers/>
+            <PanelVerticalCategories/>
       </div>
     );
   }

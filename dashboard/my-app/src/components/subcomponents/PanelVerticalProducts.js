@@ -36,9 +36,9 @@ class PanelVerticalProducts extends Component {
           <li>
            <p>{e.name}</p>
            <p>{e.price}</p>
-           <p>{e.image}</p>
+          
            <picture>
-            <img src={'./images/Uploads/products/<% %>' + e.image}/>
+            {/* <img src={e.image}/> */}
            </picture>
            </li>
            )}

@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-class PanelVerticalUsers extends Component {
+class PanelVerticalCategories extends Component {
 
   constructor(){
     super()
     this.state = {
-     usuarios : []
+     categories : []
     }
   }
 
    async componentDidMount(){
     try {
-    let peticion = await fetch('http://localhost:3000/api/users')
+    let peticion = await fetch('http://localhost:3000/api/categories/index')
 
     let respuesta = await peticion.json()
 
     
     
-    this.setState({usuarios:respuesta.data})
+    this.setState({categories:respuesta.data})
     
     console.log(this.state)
     } catch(error) {
@@ -30,12 +30,12 @@ class PanelVerticalUsers extends Component {
     
    return (
       <div >
-        <h2>Somos los usuarios</h2>
+        <h2>Somos las categorias</h2>
         <ul>
-          {this.state.usuarios.map(e => 
+          {this.state.categories.map(e => 
            <li>
-           <p>{e.id}</p>
-           <p>{e.nombre}</p>
+           
+           <p>{e.name} : {e.products.length}</p>
            </li>
            )}
           
@@ -48,4 +48,4 @@ class PanelVerticalUsers extends Component {
           };
   }
      
-  export default PanelVerticalUsers;
+  export default PanelVerticalCategories;

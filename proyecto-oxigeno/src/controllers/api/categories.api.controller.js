@@ -2,7 +2,9 @@ let db = require('../../database/models/index')
 
 module.exports = {
     all: async (req, res) => {
-        let categories = await db.categories.findAll()
+        let categories = await db.categories.findAll({
+            include: ['products']
+        })
         return res.status(200).json({
             total: categories.length,
             data: categories,

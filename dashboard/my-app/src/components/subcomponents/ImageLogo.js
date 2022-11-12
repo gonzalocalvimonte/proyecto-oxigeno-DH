@@ -1,8 +1,10 @@
+import './stylesSubcomponents/ImagenLogo.css'
+
 function ImageLogo() {
   return (
-    <div >
+    <div id="imagenOxigeno">
         <picture>
-                <img src=''/>
+                <img src='http://localhost:3000/images/logo_blanco.png'/>
         </picture>
     </div>
   );

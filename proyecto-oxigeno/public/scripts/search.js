@@ -28,7 +28,7 @@ document.querySelector('#searchInput').addEventListener('input', async(e) => {
         resultados.forEach(element => {
         document.querySelector('#listProducts').innerHTML += `
         <a class="aSearch" href="/products/detalle/${element.id}">
-        <img src="/images/Uploads/products/${element.image}" alt="imagen del producto">
+        <img src="${element.image}" alt="imagen del producto">
         <div>
         <p> ${element.name}</p>        
         </div>
