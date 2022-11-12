@@ -3,7 +3,7 @@ import './stylesComponents/Header.css'
 
 function Header() {
   return (
-        <div >
+        <div id='header'>
 
             <ImageLogo/>
 

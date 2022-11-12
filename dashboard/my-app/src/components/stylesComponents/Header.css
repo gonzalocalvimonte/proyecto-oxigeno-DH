@@ -1,0 +1,13 @@
+
+    #header{
+        height: 20vh;
+        background: #67a0cc;
+        background: -webkit-linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+        background: linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: start;
+        width: 100%;
+}

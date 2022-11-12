@@ -41,6 +41,7 @@ server.use("/user", require('./routes/users.routes'));
 server.use('/category', require('./routes/category.routes'));
 
 //api
+server.use("/api/categories", require('./routes/api/categories.api.routes'))
 server.use("/api/", require('./routes/api/cart.routes'))
 server.use("/api", require('./routes/api/products.api.routes'));
 server.use("/api/", require('./routes/api/users.api.routes'))
