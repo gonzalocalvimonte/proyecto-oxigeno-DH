@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector("form.form-log");
 
     formulario.addEventListener("submit", function (e) {
-        
+
         e.preventDefault(); 
 
         // Validación usuario (email)
