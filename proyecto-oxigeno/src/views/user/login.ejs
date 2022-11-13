@@ -11,15 +11,19 @@
 
     <main id="login">
         <form class="form-log" action="/user/access" method="post">
-            <input class="in-log" type="text" name="usuario" id="usuario"  placeholder="Email" value="<%= locals.data && data.usuario %>">
-            <% if (locals.errores && locals.errores.usuario) { %>
-                <p class="feedback"><%= locals.errores.usuario.msg  %></p>
-        <%  }%>
-        <p id="errorUsuario" class="feedback"></p>
-            <input class="in-log" type="password" placeholder="Contraseña" name="password" id="password" >
-            
+            <div class="prueba">
+                <input class="in-log" type="text" name="usuario" id="usuario"  placeholder="Email" value="<%= locals.data && data.usuario %>">
+                <% if (locals.errores && locals.errores.usuario) { %>
+                    <p class="feedback"><%= locals.errores.usuario.msg  %></p>
+            <%  }%>
+            <p id="errorUsuario" class="feedback"></p>
+    
+                <input class="in-log" type="password" placeholder="Contraseña" name="password" id="password" >    
                 <i class="fa-regular fa-eye" id="togglePasswordView"></i>
-                   
+    
+            </div>
+           
+
             <% if (locals.errores && locals.errores.password) { %>
                 <p class="feedback"><%= locals.errores.password.msg  %></p>
         <%  }%>
