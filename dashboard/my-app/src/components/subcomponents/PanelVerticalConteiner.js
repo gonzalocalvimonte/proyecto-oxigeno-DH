@@ -6,7 +6,9 @@ function PanelVerticalConteiner() {
    
     return (
       <div id='conteneirPanelVertical'>
+       
             <PanelVerticalProducts/>
+        
             <PanelVerticalCategories/>
       </div>
     );

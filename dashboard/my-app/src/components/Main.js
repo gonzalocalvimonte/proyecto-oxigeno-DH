@@ -2,6 +2,7 @@ import PanelDetail from './subcomponents/PanelDetail'
 import PanelLast from './subcomponents/PanelLast'
 import PanelVerticalConteiner from './subcomponents/PanelVerticalConteiner'
 import React, { Component } from 'react';
+import "./stylesComponents/Main.css"
 
 class Main extends Component {
 
@@ -53,7 +54,8 @@ class Main extends Component {
    
     console.log(this.state)
   return (
-    <div >
+    <div id="Main">
+      <section id="conPanelDetail">
         <PanelDetail title='Cantidad de productos' >
         <p>
           {this.state.products.length}
@@ -69,6 +71,7 @@ class Main extends Component {
           {this.state.categories.length}
         </p>
         </PanelDetail>
+      </section>
 
         <PanelLast/>
 

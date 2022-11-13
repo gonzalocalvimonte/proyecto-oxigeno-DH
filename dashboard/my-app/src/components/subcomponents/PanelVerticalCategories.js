@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Box from '@mui/material/Box';
+import { DataGrid } from '@mui/x-data-grid';
+
 
 class PanelVerticalCategories extends Component {
 
@@ -28,24 +31,44 @@ class PanelVerticalCategories extends Component {
   }
    render(){
     
-   return (
-      <div >
-        <h2>Somos las categorias</h2>
-        <ul>
-          {this.state.categories.map(e => 
-           <li>
-           
-           <p>{e.name} : {e.products.length}</p>
-           </li>
-           )}
-          
-        </ul>
+    const columns = [
+      { field: 'id', headerName: 'ID', width: 90 },
+      {
+        field: 'name',
+        headerName: 'Nombre de la categoría',
+        width: 250,
+        editable: true,
+      },
+      {
+        field: 'count',
+        headerName: 'Cantidad de productos',
+        type: 'number',
+        width: 300,
+        editable: true,
+      }
+    ];
+
+    return (
+
+
+      <Box sx={{ height: 400, width: '40%'  }}>
+        <DataGrid Categorías
+          rows={this.state.categories}
+          columns={columns}
+          pageSize={5}
+          rowsPerPageOptions={[5]}
+          checkboxSelection
+          disableSelectionOnClick
+          experimentalFeatures={{ newEditingApi: true }}
+        />
+      </Box>
+      
+    );
+  }
+  }
         
          
          
-      </div>
-    )
-          };
-  }
+    
      
   export default PanelVerticalCategories;

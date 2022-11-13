@@ -8,7 +8,7 @@ function Header() {
             <ImageLogo/>
 
             <h1>
-                Proyecto-Oxigeno-Grupo2
+                PANEL DE SEGUIMIENTO
             </h1>
 
         </div>

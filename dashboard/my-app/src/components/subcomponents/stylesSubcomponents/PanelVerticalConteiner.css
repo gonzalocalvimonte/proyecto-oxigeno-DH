@@ -1,7 +1,6 @@
-.conteinerPanelVertical{
+#conteneirPanelVertical{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
+    justify-content: space-around;
     width: 100%;
 }

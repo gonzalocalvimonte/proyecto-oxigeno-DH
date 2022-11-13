@@ -23,7 +23,7 @@ class PanelLast extends Component{
     
     render(){
       
-      let producto = this.state.products.filter(producto => producto.id == this.state.products.length - 1)
+      let producto = this.state.products.filter(producto => producto.id === this.state.products.length - 1)
       
       
       return (
