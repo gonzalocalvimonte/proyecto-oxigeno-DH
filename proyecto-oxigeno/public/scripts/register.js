@@ -4,9 +4,6 @@ window.addEventListener("load", function() {
 
     formulario.addEventListener("submit", function (e) {
 
-        formulario.submit(); 
-        return(null);
-        
         e.preventDefault(); 
 
         // Validación Nombre
