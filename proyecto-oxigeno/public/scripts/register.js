@@ -82,7 +82,7 @@ window.addEventListener("load", function() {
             } 
         }
          // Si no hubo errores, enviar el formulario
-         if (errorNombre.innerHTML == "" && errorApellido.innerHTML == "" &&  errorEmail.innerHTML == "" && errorPassword.innerHTML == "" && errorAvatar.innerHTML == "" ) {
+         if (errorNombre.innerHTML == "" && errorApellido.innerHTML == "" &&  errorEmail.innerHTML == "" && errorPassword.innerHTML == "" && errorNacimiento.innerHTML == "" && errorDomicilio.innerHTML == "" && errorAvatar.innerHTML == "") {
             formulario.submit(); 
         }
     
