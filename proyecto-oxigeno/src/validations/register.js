@@ -11,7 +11,7 @@ let email = body('email').notEmpty().withMessage('Email requerido').bail().isEma
   } 
   else { throw new Error("Ese email ya está registrado") }});
 
-let password = body('password').notEmpty().withMessage('Password requerida').bail().isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres');
+let password = body('password').notEmpty().withMessage('Password requerida').bail().isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres').isStrongPassword({minLength: 6, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 }).withMessage('La contraseña debe tener letras mayúsculas, minúsculas, un número y un carácter especial');
 let avatar = body('avatar').isEmpty().bail()
   .custom((v, {req}) => {
     if (typeof req.files[0] != "undefined" && req.files[0] != null ) {
