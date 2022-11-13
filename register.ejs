@@ -1,0 +1,69 @@
+<%- include('../partials/head.ejs')  %> 
+<link rel="stylesheet" href="/css/register.css">
+
+<script defer src="/scripts/register.js"> </script>
+
+
+<body>
+    <header id="header">
+        <%- include("../partials/header.ejs")  %> 
+    </header>
+
+    
+
+    <main id="register">
+        <form class="form-reg" action="/user/save" method="post" enctype="multipart/form-data">
+            <span class="titulo-form">¡Registrate!</span>
+          
+                <input class="in-register" type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.data && data.nombre %>" >
+            <% if (locals.errores && locals.errores.nombre) { %>
+                <div></div>
+                <img src="/images/error.png">
+
+                <p class="feedback"><%= locals.errores.nombre.msg%></p>
+            <%  }%>
+            <p id="errorNombre" class="feedback"></p>
+            <input class="in-register" type="text" name="apellido" id="apellido" placeholder="Apellido"  value="<%= locals.data && data.apellido %>">
+            <% if (locals.errores && locals.errores.apellido) { %>
+                <p class="feedback"><%= locals.errores.apellido.msg  %></p>
+            <%  }%>
+                <p id="errorApellido" class="feedback"></p>
+            <input class="in-register" type="text" name="email" id="email" placeholder="email" value="<%= locals.data && data.email %>">
+            <% if (locals.errores && locals.errores.email) { %>
+                    <p class="feedback"><%= locals.errores.email.msg  %></p>
+            <%  }%>
+            <p id="errorEmail" class="feedback"></p>
+            <input class="in-register" type="password" name="password" id="password" placeholder="Contraseña" >
+            <% if (locals.errores && locals.errores.password) { %>
+                
+                <p class="feedback"> <img src="/images/error.png"> <%= locals.errores.password.msg  %></p>
+            <%  }%>
+            <p id="errorPassword" class="feedback"></p>
+            <input class="in-register" type="date" name="nacimiento" id="nacimiento" placeholder="Fecha Nacimiento" >
+            <% if (locals.errores && locals.errores.nacimiento) { %>
+                
+                <p class="feedback"> <img src="/images/error.png"> <%= locals.errores.nacimiento.msg  %></p>
+            <%  }%>
+            <p id="errorNacimiento" class="feedback"></p>
+            <input class="in-register" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value="<%= locals.data && data.domicilio %>">
+            <% if (locals.errores && locals.errores.domicilio) { %>
+                
+                <p class="feedback"> <img src="/images/error.png"> <%= locals.errores.domicilio.msg  %></p>
+            <%  }%>
+            <p id="errorDomicilio" class="feedback"></p>
+            <input class="in-register" type="file" name="avatar" id="avatar">
+            <% if (locals.errores && locals.errores.avatar) { %>
+                <p class="feedback"><%=  locals.errores.avatar.msg %> </p> 
+            <%  }%>
+            <p id="errorAvatar" class="feedback"></p>
+            <div id="btn-enviar">
+                <button type="submit"class="btn-enviar">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer id="footer">
+        <%- include("../partials/footer.ejs") %> 
+    </footer>
+
+</body>
