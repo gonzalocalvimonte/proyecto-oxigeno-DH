@@ -40,7 +40,17 @@
             <%  }%>
             <p id="errorPassword" class="feedback"></p>
             <input class="in-register" type="date" name="nacimiento" id="nacimiento" placeholder="Fecha Nacimiento" >
+            <% if (locals.errores && locals.errores.nacimiento) { %>
+                
+                <p class="feedback"> <img src="/images/error.png"> <%= locals.errores.nacimiento.msg  %></p>
+            <%  }%>
+            <p id="errorNacimiento" class="feedback"></p>
             <input class="in-register" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value="<%= locals.data && data.domicilio %>">
+            <% if (locals.errores && locals.errores.domicilio) { %>
+                
+                <p class="feedback"> <img src="/images/error.png"> <%= locals.errores.domicilio.msg  %></p>
+            <%  }%>
+            <p id="errorDomicilio" class="feedback"></p>
             <input class="in-register" type="file" name="avatar" id="avatar">
             <% if (locals.errores && locals.errores.avatar) { %>
                 <p class="feedback"><%=  locals.errores.avatar.msg %> </p> 
