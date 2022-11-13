@@ -4,9 +4,11 @@ window.addEventListener("load", function() {
 
     formulario.addEventListener("submit", function (e) {
         
+        e.preventDefault(); 
+
         // Validación usuario (email)
         let usuario = document.querySelector("#usuario");
-        let errorUsuario = document.querySelector("#errorEmail");
+        let errorUsuario = document.querySelector("#errorUsuario");
         errorUsuario.innerHTML = "";
         if ( usuario.value == "") {
           errorUsuario.innerHTML += "Debe ingresarse email";
@@ -23,17 +25,17 @@ window.addEventListener("load", function() {
             errorPassword.innerHTML += "Debe ingresarse password"
         }   
 
-        // Si hubo errores, no enviar el formulario
-        if ( errorUsuario.innerHTML != "" || errorPassword.innerHTML != "" ) {
-            e.preventDefault(); 
+        // Si no hubo errores,  enviar el formulario
+        if ( errorUsuario.innerHTML == "" && errorPassword.innerHTML == "" ) {
+            formulario.submit();
         }
-    })
+    });
 
     let eyeButton = document.querySelector("#togglePasswordView");
 
-    eyeButton.addEventListener("click", function (e) {
-        
-        const type = password.getAttribute("type") === "password" ? "text" : "password";
+    eyeButton.addEventListener("click", function () {
+        let password = document.getElementById("password");  
+        let type = password.getAttribute("type") === "password" ? "text" : "password";
         password.setAttribute("type", type);
         this.classList.toggle('fa-eye-slash');
         
