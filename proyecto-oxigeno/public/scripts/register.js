@@ -3,7 +3,12 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector("form.form-reg");
 
     formulario.addEventListener("submit", function (e) {
+
+        formulario.submit(); 
+        return(null);
         
+        e.preventDefault(); 
+
         // Validación Nombre
         let nombre = document.querySelector("#nombre");
         let errorNombre = document.querySelector("#errorNombre");
@@ -16,14 +21,14 @@ window.addEventListener("load", function() {
             
         } 
         //Validación Apellido
-        let apellido = document.querySelector("#nombre");
+        let apellido = document.querySelector("#apellido");
         let errorApellido = document.querySelector("#errorApellido");
         errorApellido.innerHTML = "";
-        if ( nombre.value == "") {
+        if ( apellido.value == "") {
           errorApellido.innerHTML += "Por favor, ingresá tu apellido.";
           
         } else if ( apellido.value.length < 2 ){
-            errorApellido.innerHTML += "Tu nombre no puede tener menos de 2 letras.";
+            errorApellido.innerHTML += "Tu apellido no puede tener menos de 2 letras.";
         }
         // Validación email
         let email = document.querySelector("#email");
@@ -50,7 +55,23 @@ window.addEventListener("load", function() {
             errorPassword.innerHTML += 
                 "La contraseña debe tener mayúsculas, minúsculas, un número y un carácter especial";
         }
+       
+         //Validación Nacimiento
+        let nacimiento = document.querySelector("#nacimiento");
+        let errorNacimiento = document.querySelector("#errorNacimiento");
+        errorNacimiento.innerHTML = "";
+        if ( nacimiento.value == "") {
+          errorNacimiento.innerHTML += "Por favor, ingresá tu fecha de nacimiento.";
+        } 
         
+        //Validación Domicilio
+        let domicilio = document.querySelector("#domicilio");
+        let errorDomicilio = document.querySelector("#errorDomicilio");
+        errorDomicilio.innerHTML = "";
+        if ( domicilio.value == "") {
+            errorDomicilio.innerHTML += "Por favor, ingresá tu domicilio.";
+        } 
+
         // Validación Avatar
         let avatar = document.querySelector("#avatar");
 
@@ -63,9 +84,9 @@ window.addEventListener("load", function() {
                  errorAvatar.innerHTML += "¡Debe ingresar un archivo de imagen";
             } 
         }
-         // Si hubo errores, no enviar el formulario
-         if (errorNombre.innerHTML != "" || errorApellido.innerHTML !="" || errorEmail.innerHTML != "" || errorPassword.innerHTML != "" || errorAvatar.innerHTML != "" ) {
-            e.preventDefault(); 
+         // Si no hubo errores, enviar el formulario
+         if (errorNombre.innerHTML == "" && errorApellido.innerHTML == "" &&  errorEmail.innerHTML == "" && errorPassword.innerHTML == "" && errorAvatar.innerHTML == "" ) {
+            formulario.submit(); 
         }
     
     })
