@@ -48,11 +48,15 @@ class PanelVerticalCategories extends Component {
       }
     ];
 
+
+
+
+
     return (
 
 
       <Box sx={{ height: 400, width: '40%'  }}>
-        <DataGrid Categorías
+        <DataGrid 
           rows={this.state.categories}
           columns={columns}
           pageSize={5}
