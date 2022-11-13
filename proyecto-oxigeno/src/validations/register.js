@@ -1,9 +1,16 @@
+const db = require('../database/models/index');
 const { body } = require("express-validator");
 
 
-let nombre = body('nombre').notEmpty().withMessage('Nombre requerido');
-let apellido = body('apellido').notEmpty().withMessage('Apellido requerido');
-let email = body('email').notEmpty().withMessage('Email requerido').bail().isEmail().withMessage('Email no válido');
+let nombre = body('nombre').notEmpty().withMessage('Nombre requerido').bail().isLength({min:2}).withMessage('El nombre debe tener al menos 2 caracteres');
+let apellido = body('apellido').notEmpty().withMessage('Apellido requerido').bail().isLength({min:2}).withMessage('El apellido debe tener al menos 2 caracteres');;
+let email = body('email').notEmpty().withMessage('Email requerido').bail().isEmail().withMessage('Email no válido').bail().custom( async (value, {req}) => {
+  let user = await db.Users.findOne({where:{email:value}});
+  if ( ! user ){         
+      return true 
+  } 
+  else { throw new Error("Ese email ya está registrado") }});
+
 let password = body('password').notEmpty().withMessage('Password requerida').bail().isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres');
 let avatar = body('avatar').isEmpty().bail()
   .custom((v, {req}) => {
@@ -17,6 +24,10 @@ let avatar = body('avatar').isEmpty().bail()
     return true;
   }).withMessage("El archivo debe ser una imagen");
 
-let validationsRegUser = [ nombre, apellido, email, password, avatar ];
+
+  let nacimiento = body('nacimiento').notEmpty().withMessage('Fecha de nacimiento requerida');
+
+  let domicilio = body('domicilio').notEmpty().withMessage('Domicilio requerido')
+let validationsRegUser = [ nombre, apellido, email, password, avatar, nacimiento, domicilio ];
 
 module.exports = validationsRegUser;
