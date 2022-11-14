@@ -23,8 +23,8 @@ Nuestros público de referencia será poseedores de embarcaciones, aficionados d
 *Vivo en Capital Federal, Argentina. Trabajo como Project Manager en Toyota Argentina. Quise ampliar mis conocimientos técnicos para obtener otro punto de vista en mi día día.*
 - ### Lisandro Fernández Tasende
 *Trabajo en ventas en una empresa de telecomunicaciones. Me gusta mucho aprender cosas relacionadas con la tecnología.*
-
-
+- ### Matías Tolosa
+*Soy de Capital Federal, tengo 18 años. Trabajo en un parque de camas eláasticas, soy acróbata. Me encanta la tecnología y me desde el primer momento me interesó el tema de la programación.*
 
 
 
