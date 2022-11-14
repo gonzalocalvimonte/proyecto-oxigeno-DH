@@ -21,7 +21,7 @@ class PanelVerticalProducts extends Component {
     
     this.setState({products:respuesta.data})
     
-    console.log(this.state)
+    // console.log(this.state)
     } catch(error) {
       console.log(error)
     }
@@ -36,14 +36,12 @@ class PanelVerticalProducts extends Component {
         field: 'name',
         headerName: 'Nombre del producto',
         width: 250,
-        editable: true,
       },
       {
         field: 'price',
         headerName: 'Precio ($)',
         type: 'number',
         width: 300,
-        editable: true,
       }
     ];
 
@@ -54,7 +52,6 @@ class PanelVerticalProducts extends Component {
           columns={columns}
           pageSize={5}
           rowsPerPageOptions={[5]}
-          checkboxSelection
           disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
         />

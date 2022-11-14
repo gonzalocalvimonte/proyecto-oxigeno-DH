@@ -33,16 +33,16 @@ class PanelLast extends Component{
         <h2>soy el ultimo producto agregado</h2>
         <div>
         {producto.map(e =>
-        <div>
-           <p>{e.name}</p>
-           <p>{e.price}</p>
-           </div>
-           )
+          <div>
+            <p>{e.name}</p>
+            <p>{e.price}</p>
+          </div>
+          )
         }
-           </div>
-         
+        </div>
+
       </div>
     )
   }}
-     
+
   export default PanelLast

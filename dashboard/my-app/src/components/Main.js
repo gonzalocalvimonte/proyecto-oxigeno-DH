@@ -52,7 +52,7 @@ class Main extends Component {
   render(){
 
    
-    console.log(this.state)
+  // console.log(this.state)
   return (
     <div id="Main">
       <section id="conPanelDetail">

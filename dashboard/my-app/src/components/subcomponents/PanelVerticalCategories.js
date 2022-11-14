@@ -22,7 +22,7 @@ class PanelVerticalCategories extends Component {
     
     this.setState({categories:respuesta.data})
     
-    console.log(this.state)
+    // console.log(this.state)
     } catch(error) {
       console.log(error)
     }
@@ -30,38 +30,36 @@ class PanelVerticalCategories extends Component {
     
   }
    render(){
-    
+    const rows = this.state.categories.map(x => {
+      x = {
+        id: x.id,
+        name: x.name,
+        products: x.products.length
+      }
+      return x
+    })
     const columns = [
       { field: 'id', headerName: 'ID', width: 90 },
       {
         field: 'name',
         headerName: 'Nombre de la categoría',
         width: 250,
-        editable: true,
       },
       {
-        field: 'count',
+        field: 'products',
         headerName: 'Cantidad de productos',
         type: 'number',
         width: 300,
-        editable: true,
       }
     ];
 
-
-
-
-
     return (
-
-
       <Box sx={{ height: 400, width: '40%'  }}>
         <DataGrid 
-          rows={this.state.categories}
+          rows={rows}
           columns={columns}
           pageSize={5}
           rowsPerPageOptions={[5]}
-          checkboxSelection
           disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
         />
@@ -71,8 +69,4 @@ class PanelVerticalCategories extends Component {
   }
   }
         
-         
-         
-    
-     
-  export default PanelVerticalCategories;
+export default PanelVerticalCategories;
