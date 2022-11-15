@@ -37,7 +37,7 @@
 #search{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     height: 2rem;
     margin: 1rem;
 }
@@ -124,7 +124,7 @@
     border-radius: 50%;
 }
 #menu{
-   display: none;
+    display: none;
     
 }
 @media all and (min-width: 768px){
@@ -144,7 +144,7 @@
         max-width: 555px;
     }
     #nav{
-        margin: auto;
+        margin: auto 4rem;
         width: 10%;
     }
     #nav i{
