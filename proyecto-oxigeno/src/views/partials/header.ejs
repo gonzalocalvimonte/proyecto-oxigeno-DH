@@ -25,6 +25,11 @@
                         <% } %>
                     <li class="test cart"><a href="/cart"><i class="carttwo fa-solid fa-cart-shopping"><span class="header-cart syle-cart">0</span></i></a></li>
                 <% if (user) { %>
+                    <% if (user.roleId != 3) { %>
+                        <li class="test dash"><a href="http://localhost:3030/"><i class="dashtwo fa-solid fa-chart-line"></i></a></li>
+                    <% } %>
+                <% } %>
+                <% if (user) { %>
                     <li class="test out"><a href="/user/logout"><i class="outtwo fa-sharp fa-solid fa-right-from-bracket"></i></a></li>
                 <% } %>        
         </ul>

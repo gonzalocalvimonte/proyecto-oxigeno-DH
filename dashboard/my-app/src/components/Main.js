@@ -9,21 +9,18 @@ class Main extends Component {
   constructor(){
     super()
     this.state = {
-     products : [],
-     users : [],
-     categories:[]
+      products : [],
+      users : [],
+      categories:[]
     }
   }
 
- 
-
   async componentDidMount(){
+
     try {
     let peticion = await fetch('http://localhost:3000/api/users')
     let respuesta = await peticion.json()
     this.setState({users:respuesta.data})
-      
-    
     } catch(error) {
       console.log(error)
     }
@@ -32,8 +29,6 @@ class Main extends Component {
     let peticion = await fetch('http://localhost:3000/api/list')
     let respuesta = await peticion.json()
     this.setState({products:respuesta.data})
-      
-    
     } catch(error) {
       console.log(error)
     }
@@ -42,16 +37,12 @@ class Main extends Component {
       let peticion = await fetch('http://localhost:3000/api/categories/index')
       let respuesta = await peticion.json()
       this.setState({categories:respuesta.data})
-        
-      
       } catch(error) {
         console.log(error)
       }
   }
- 
-  render(){
 
-   
+  render(){
   // console.log(this.state)
   return (
     <div id="Main">

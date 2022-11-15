@@ -72,11 +72,11 @@ let ProductsController = {
         })
     },
 
-    edit:function(req,res){
-        let pedidoProducto = db.Products.findByPk(req.params.id,{
+    edit: async (req,res) =>{
+        let pedidoProducto = await db.Products.findByPk(req.params.id,{
             attributes:['id','name','description','price','image','category_id']
         });
-        let pedidoCategoria = db.categories.findAll({
+        let pedidoCategoria = await db.categories.findAll({
             attributes:['name','description','id']});
         
             Promise.all([pedidoProducto, pedidoCategoria])
