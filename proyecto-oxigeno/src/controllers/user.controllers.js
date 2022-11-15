@@ -95,10 +95,10 @@ const controller = {
     },
             
     delete: (req,res) => {
-        if(req.body.avatar != 'default.png'){
-            let file = join(__dirname,'../../public/images/Uploads/users/' + req.body.avatar)
-            unlinkSync(file)
-        }
+        // if(req.body.avatar != 'default.png'){
+        //     let file = join(__dirname,'../../public/images/Uploads/users/' + req.body.avatar)
+        //     unlinkSync(file)
+        // }
         db.Users.destroy({
             where: {
                 id: req.params.id

@@ -42,6 +42,7 @@ router.get("/detail/:id", isLogged, isAdmin, controller.detail); //Admin Functio
 //Update
 router.get('/profile/edit/:id', isLogged,controller.edit)
 router.put('/update/:id', upload.any(), controller.update)
+// router.put('/updateRol/:id', controller.update)
 
 //Delete
 router.delete('/delete/:id', controller.delete)
