@@ -1,8 +1,10 @@
-window.addEventListener("load", function() {
+const usersApi = require("../../src/controllers/api/users.api");
+
+window.addEventListener("load",  function() {
  
     let formulario = document.querySelector("form.form-reg");
 
-    formulario.addEventListener("submit", function (e) {
+    formulario.addEventListener("submit", async function (e) {
 
         e.preventDefault(); 
 
@@ -28,6 +30,15 @@ window.addEventListener("load", function() {
             errorApellido.innerHTML += "Tu apellido no puede tener menos de 2 letras.";
         }
         // Validación email
+
+        try {
+            let peticion = await fetch('http://localhost:3000/api/users')
+            let respuesta = await peticion.json();
+            let usersApi = respuesta.data;
+        } catch (error) {
+            console.log(error);
+        }
+            
         let email = document.querySelector("#email");
         let errorEmail = document.querySelector("#errorEmail");
         errorEmail.innerHTML = "";
@@ -36,7 +47,9 @@ window.addEventListener("load", function() {
           
         } else if (! /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))  {
             errorEmail.innerHTML += "Por favor, ingresá una dirección de mail válida.";
-        } 
+        } else if ( usersApi.includes(email.value))  {
+            errorEmail.innerHTML += "Ese email ya está registrado";
+        }
 
         //Validación Password
         let password = document.querySelector("#password");

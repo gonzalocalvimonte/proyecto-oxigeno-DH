@@ -10,10 +10,10 @@ module.exports = {
     },
     
     all: async (req, res) => {
-        let products = await db.Users.findAll()
+        let users = await db.Users.findAll()
         return res.status(200).json({
-            total: products.length,
-            data: products,
+            total: users.length,
+            data: users,
             status: 200
         })
     }
