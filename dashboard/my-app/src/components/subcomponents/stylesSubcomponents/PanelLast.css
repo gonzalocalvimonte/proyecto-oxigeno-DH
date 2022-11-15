@@ -1,0 +1,35 @@
+*{
+    --blue-0: #0061bb; 
+    --blue-1: #0487d9; /* de mas(1) a menos saturado(4) */
+    --blue-2: #048abf;
+    --blue-3: #79bed9;
+    --blue-4: #c4f2ee;
+    --black: #0d0d0d;
+    --grey: #f2f2f2;
+    --white: #fff;
+}
+
+#lastProd{
+    justify-content: center;
+    margin:auto;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+#lastProd h2{
+    border-radius: 5px;
+    margin: 2rem auto;
+    padding: .3rem;
+    width: 30%;
+    background: #67a0cc;
+    background: -webkit-linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+    background: linear-gradient(0deg, #67a0cc 0%, #0487d9 70%, #0487d9 100%);
+    opacity: 0.8;
+    color: white;
+}
+
+#lastProd p{
+    color: #383838;
+    font-weight: bold;
+}
+

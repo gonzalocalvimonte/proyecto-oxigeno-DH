@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import "./stylesSubcomponents/PanelLast.css"
+
 
 class PanelLast extends Component{
 
   constructor(){
     super()
     this.state = {
-     products : []
+    products : []
     }
   }
 
@@ -14,28 +16,22 @@ class PanelLast extends Component{
     let peticion = await fetch('http://localhost:3000/api/list')
     let respuesta = await peticion.json()
     this.setState({products:respuesta.data})
-    
-  
     } catch(error) {
       console.log(error)
     }}
 
-    
-    render(){
-      
+    render(){    
       let producto = this.state.products.filter(producto => producto.id === this.state.products.length - 1)
-      
-      
       return (
         
-      <div>
+      <div id='lastProd'>
 
-        <h2>soy el ultimo producto agregado</h2>
-        <div>
+        <h2>Ultimo producto agregado</h2>
+        <div id='lastContent'>
         {producto.map(e =>
           <div>
             <p>{e.name}</p>
-            <p>{e.price}</p>
+            <p>$ {e.price}</p>
           </div>
           )
         }
@@ -45,4 +41,4 @@ class PanelLast extends Component{
     )
   }}
 
-  export default PanelLast
+export default PanelLast

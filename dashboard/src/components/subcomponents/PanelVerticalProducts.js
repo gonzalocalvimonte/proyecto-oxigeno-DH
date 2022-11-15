@@ -7,11 +7,11 @@ class PanelVerticalProducts extends Component {
   constructor(){
     super()
     this.state = {
-     products : []
+      products : []
     }
   }
 
-   async componentDidMount(){
+  async componentDidMount(){
     try {
     let peticion = await fetch('http://localhost:3000/api/list')
 
@@ -25,11 +25,9 @@ class PanelVerticalProducts extends Component {
     } catch(error) {
       console.log(error)
     }
-
-    
   }
-   render(){
-    
+
+  render(){
     const columns = [
       { field: 'id', headerName: 'ID', width: 90 },
       {
@@ -58,6 +56,5 @@ class PanelVerticalProducts extends Component {
       </Box>
     );
   }
-  }
-     
-  export default PanelVerticalProducts;
+}
+export default PanelVerticalProducts;
