@@ -80,6 +80,16 @@ Desde el primer momento hasta el último dividimos las tareas y respetamos los a
 
 Pudimos dividir al equipo en tareas especificas aprovechando el tiempo para mejorar la estetica y sumar funcionalidades.
 
+
 ### Aspectos negativos
 
 Si bine la división de tareas fue correcta, estuvimos hasta el ultimo minuto terminando mejoras. Podriamos haber usado el tiempo de una manera mas estrategica. 
+
+##Sprint 8
+
+### Aspectos positivos
+Siendo el último sprint, llegamos con todas las variantes resueltas. 
+Dividimos las tareas correctamente y avanzamos en el proceso de codeo. Pudimos llegar en tiempo y forma.
+
+### Aspectos negativos
+Trabajamos a contra reloj por el poco tiempo que tenemos destinado a este sprint.
