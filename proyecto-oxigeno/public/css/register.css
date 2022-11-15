@@ -12,7 +12,7 @@
 #register{
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 0rem;
     margin: auto;
     width: 100%;
 }
@@ -28,6 +28,13 @@
     padding: 1rem;
     border-radius: 4px;
 }
+#togglePasswordView{
+  position: relative;
+  left: 85%;
+  bottom: 50px;
+  cursor: pointer;
+}
+
 #nacimiento{
     display: flex;
     margin: auto;
@@ -118,7 +125,7 @@
 
   .titulo-form{
     
-    padding: 50px 10px 50px 10px;
+    padding: 25px 10px 10px 10px;
     font-size: 100px;
 
   }
@@ -129,8 +136,10 @@
     .form-reg{
         max-width: 500px;
     }
+
+
 }
 @media all and (min-width:1200px) {
     
-
+ 
 }

@@ -86,6 +86,16 @@ window.addEventListener("load", function() {
             formulario.submit(); 
         }
     
+    });
+
+    let eyeButton = document.querySelector("#togglePasswordView");
+
+    eyeButton.addEventListener("click", function () {
+        let password = document.getElementById("password");  
+        let type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        this.classList.toggle('fa-eye-slash');
+        
     })
 })
 

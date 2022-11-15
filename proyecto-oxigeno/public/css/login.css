@@ -73,8 +73,8 @@
 
 #togglePasswordView{
     position: relative;
-    left: 300px;
-    bottom: 45px;
+    left: 85%;
+    bottom: 50px;
     cursor: pointer;
 }
 

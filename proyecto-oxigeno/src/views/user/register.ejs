@@ -31,6 +31,7 @@
             <%  }%>
             <p id="errorEmail" class="feedback"></p>
             <input class="in-register" type="password" name="password" id="password" placeholder="Contraseña" >
+            <i class="fa-regular fa-eye" id="togglePasswordView"></i>
             <% if (locals.errores && locals.errores.password) { %>
                 
                 <p class="feedback"> <%= locals.errores.password.msg  %></p>
