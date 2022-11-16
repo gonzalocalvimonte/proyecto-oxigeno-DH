@@ -102,3 +102,32 @@ Faltan validaciones de front.
 
 ### Reunión 1/11
 Reunión final previa a la entrega
+
+## Sprint 8
+
+### Reunión 12/10
+
+Se divide  tareas segun trabajo realizado en sprints anteriores:
+Modalidad 1: equipo de implementacion sprint
+Modalidad 2: equipo de relevamiento de errores anteriores
+Modalidad 3: equipo de mejora estetica
+
+### Reunión 18/10
+
+Relevamiento de avances.
+Progresan las actividades, se decide avanzar con buscados, carrito y favicon
+
+### Reunión 04/11
+División de tareas del último sprint.
+
+### Reunión 08/11
+Demostración de las API y repaso en conjunto de React.
+
+### Reunión 12/11
+Revision del React ehcho y comienzo de los cambios estéticos.
+
+### Reunión 15/11
+Repaso y preparación de exposición
+
+
+

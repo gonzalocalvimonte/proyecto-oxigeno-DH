@@ -28,9 +28,9 @@
         <button class="edit-profile-btn" type="submit">Editar perfil</button>
     </form>
     
-    <form class="profile-form delete-form" action="/user/delete?m=DELETE" method="post">
+    <form onsubmit="return confirm('Desea eliminar este usuario?')" class="profile-form delete-form" action="/user/delete/<%= user.id %>?m=DELETE " method="post">
         <input type="hidden" name="id" value="<%=user.id%>">
-        <button class="delete-profile-btn">Eliminar perfil</button>
+        <button  class="delete-profile-btn">Eliminar perfil</button>
     </form>
         
     </main>

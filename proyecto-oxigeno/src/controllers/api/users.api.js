@@ -2,9 +2,9 @@ const db = require("../../database/models/index");
 
 module.exports = {
     one: async (req, res) => {
-        let users = await db.Users.findByPk(req.params.id)
+        let user = await db.Users.findByPk(req.params.id)
         return res.status(200).json({
-            data: users,
+            data: user,
             status: 200
         })
     },
