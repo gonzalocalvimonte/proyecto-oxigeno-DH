@@ -14,6 +14,9 @@
     margin:auto;
     text-align: center;
     padding-bottom: 3rem;
+    border: 1px solid var(--blue-3);
+    width: 80%;
+    margin-top: 1rem;
 }
 
 #lastProd h2{
@@ -33,3 +36,16 @@
     font-weight: bold;
 }
 
+#lastContent{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.imagenProduct{
+    width: 4rem;
+}

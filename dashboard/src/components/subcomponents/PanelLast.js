@@ -26,12 +26,15 @@ class PanelLast extends Component{
         
       <div id='lastProd'>
 
-        <h2>Ultimo producto agregado</h2>
-        <div id='lastContent'>
+        <h2>ULTIMO PRODUCTO CARGADO</h2>
+        <div >
         {producto.map(e =>
-          <div>
-            <p>{e.name}</p>
-            <p>$ {e.price}</p>
+          <div id='lastContent'>
+            
+            <span># {e.id}</span>
+            <img className='imagenProduct' src={e.image}/>
+            <span className='pNombre'>{e.name}</span>
+            <span className='pPrecio'>$ {e.price}</span>
           </div>
           )
         }

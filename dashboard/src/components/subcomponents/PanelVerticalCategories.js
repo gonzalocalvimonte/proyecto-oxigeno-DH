@@ -39,22 +39,22 @@ class PanelVerticalCategories extends Component {
       return x
     })
     const columns = [
-      { field: 'id', headerName: 'ID', width: 90 },
+      { field: 'id', headerName: 'ID', width: 100 },
       {
         field: 'name',
         headerName: 'Nombre de la categoría',
-        width: 250,
+        width: 400,
       },
       {
         field: 'products',
         headerName: 'Cantidad de productos',
         type: 'number',
-        width: 300,
+        width: 250,
       }
     ];
 
     return (
-      <Box sx={{ height: 400, width: '40%'  }}>
+      <Box sx={{ height: 372, width: '40%'  }}>
         <DataGrid 
           rows={rows}
           columns={columns}

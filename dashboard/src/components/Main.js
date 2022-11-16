@@ -47,17 +47,17 @@ class Main extends Component {
   return (
     <div id="Main">
       <section id="conPanelDetail">
-        <PanelDetail title='Cantidad de productos' >
+        <PanelDetail title='CANTIDAD DE PRODUCTOS' >
         <p>
           {this.state.products.length}
         </p>  
         </PanelDetail>
-        <PanelDetail title='Cantidad de usuarios'>
+        <PanelDetail title='CANTIDAD DE USUARIOS REGISTRADOS'>
         <p>
           {this.state.users.length}
         </p>
         </PanelDetail>
-        <PanelDetail title='Cantidad de categorias' >
+        <PanelDetail title='CANTIDAD DE CATEGORIAS' >
         <p>
           {this.state.categories.length}
         </p>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-
+import './stylesSubcomponents/PanelVerticalProducts.css'
 class PanelVerticalProducts extends Component {
 
   constructor(){
@@ -28,27 +28,44 @@ class PanelVerticalProducts extends Component {
   }
 
   render(){
+    const rows = this.state.products.map(x => {
+      x = {
+      id: x.id,
+      name: x.name,
+      price: x.price,
+      image:x.image
+      }
+      return x
+    }
+    )
+      
     const columns = [
-      { field: 'id', headerName: 'ID', width: 90 },
+      { field: 'id', headerName: 'ID', width: 100 },
+      {
+        field: 'image',
+        headerName: 'Imagen',
+        width: 100,
+        renderCell: (params) => <img className='imgProduct' src={params.value}/>     
+      },
       {
         field: 'name',
         headerName: 'Nombre del producto',
-        width: 250,
+        width: 400,
       },
       {
         field: 'price',
         headerName: 'Precio ($)',
         type: 'number',
-        width: 300,
+        width: 150,
       }
     ];
 
     return (
-      <Box sx={{ height: 400, width: '40%'  }}>
+      <Box sx={{ height: 372, width: '40%'  }}>
         <DataGrid
-          rows={this.state.products}
+          rows={rows}
           columns={columns}
-          pageSize={5}
+          pageSize={5}  
           rowsPerPageOptions={[5]}
           disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
