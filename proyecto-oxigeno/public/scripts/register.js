@@ -1,4 +1,4 @@
-const usersApi = require("../../src/controllers/api/users.api");
+
 
 window.addEventListener("load",  function() {
  
